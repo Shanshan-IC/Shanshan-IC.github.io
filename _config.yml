@@ -3,18 +3,18 @@ description:        "Personal Blog"
 
 url:                "Shanshan-IC.github.io"
 author:             "Shanshan-IC"
-email:              "jhondoe@abc.com"
+email:              "33sharewithu@gmail.com"
 gravatar_hash:      "205e460b479e2e5b48aec07710c08d50"
 twitter:            "jhondoe"
-email:              "jhondoe@abc.com"
+email:              "33sharewithu@gmail.com"
 github:             "Shanshan-IC"
 pinterest:          "jhondoe"
-linkedin:           "jhondoe"
-facebook:           "jhondoe"
-
+linkedin:           "shanshan-fu-549230107"
+facebook:           "fu.shanshan.33"
+weibo:              "1005052079930097"
 disqus_shortname:   "thinker3197"
 
-background:         "http://apple.wallpapersfine.com/wallpapers/original/1242x2208/w-5273.jpg"
+background:         "img/home/me.jpg"
 
 paginate:           5
 paginate_path:      "/page:num/"
