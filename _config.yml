@@ -1,51 +1,37 @@
-name:               "Shanshan"
-description:        "Personal Blog"
+permalink: /blog/:year/:month/:title.html 
+include: ['.htaccess']
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
+markdown: kramdown
+highlights: pygments
+url: 
+cdn_url: 7u2t01.com1.z0.glb.clouddn.com
+lsi: false
+safe: true
+timezone: Asia/Shanghai
+auto: false 
 
-url:                "Shanshan-IC.github.io"
-author:             "Shanshan-IC"
-email:              "33sharewithu@gmail.com"
-gravatar_hash:      "205e460b479e2e5b48aec07710c08d50"
-twitter:            "jhondoe"
-email:              "33sharewithu@gmail.com"
-github:             "Shanshan-IC"
-pinterest:          "jhondoe"
-linkedin:           "shanshan-fu-549230107"
-facebook:           "fu.shanshan.33"
-weibo:              "1005052079930097"
-disqus_shortname:   "thinker3197"
+paginate: 8
+paginate_path: "page:num"
 
-background:         "img/home/me.jpg"
+kramdown:
+  auto_ids: true,
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
 
-paginate:           5
-paginate_path:      "/page:num/"
+JB :
+  IMAGE_PATH : http://coolshell.info/images
 
-baseurl:            ""
-permalink:          /:year/:month/:day/:title/
+# presonal config
+domain: http://coolshell.info
+title: 册册
+description: Enjoy my life with code
+author: Shanshan Fu
+email: 33sharewithu@gmail.com
+github: Shanshan-IC
 
-markdown:           kramdown
-
-nav:
-  - name:           "About"
-    href:           "/about"
-  - name:           "Download"
-    href:           "/releases"
-
-sass:
-  style:            :compressed
-
-defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
-    values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
-    values:
-      layout:       "post"
-
-gems:
-  - jekyll-paginate
+config:
+  js_dir:
+  img_dir:
+  css_dir:
