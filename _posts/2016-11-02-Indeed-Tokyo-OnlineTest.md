@@ -7,6 +7,94 @@ tag: [Interview, C++]
 
 Codes for Indeed Tokyo 2017 Online Test, but I forgot the questions, only update the submission.
 
+Question A: Calculate Sequence
+
+{% highlight java %}
+#include <iostream>
+ 
+using namespace std;
+ 
+int getSequence(int a, int b) {
+    int t = 1;
+    for (int n=3; n<=10; n++) {
+        t = b;
+        b = b+a;
+        a = t;
+    }
+    return b;
+}
+ 
+int main() {
+    int a, b;
+    while (cin >> a>> b)
+        cout << getSequence(a, b) << endl;
+    return 0;
+}
+{% endhighlight %}
+
+Question C: Anagram Multiple Number
+
+{% highlight java %}
+#include <iostream>
+#include <string>
+#include <unordered_map>
+using namespace std;
+ 
+bool isSame(int n, int m) {
+    unordered_map<int, int> map;
+    while (n>0) {
+        int k = n%10;
+        map[k]++;
+        n = n/10;
+    }
+    
+    while (m>0) {
+        int b = m%10;
+        if (map[b]==0)	return false;
+        map[b]--;
+        m = m/10;
+    }
+    return true;
+}
+ 
+int getCount(int n) {
+    int count = 0;
+    int len = to_string(n).size();
+    
+    // substract
+    for (int i=2; i<10; i++) {
+        int temp = n / i;
+        if (n % i !=0)	continue;
+        else {
+            if (to_string(temp).size() < len)
+                break;
+            else
+                if (isSame(temp, n))
+                    count++;
+        }
+    }
+    //multiple
+    int i=2;
+    for (; i<10; i++) {
+        int temp = n * i;
+        if (to_string(temp).size() > len)
+            break;
+        else 
+            if (isSame(temp, n))
+                count++;
+    }
+    return count;
+}
+ 
+int main() {
+    int n;
+    while (cin >> n)
+        cout << getCount(n) << endl;
+    return 0;
+}
+
+{% endhighlight %}
+
 Question D: Construct Permutation
 
 {% highlight java %}
