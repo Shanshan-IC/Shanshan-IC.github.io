@@ -14,7 +14,7 @@ title: "关于：About"
 <p class="contact">
  <a href="http://weibo.com/u/2079930097" target = "_blank"><img src="http://www.sinaimg.cn/blog/developer/wiki/LOGO_32x32.png" width="24" height="24" style="display:inline-block;vertical-align:middle"></a>
         <a href="https://www.zhihu.com/people/fu-shan-shan-58" target = "_blank"><img src="http://www.zhihu.com/favicon.ico" width="24" height="24" style="display:inline-block;vertical-align:middle"></a>
- <a href="https://github.com/Shanshan-IC" target = "_blank"><img src="http://www.github.com/favicon.ico" width="24" height="24" style="display:inline-block;vertical-align:middle"></a>
+ <a href="https://github.com/Shanshan-IC" target = "_blank"><img src="http://www.github.com/favicon.ico" target = "_blank" width="24" height="24" style="display:inline-block;vertical-align:middle"></a></br>
 邮箱: 33sharewithu@gmail.com 
 </p>
 
