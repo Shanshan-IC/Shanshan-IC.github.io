@@ -4,12 +4,14 @@ title: Langhong Online Test 31th Oct. 2017
 category: Interview
 tag: [Interview, C++]
 ---
-Interview on 27. Oct for 朗虹, Some programming tests.
 
-Question 1. 
+	Interview on 27. Oct for 朗虹, Some programming tests.
 
-假设股市每秒更新一次数据，即当前的股票价格。现在需要制作一个程序实现实时计算当前一个小时内的股票A的价格参数，即计算这一个小时内的股票价格的平均值和所有时刻的最大值最小值。例如：在11点时计算10点01秒到11点00秒的价格均值和更新全局最大最小值，在11点01秒时计算10点02秒到11点01秒的价格均值和更新全局最大最小值。
-The idea is using ring buffer to update.
+	Question 1. 
+
+	假设股市每秒更新一次数据，即当前的股票价格。现在需要制作一个程序实现实时计算当前一个小时内的股票A的价格参数，即计算这一个小时内的股票价格的平均值和所有时刻的最大值最小值。例如：在11点时计算10点01秒到11点00秒的价格均值和更新全局最大最小值，在11点01秒时计算10点02秒到11点01秒的价格均值和更新全局最大最小值。
+	
+	The idea is using ring buffer to update.
 
 {% highlight java %}
 class PriceParam
@@ -81,12 +83,10 @@ int main() {
 }
 {% endhighlight %}
 
-Question 2. 
+	Question 2. 
 
-有两个有序的数组（从小到大排列）, find the medium of two arrays
-It's similiar with the leetcode 4 
-
-[Leetcode](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+	有两个有序的数组（从小到大排列）, find the medium of two arrays
+	It's similiar with the [Leetcode4](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
 {% highlight java %}
 struct MyDataArray{
@@ -138,13 +138,15 @@ int main() {
 }
 {% endhighlight %}
 
-Question 3
-定义 int64_t为8字节的数据类型
+	Question 3
+
+	定义 int64_t为8字节的数据类型
     //要求将din的第5到第8字节赋值给result.name
     //第1个字节赋值给result.score1
     //第2个字节赋值给result.score2
     //第3个字节赋值给result.score3
     //第4个字节赋值给result.score4
+
 {% highlight java %}
 struct MyDataStruct
 {
