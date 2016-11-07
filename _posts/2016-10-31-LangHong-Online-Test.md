@@ -141,13 +141,13 @@ int main() {
 	Question 3
 
 	定义 int64_t为8字节的数据类型
+
+{% highlight java %}
     //要求将din的第5到第8字节赋值给result.name
     //第1个字节赋值给result.score1
     //第2个字节赋值给result.score2
     //第3个字节赋值给result.score3
     //第4个字节赋值给result.score4
-
-{% highlight java %}
 struct MyDataStruct
 {
     char name[4];
