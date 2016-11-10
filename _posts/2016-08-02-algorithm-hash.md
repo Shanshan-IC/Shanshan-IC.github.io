@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Hash
+description: Hash Theory
 keywords: Hash
 category: [Algorithms] 
-description: Hash Theory
 tags:[hash, algorithms]
 ---
 
