@@ -11,7 +11,7 @@ tags : [C++, Algorithms]
 
 MergeSort is a Divide and Conquer algorithm. It divides input array in two halves, calls itself for the two halves and then merges the two sorted halves. 
 
-![](/images/images/algorithms/merge.png)
+![](/images/algorithms/merge.png)
 
 {% highlight java %}
 
