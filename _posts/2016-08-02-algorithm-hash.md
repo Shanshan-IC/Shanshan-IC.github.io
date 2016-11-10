@@ -11,21 +11,21 @@ In computing, a hash table (hash map) is a data structure used to implement an a
 
 1.	Suppose we want to design a system for storing employee records keyed using phone numbers. And we want following queries to be performed efficiently:
 
-Insert a phone number and corresponding information.
+	Insert a phone number and corresponding information.
 
-Search a phone number and fetch the information.
+	Search a phone number and fetch the information.
 
-Delete a phone number and related information.
+	Delete a phone number and related information.
 
 2.	We can think of using the following data structures to maintain information about different phone numbers.
 
-Array of phone numbers and records.
+	Array of phone numbers and records.
 
-Linked List of phone numbers and records.
+	Linked List of phone numbers and records.
 
-Balanced binary search tree with phone numbers as keys.
-
-Direct Access Table.
+	Balanced binary search tree with phone numbers as keys.
+	
+	Direct Access Table.
 
 3.	For arrays and linked lists, we need to search in a linear fashion, which can be costly in practice. If we use arrays and keep the data sorted, then a phone number can be searched in O(Logn) time using Binary Search, but insert and delete operations become costly as we have to maintain sorted order.
 
