@@ -11,11 +11,11 @@ In computing, a hash table (hash map) is a data structure used to implement an a
 
 1.	Suppose we want to design a system for storing employee records keyed using phone numbers. And we want following queries to be performed efficiently:
 
-	Insert a phone number and corresponding information.
+* Insert a phone number and corresponding information.
 
-	Search a phone number and fetch the information.
+* earch a phone number and fetch the information.
 
-	Delete a phone number and related information.
+* Delete a phone number and related information.
 
 2.	We can think of using the following data structures to maintain information about different phone numbers.
 
