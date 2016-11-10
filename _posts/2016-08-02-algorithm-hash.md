@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Hash
-description: Hash Theory
-keywords: Hash
-category: [Algorithms] 
-tags:[hash, algorithms]
+category: Algorithms
+tag: [hash, algorithms]
 ---
 
 Hash Basic Knowledge (some from geeksforgeeks)
