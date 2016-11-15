@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hash
+title: Hash Theory
 category: Algorithms
 tag: [hash, algorithms]
 ---
