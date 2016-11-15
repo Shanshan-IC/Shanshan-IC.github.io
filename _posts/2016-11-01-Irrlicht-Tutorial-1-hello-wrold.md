@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Irrlicht Tutroial 1: Hello World
+title: Irrlicht Tutroial 1 Hello World
 description: Irrlicht Tutroial
 keywords: Irrlicht
 categories : [Irrlicht]
