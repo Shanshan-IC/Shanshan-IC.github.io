@@ -13,7 +13,7 @@ MergeSort is a Divide and Conquer algorithm. It divides input array in two halve
 
 ![](/images/algorithms/merge.png)
 
-{% highlight java %}
+{% highlight C++ %}
 
 #include <iostream>
 

@@ -9,7 +9,7 @@ Codes for Indeed Tokyo 2017 Online Test, but I forgot the questions, only update
 
 Question A: Calculate Sequence
 
-{% highlight java %}
+{% highlight C++ %}
 #include <iostream>
  
 using namespace std;
@@ -34,7 +34,7 @@ int main() {
 
 Question C: Anagram Multiple Number
 
-{% highlight java %}
+{% highlight C++ %}
 #include <iostream>
 #include <string>
 #include <unordered_map>
@@ -97,7 +97,7 @@ int main() {
 
 Question D: Construct Permutation
 
-{% highlight java %}
+{% highlight C++ %}
 #include <iostream>
 #include <vector>
 #include <unordered_map>

@@ -23,7 +23,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 1,1,5 → 1,5,1
 
 
-{% highlight java %}
+{% highlight C++ %}
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
@@ -58,7 +58,7 @@ For example, [1,2,3] have the following permutations:
         [3,2,1]
     ]
 
-{% highlight java %}
+{% highlight C++ %}
 class Solution {
 public:
     vector<vector<int> > permute(vector<int> &num) {
@@ -96,7 +96,7 @@ For example, [1,1,2] have the following unique permutations:
         [2,2,1],
     ]
 
-{% highlight java %}    
+{% highlight C++ %}    
 
 class Solution {
 public:
@@ -139,7 +139,7 @@ By listing and labeling all of the permutations in order, We get the following s
 
 Given n and k, return the kth permutation sequence.
 
-{% highlight java %}
+{% highlight C++ %}
 
 class Solution {
 public:
