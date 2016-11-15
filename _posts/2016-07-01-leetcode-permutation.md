@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode: Permutation (31, 46, 47, 60)
+title:      Leetcode  (31, 46, 47, 60) Permutation
 keywords:   Leetcode
 category:   Leetcode 
 description: Leetcode
@@ -23,6 +23,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 3,2,1 → 1,2,3
 
 1,1,5 → 1,5,1
+
 
 {% highlight java %}
 class Solution {
