@@ -13,7 +13,7 @@ tag: [Interview, C++]
 	
 	The idea is using ring buffer to update.
 
-{% highlight java %}
+{% highlight C++ %}
 class PriceParam
 {
 private:
@@ -88,7 +88,7 @@ int main() {
 	有两个有序的数组（从小到大排列）, find the medium of two arrays
 	It's similiar with the [Leetcode4](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
-{% highlight java %}
+{% highlight C++ %}
 struct MyDataArray{
 	int *data;
 	int size;
@@ -142,7 +142,7 @@ int main() {
 
 	定义 int64_t为8字节的数据类型
 
-{% highlight java %}
+{% highlight C++ %}
     //要求将din的第5到第8字节赋值给result.name
     //第1个字节赋值给result.score1
     //第2个字节赋值给result.score2
