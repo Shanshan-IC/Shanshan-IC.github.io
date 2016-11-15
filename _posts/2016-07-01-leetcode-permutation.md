@@ -1,9 +1,7 @@
 ---
 layout:     post
 title:      Leetcode  (31, 46, 47, 60) Permutation
-keywords:   Leetcode
-category:   Leetcode 
-description: Leetcode
+category:   [Leetcode] 
 tags:		[Leetcode, algorithms]
 ---
 Leetcode Permutation Serials
