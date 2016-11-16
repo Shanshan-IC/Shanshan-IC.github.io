@@ -1,10 +1,9 @@
 ---
 layout:     post
-title:      Leetcode  (141, ) Linked List Cycle
+title:      Leetcode  (141, 142) Linked List Cycle I and II
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms]
+tags:		[Leetcode, algorithms, linkedList]
 ---
-Leetcode Permutation Serials
 
 [Leetcode 141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 
