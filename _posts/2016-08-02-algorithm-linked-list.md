@@ -18,7 +18,7 @@ struct node {
 	node* right;
 };
 {% endhighlight %}
-Why Linked List?
+* Why Linked List?
 
 Arrays can be used to store linear data of similar types, but arrays have following limitations.
 
@@ -34,17 +34,17 @@ And if we want to insert a new ID 1005, then to maintain the sorted order, we ha
 
 Deletion is also expensive with arrays until unless some special techniques are used. For example, to delete 1010 in id[], everything after 1010 has to be moved.
 
-Advantages over arrays
+* Advantages over arrays
 
 Dynamic size and Ease of insertion/deletion
 
-Drawbacks
+* Drawbacks
 
 1) Random access is not allowed. We have to access elements sequentially starting from the first node. So we cannot do binary search with linked lists.
 
 2) Extra memory space for a pointer is required with each element of the list.
 
-Doubly linked list
+* Doubly linked list
 
 Link − Each link of a linked list can store a data called an element.
 
