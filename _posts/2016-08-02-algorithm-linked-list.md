@@ -7,7 +7,7 @@ tag: [hash, algorithms]
 
 Linked List Basic Knowledge (some from geeksforgeeks)
 
-Concept
+* Concept
 
 Like arrays, Linked List is a linear data structure. Unlike arrays, linked list elements are not stored at contiguous location; the elements are linked using pointers.
 
