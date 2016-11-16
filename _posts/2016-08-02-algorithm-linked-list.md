@@ -7,7 +7,7 @@ tag: [hash, algorithms]
 
 Linked List Basic Knowledge (some from geeksforgeeks)
 
-1. Concept
+Concept
 
 Like arrays, Linked List is a linear data structure. Unlike arrays, linked list elements are not stored at contiguous location; the elements are linked using pointers.
 
@@ -18,8 +18,7 @@ struct node {
 	node* right;
 };
 {% endhighlight %}
-
-2. Why Linked List?
+Why Linked List?
 
 Arrays can be used to store linear data of similar types, but arrays have following limitations.
 
@@ -35,17 +34,17 @@ And if we want to insert a new ID 1005, then to maintain the sorted order, we ha
 
 Deletion is also expensive with arrays until unless some special techniques are used. For example, to delete 1010 in id[], everything after 1010 has to be moved.
 
-3. Advantages over arrays
+Advantages over arrays
 
 Dynamic size and Ease of insertion/deletion
 
-4. Drawbacks
+Drawbacks
 
 1) Random access is not allowed. We have to access elements sequentially starting from the first node. So we cannot do binary search with linked lists.
 
 2) Extra memory space for a pointer is required with each element of the list.
 
-5. Doubly linked list
+Doubly linked list
 
 Link − Each link of a linked list can store a data called an element.
 
@@ -54,7 +53,3 @@ Next − Each link of a linked list contains a link to the next link called Next
 Prev − Each link of a linked list contains a link to the previous link called Prev.
 
 LinkedList − A Linked List contains the connection link to the first link called First and to the last link called Last.
-
-{% highlight C++%}
-
-{% endhighlight %}
