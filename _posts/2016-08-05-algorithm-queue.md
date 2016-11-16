@@ -43,7 +43,7 @@ front may reach end of the array. The solution to this problem is to increase fr
 
 3) If two elements have the same priority, they are served according to their order in the queue.
 
-*A typical priority queue supports following operations.
+* A typical priority queue supports following operations.
 
 insert(item, priority): O(1)
 
