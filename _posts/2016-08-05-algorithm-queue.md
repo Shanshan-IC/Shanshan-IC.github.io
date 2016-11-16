@@ -1,3 +1,12 @@
+---
+layout: post
+title: Queue Theory
+category: Algorithms
+tag: [Queue, algorithms]
+---
+
+Queue Basic Knowledge (some from geeksforgeeks)
+
 * Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO). 
 
 The difference between stacks and queues is in removing. In a stack we remove the item the most recently added; in a queue, we remove the item the least recently added.
