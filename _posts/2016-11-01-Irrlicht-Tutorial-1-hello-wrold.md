@@ -55,8 +55,7 @@ IGUIEnvironment* guienv = device->getGUIEnvironment();
 Add a hello world label to the window, using the GUI environment. The text is placed at the position (10,10) as top left corner and (260,22) as lower right corner.
 
 {% highlight C++%}
-guienv->addStaticText(L"Hello World! This is the Irrlicht Software renderer!",
-		rect<s32>(10,10,260,22), true);
+guienv->addStaticText(L"Hello World! This is the Irrlicht Software renderer!", rect<s32>(10,10,260,22), true);
 {% endhighlight %}
 
 In order to get interesting, we use the mesh from the scene manager and then add a scenenode to display it with addAnimatedMeshSceneNode(). In the mean time, check it.

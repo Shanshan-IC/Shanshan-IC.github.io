@@ -10,7 +10,7 @@ tags : [C++, Irrlicht, Graphics]
 This tutorials are based on the [irrlicht tutorial](http://irrlicht.sourceforge.net/docu), show how manual movement of nodes using the keyboard. You have to read the previous tutorials, because the tutorials will skips the knowledgement that we have already talked about before.
 
 we need an object which is derived from the irr::IEventReceiver object. There is only one method to override: irr::IEventReceiver::OnEvent(). This method will be called by the engine once when an event happens. What we really want to know is whether a key is being held down, and so we will remember the current state of each key.
-
+{% highlight C++%}
 class MyEventReceiver : public IEventReceiver {
 public:
 	virtual bool onEvent(const SEvent& event) {
@@ -31,7 +31,7 @@ public:
 private:
 	bool KeyIsDown[KEY_KEY_CODES_COUNT];
 }
-
+{% endhighlight %}
 Then it's the main part, just like the pevious example, create the device, video driver, and scene manager and camera. And create the event receiver.
 (MyEventReceiver receiver;)
 
@@ -82,22 +82,12 @@ if (anms)
 	model around 180 degrees, and adjust the animation speed and
 	the texture. To set the right animation (frames and speed), we
 	would also be able to just call
-	"anms->setMD2Animation(scene::EMAT_RUN)" for the 'run'
-	animation instead of "setFrameLoop" and "setAnimationSpeed",
-	but this only works with MD2 animations, and so you know how to
-	start other animations. But a good advice is to not use
-	hardcoded frame-numbers...
 	*/
 	anms->setMaterialFlag(video::EMF_LIGHTING, false);
-
 	anms->setFrameLoop(0, 13);
 	anms->setAnimationSpeed(15);
-	//		anms->setMD2Animation(scene::EMAT_RUN);
-
 	anms->setScale(core::vector3df(2.f, 2.f, 2.f));
 	anms->setRotation(core::vector3df(0, -90, 0));
-	//		anms->setMaterialTexture(0, driver->getTexture("../../media/sydney.bmp"));
-
 }
 {% endhighlight %}
 Add the camera and make the mouse cursor invisible
