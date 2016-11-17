@@ -82,66 +82,43 @@ public:
     }   
 }
 {% endhighlight %}
-Then it's the main part, just like the pevious example.
+Then it's the main part, just like the pevious example, create the device, video driver, and scene manager and camera.
+
+Next, Create the nodes.
 {% highlight C++%}
-int main() {
-	video::E_DRIVER_TYPE driverType=driverChoiceConsole();
-	if (driverType==video::EDT_COUNT)
-		return 1;
-
-	// create device
-
-	IrrlichtDevice *device = createDevice(driverType,
-			core::dimension2d<u32>(640, 480), 16, false);
-		
-	if (device == 0)
-		return 1; // could not create selected driver.
-
-	// create engine and camera
-
-	device->setWindowCaption(L"Custom Scene Node - Irrlicht Engine Demo");
-
-	video::IVideoDriver* driver = device->getVideoDriver();
-	scene::ISceneManager* smgr = device->getSceneManager();
-
-	smgr->addCameraSceneNode(0, core::vector3df(0,-40,0), core::vector3df(0,0,0));	
-
-{% endhighlight %}
-Create the nodes
-{% highlight C++%}
-	CSampleSceneNode *myNode =
-	new CSampleSceneNode(smgr->getRootSceneNode(), smgr, 666);
-	// except this, we also show how to create 
-	// sphere, 0.2 is its radius
-	scene::ISceneNode *sphereNode = smgr->addSphereSceneNode(0.2);
-	// cube
-	scene::ISceneNode *cubeNode=smgr->addCubeSceneNode(100.0f);
-	// cylinder
-	const IGeometryCreator* igCreator = smgr->getGeometryCreator();
-	IMesh* cylinder = igCreator->createCylinderMesh(1.0f, 5.0f, 30, video::SColor(255, 255, 255, 255), false);
-	scene::IMeshSceneNode* cylinderNode = smgr->addMeshSceneNode(cylinder);
+CSampleSceneNode *myNode =
+new CSampleSceneNode(smgr->getRootSceneNode(), smgr, 666);
+// except this, we also show how to create 
+// sphere, 0.2 is its radius
+scene::ISceneNode *sphereNode = smgr->addSphereSceneNode(0.2);
+// cube
+scene::ISceneNode *cubeNode=smgr->addCubeSceneNode(100.0f);
+// cylinder
+const IGeometryCreator* igCreator = smgr->getGeometryCreator();
+IMesh* cylinder = igCreator->createCylinderMesh(1.0f, 5.0f, 30, video::SColor(255, 255, 255, 255), false);
+scene::IMeshSceneNode* cylinderNode = smgr->addMeshSceneNode(cylinder);
 {% endhighlight %}
 Add an animator to the scence node to rotate it
 {% highlight C++ %}
-	scene::ISceneNodeAnimator* anim =
-		smgr->createRotationAnimator(core::vector3df(0.8f, 0, 0.8f));
-	if (anim) {
-		myNode->addAnimator(anim);
-		anim->drop();
-		anim = 0;
-	}
-	// when it's done, drop the node
-	myNode->drop();
-	myNode=0;
+scene::ISceneNodeAnimator* anim =
+	smgr->createRotationAnimator(core::vector3df(0.8f, 0, 0.8f));
+if (anim) {
+	myNode->addAnimator(anim);
+	anim->drop();
+	anim = 0;
+}
+// when it's done, drop the node
+myNode->drop();
+myNode=0;
 {% endhighlight %}
 Then draw everything
 {% highlight C++ %}
-	while (device->run()) {
-		driver->beginScene(true, true, video::SColor(0, 100, 100, 100));
-		smgr->drawAll();
-		driver->endScene();
-	}
-	device->drop();
+while (device->run()) {
+	driver->beginScene(true, true, video::SColor(0, 100, 100, 100));
+	smgr->drawAll();
+	driver->endScene();
+}
+device->drop();
 {% endhighlight %}
 
 You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/03.CustomSceneNode)

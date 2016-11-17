@@ -32,136 +32,116 @@ private:
 	bool KeyIsDown[KEY_KEY_CODES_COUNT];
 }
 
-Then it's the main part, just like the pevious example.
-{% highlight C++%}
-int main() {
-	video::E_DRIVER_TYPE driverType=driverChoiceConsole();
-	if (driverType==video::EDT_COUNT)
-		return 1;
+Then it's the main part, just like the pevious example, create the device, video driver, and scene manager and camera. And create the event receiver.
+(MyEventReceiver receiver;)
 
-	// create device
-	IrrlichtDevice *device = createDevice(driverType,
-			core::dimension2d<u32>(640, 480), 16, false);
-		
-	if (device == 0)
-		return 1; // could not create selected driver.
-
-	// create engine and camera
-	video::IVideoDriver* driver = device->getVideoDriver();
-	scene::ISceneManager* smgr = device->getSceneManager();
-
-	smgr->addCameraSceneNode(0, core::vector3df(0,-40,0), core::vector3df(0,0,0));	
-
-	// create device
-    MyEventReceiver receiver;
-{% endhighlight %}
 Create a node moved with the WSAD keys, and set the position and material
 {% highlight C++%}
-    scene::ISceneNode *node = smgr->addSphereNode();
-    if (node) {
-    	node->setPosition(core::vector3df(0,0,30));
-        node->setMaterialTexture(0, driver->getTexture("../../media/wall.bmp"));
-        node->setMaterialFlag(video::EMF_LIGHTING, false);
-    }
+scene::ISceneNode *node = smgr->addSphereNode();
+if (node) {
+	node->setPosition(core::vector3df(0,0,30));
+    node->setMaterialTexture(0, driver->getTexture("../../media/wall.bmp"));
+    node->setMaterialFlag(video::EMF_LIGHTING, false);
+}
 {% endhighlight %}
 Create another node, moveable using a scene node animator 
 {% highlight C++%}
-	scene::ISceneNode* n = smgr->addCubeSceneNode();
-	if (n) {
-	n->setMaterialTexture(0, driver->getTexture("../../media/t351sml.jpg"));
-        n->setMaterialFlag(video::EMF_LIGHTING, false);
-        scene::ISceneNodeAnimator* anim =
-            smgr->createFlyCircleAnimator(core::vector3df(0,0,30), 20.0f);
-        if (anim)
-        {
-            n->addAnimator(anim);
-            anim->drop();
-        }
-	}
+scene::ISceneNode* n = smgr->addCubeSceneNode();
+if (n) {
+n->setMaterialTexture(0, driver->getTexture("../../media/t351sml.jpg"));
+    n->setMaterialFlag(video::EMF_LIGHTING, false);
+    scene::ISceneNodeAnimator* anim =
+        smgr->createFlyCircleAnimator(core::vector3df(0,0,30), 20.0f);
+    if (anim)
+    {
+        n->addAnimator(anim);
+        anim->drop();
+    }
+}
 {% endhighlight %}
 The last scene node is to show possibilities of scene node animators is
 	a b3d model, which uses a 'fly straight' animator to run between to points.
 {% highlight C++%}
-	scene::IAnimatedMeshSceneNode* anms =
-		smgr->addAnimatedMeshSceneNode(smgr->getMesh("../../media/ninja.b3d"));
+scene::IAnimatedMeshSceneNode* anms =
+	smgr->addAnimatedMeshSceneNode(smgr->getMesh("../../media/ninja.b3d"));
 
-	if (anms)
+if (anms)
+{
+	scene::ISceneNodeAnimator* anim =
+		smgr->createFlyStraightAnimator(core::vector3df(100, 0, 60),
+		core::vector3df(-100, 0, 60), 3500, true);
+	if (anim)
 	{
-		scene::ISceneNodeAnimator* anim =
-			smgr->createFlyStraightAnimator(core::vector3df(100, 0, 60),
-			core::vector3df(-100, 0, 60), 3500, true);
-		if (anim)
-		{
-			anms->addAnimator(anim);
-			anim->drop();
-		}
-
-		/*
-		To make the model look right we disable lighting, set the
-		frames between which the animation should loop, rotate the
-		model around 180 degrees, and adjust the animation speed and
-		the texture. To set the right animation (frames and speed), we
-		would also be able to just call
-		"anms->setMD2Animation(scene::EMAT_RUN)" for the 'run'
-		animation instead of "setFrameLoop" and "setAnimationSpeed",
-		but this only works with MD2 animations, and so you know how to
-		start other animations. But a good advice is to not use
-		hardcoded frame-numbers...
-		*/
-		anms->setMaterialFlag(video::EMF_LIGHTING, false);
-
-		anms->setFrameLoop(0, 13);
-		anms->setAnimationSpeed(15);
-		//		anms->setMD2Animation(scene::EMAT_RUN);
-
-		anms->setScale(core::vector3df(2.f, 2.f, 2.f));
-		anms->setRotation(core::vector3df(0, -90, 0));
-		//		anms->setMaterialTexture(0, driver->getTexture("../../media/sydney.bmp"));
-
+		anms->addAnimator(anim);
+		anim->drop();
 	}
+
+	/*
+	To make the model look right we disable lighting, set the
+	frames between which the animation should loop, rotate the
+	model around 180 degrees, and adjust the animation speed and
+	the texture. To set the right animation (frames and speed), we
+	would also be able to just call
+	"anms->setMD2Animation(scene::EMAT_RUN)" for the 'run'
+	animation instead of "setFrameLoop" and "setAnimationSpeed",
+	but this only works with MD2 animations, and so you know how to
+	start other animations. But a good advice is to not use
+	hardcoded frame-numbers...
+	*/
+	anms->setMaterialFlag(video::EMF_LIGHTING, false);
+
+	anms->setFrameLoop(0, 13);
+	anms->setAnimationSpeed(15);
+	//		anms->setMD2Animation(scene::EMAT_RUN);
+
+	anms->setScale(core::vector3df(2.f, 2.f, 2.f));
+	anms->setRotation(core::vector3df(0, -90, 0));
+	//		anms->setMaterialTexture(0, driver->getTexture("../../media/sydney.bmp"));
+
+}
 {% endhighlight %}
 Add the camera and make the mouse cursor invisible
 {% highlight C++%}
-	smgr->addCameraSceneNodeFPS();
-	device->getCurSorControal()->setVisible(false);
+smgr->addCameraSceneNodeFPS();
+device->getCurSorControal()->setVisible(false);
 {% endhighlight %}
 Add a logo
 {% highlight C++%}
-	device->getGUIEnvironment()->addImage(
-		driver->getTexture("../../media/irrlichtlogoalpha2.tga"),
-		core::position2d<s32>(10,20));
+device->getGUIEnvironment()->addImage(
+	driver->getTexture("../../media/irrlichtlogoalpha2.tga"),
+	core::position2d<s32>(10,20));
 
-	gui::IGUIStaticText* diagnostics = device->getGUIEnvironment()->addStaticText(
-		L"", core::rect<s32>(10, 10, 400, 20));
-	diagnostics->setOverrideColor(video::SColor(255, 255, 255, 0));
+gui::IGUIStaticText* diagnostics = device->getGUIEnvironment()->addStaticText(
+	L"", core::rect<s32>(10, 10, 400, 20));
+diagnostics->setOverrideColor(video::SColor(255, 255, 255, 0));
 {% endhighlight %}
 Then draw everything
 {% highlight C++ %}
-	while (device->run()) {
-		/* Check if keys W, S, A or D are being held down, and move the sphere node around respectively. */
-		// Work out a frame delta time.
-        const u32 now = device->getTimer()->getTime();
-        const f32 frameDeltaTime = (f32)(now - then) / 1000.f; // Time in seconds
-        core::vector3df nodePosition = node->getPosition();
+while (device->run()) {
+	/* Check if keys W, S, A or D are being held down, and move the sphere node around respectively. */
+	// Work out a frame delta time.
+    const u32 now = device->getTimer()->getTime();
+    const f32 frameDeltaTime = (f32)(now - then) / 1000.f; // Time in seconds
+    core::vector3df nodePosition = node->getPosition();
 
-        if(receiver.IsKeyDown(irr::KEY_KEY_W))
-            nodePosition.Y += MOVEMENT_SPEED * frameDeltaTime;
-        else if(receiver.IsKeyDown(irr::KEY_KEY_S))
-            nodePosition.Y -= MOVEMENT_SPEED * frameDeltaTime;
+    if(receiver.IsKeyDown(irr::KEY_KEY_W))
+        nodePosition.Y += MOVEMENT_SPEED * frameDeltaTime;
+    else if(receiver.IsKeyDown(irr::KEY_KEY_S))
+        nodePosition.Y -= MOVEMENT_SPEED * frameDeltaTime;
 
-        if(receiver.IsKeyDown(irr::KEY_KEY_A))
-            nodePosition.X -= MOVEMENT_SPEED * frameDeltaTime;
-        else if(receiver.IsKeyDown(irr::KEY_KEY_D))
-            nodePosition.X += MOVEMENT_SPEED * frameDeltaTime;
+    if(receiver.IsKeyDown(irr::KEY_KEY_A))
+        nodePosition.X -= MOVEMENT_SPEED * frameDeltaTime;
+    else if(receiver.IsKeyDown(irr::KEY_KEY_D))
+        nodePosition.X += MOVEMENT_SPEED * frameDeltaTime;
 
-        node->setPosition(nodePosition);
+    node->setPosition(nodePosition);
 
-		driver->beginScene(true, true, video::SColor(0, 100, 100, 100));
-		smgr->drawAll();
-		device->getGUIEnvironment()->drawAll(); // draw the logo
-		driver->endScene();
-	}
-	device->drop();
+	driver->beginScene(true, true, video::SColor(0, 100, 100, 100));
+	smgr->drawAll();
+	device->getGUIEnvironment()->drawAll(); // draw the logo
+	driver->endScene();
+}
+device->drop();
 {% endhighlight %}
 
 You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/04.Movement)

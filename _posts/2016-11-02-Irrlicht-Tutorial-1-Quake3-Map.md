@@ -11,20 +11,6 @@ This tutorials are based on the [irrlicht tutorial](http://irrlicht.sourceforge.
 
 Like the previous example, We create a device, the difference is that we ask the user to select which video driver to use. You just need to include the <driverChoice.h>
 
-{% highlight C++%}
-video::E_DRIVER_TYPE driverType=driverChoiceConsole();
-if (driverType==video::EDT_COUNT)
-	return 1;
-IrrlichtDevice *device =
-    createDevice( video::EDT_SOFTWARE, dimension2d<u32>(640, 480), 16,
-            false, false, false, 0);
-if (!device)
-    return 1;
-IVideoDriver* driver = device->getVideoDriver();
-ISceneManager* smgr = device->getSceneManager();
-IGUIEnvironment* guienv = device->getGUIEnvironment();
-{% endhighlight %}
-
 To display the Quake 3 map, we first need to load it. Quake 3 maps are packed into .pk3 files which are nothing else than .zip files. So we add the .pk3 file to our irr::io::IFileSystem. After it was added, we are able to read from the files in that archive as if they are directly stored on the disk.
 
 {% highlight C++%}
@@ -56,33 +42,6 @@ The mouse cursor needs not be visible
 device->getCursorControl()->setVisible(false);
 {% endhighlight %}
 
-Let's draw Everything.
-
-{% highlight C++%}
-int lastFPS = -1;
-while(device->run()) {
-	driver -> beginScene(true, true, SColor(255, 100, 101, 140));
-	smgr -> drawAll();
-	guienv -> drawAll();
-	driver -> endScene();
-
-	int fps = driver->getFPS();
-	if (lastFPS != fps) {
-		core::stringw str = L"Irrlicht Engine - Quake 3 Map example [";
-        str += driver->getName();
-        str += "] FPS:";
-        str += fps;
-
-        device->setWindowCaption(str.c_str());
-        lastFPS = fps;		
-	}
-	else {
-		device -> yield();
-	}
-}
-
-device -> drop();
-return 0;
-{% endhighlight %}
+In the end draw Everything.
 
 You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/02.Quake3Map)
