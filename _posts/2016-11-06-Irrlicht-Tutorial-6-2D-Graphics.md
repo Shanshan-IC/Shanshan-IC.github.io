@@ -57,7 +57,7 @@ draw 3 sprites
 			video::SColor(255,(time) % 255,255,255), true);
 {% endhighlight %}
 Draw some texts
-{% highlight C++ %}
+{% highlight Java %}
 		if (font)
 			font->draw(L"This demo shows that Irrlicht is also capable of drawing 2D graphics.",
 				core::rect<s32>(130,10,300,50),
