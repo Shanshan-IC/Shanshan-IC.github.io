@@ -128,7 +128,7 @@ Note: The solution set must not contain duplicate quadruplets.
   		[-2, -1, 1, 2],
   		[-2,  0, 0, 2]
 	]
-
+The idea is same as the 3Sum.
 {% highlight C++ %}
 class Solution {
 public:
