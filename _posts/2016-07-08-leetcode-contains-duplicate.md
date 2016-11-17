@@ -5,7 +5,7 @@ category:   [Leetcode]
 tags:		[Leetcode, algorithms, hash]
 ---
 
-[Leetcode 217. Contains Duplicate](https://leetcode.com/problems/merge-two-sorted-lists/)
+* [Leetcode 217. Contains Duplicate](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
 
@@ -19,7 +19,7 @@ public:
 };
 {% endhighlight %}
 
-[Leetcode 219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)
+* [Leetcode 219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)
 
 The idea: use the map to store the nums[i] index
 {% highlight C++ %}

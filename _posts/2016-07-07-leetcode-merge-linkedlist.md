@@ -5,7 +5,7 @@ category:   [Leetcode]
 tags:		[Leetcode, algorithms, linkedList]
 ---
 
-[Leetcode 21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+* [Leetcode 21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
 
@@ -62,7 +62,7 @@ public:
 };
 {% endhighlight %}
 
-[23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+* [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 
 Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 
