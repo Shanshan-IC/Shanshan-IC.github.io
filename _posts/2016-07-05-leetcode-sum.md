@@ -1,22 +1,21 @@
 ---
 layout:     post
-title:      Leetcode  (01, 46, 47, 60) Sum 
+title:      Leetcode (1, 15, 16, 18) Sum 
 category:   [Leetcode] 
 tags:		[Leetcode, algorithms]
 ---
 Leetcode Sum Serials
 
-[Leetcode 1. Two Sum](https://leetcode.com/problems/two-sum/)
+* [Leetcode 1. Two Sum](https://leetcode.com/problems/two-sum/)
 
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
 You may assume that each input would have exactly one solution.
 
-Example:
-Given nums = [2, 7, 11, 15], target = 9,
-
-Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].
+	Example:
+	Given nums = [2, 7, 11, 15], target = 9,
+	Because nums[0] + nums[1] = 2 + 7 = 9,
+	return [0, 1].
 
 The idea: use the map to store the value's index, and for loop the map to find m[target-nums[i]] exits in the map
 {% highlight C++ %}
@@ -40,14 +39,13 @@ public:
 };
 {% endhighlight %}
 
-[Leetcode 15. 3Sum](https://leetcode.com/problems/3sum/)
+* [Leetcode 15. 3Sum](https://leetcode.com/problems/3sum/)
 
 Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
 
 Note: The solution set must not contain duplicate triplets.
 
 	For example, given array S = [-1, 0, 1, 2, -1, -4],
-
 	A solution set is:
 	[
   		[-1, 0, 1],
@@ -82,7 +80,7 @@ public:
 };
 {% endhighlight %}
 
-[LeetCode 16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/)
+* [LeetCode 16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/)
 
 Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
 
@@ -118,12 +116,11 @@ public:
 };
 {% endhighlight %}
 
-[LeetCode 18. 4Sum](https://leetcode.com/problems/4sum/)
+* [LeetCode 18. 4Sum](https://leetcode.com/problems/4sum/)
 
 Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
 
 Note: The solution set must not contain duplicate quadruplets.
-
 	For example, given array S = [1, 0, -1, 0, -2, 2], and target = 0.
 	A solution set is:
 	[
@@ -131,6 +128,7 @@ Note: The solution set must not contain duplicate quadruplets.
   		[-2, -1, 1, 2],
   		[-2,  0, 0, 2]
 	]
+
 {% highlight C++ %}
 class Solution {
 public:
