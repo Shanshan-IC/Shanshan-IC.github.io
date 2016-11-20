@@ -1,6 +1,7 @@
 ---
 layout:     post
-title:      Leetcode  (20, 241) Parentheses Series
+title:      Leetcode  (20, 22, 
+241) Parentheses Series
 category:   [Leetcode] 
 tags:		[Leetcode, algorithms, recursion]
 ---
@@ -41,8 +42,76 @@ public:
 };
 {% endhighlight %}
 
+* [Leetcode 22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 
+Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 
+For example, given n = 3, a solution set is:
+
+[
+  "((()))",
+  "(()())",
+  "(())()",
+  "()(())",
+  "()()()"
+]
+
+{% highlight C++ %}
+class Solution {
+public:
+    vector<string> generateParenthesis(int n) {
+        vector<string> res;
+        if (n<=0)   return res;
+        string str;
+        helper(res, str, 0, n);
+        return res;
+    }
+    
+    void helper(vector<string> &res, string str, int right, int left) {
+        if (left==0 && right==0) {
+            res.push_back(str);
+            return;
+        }
+        
+        if (right>0)
+            helper(res, str+")", right-1, left);
+        if (left>0)
+            helper(res, str+"(", right+1, left-1);
+    }
+};
+{% endhighlight %}
+
+* [Leetcode 32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
+
+Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
+
+For "(()", the longest valid parentheses substring is "()", which has length = 2.
+
+Another example is ")()())", where the longest valid parentheses substring is "()()", which has length = 4.
+
+{% highlight C++ %}
+class Solution {
+public:
+    int longestValidParentheses(string input) {
+        if (input.empty())  return 0;
+        stack<int> st;
+        int last = -1;
+        int res = 0;
+        for (int i=0; i<input.size(); i++) {
+            if (input[i]=='(')  st.push(i);
+            else {
+                if (st.empty()) last = i;
+                else {
+                    st.pop();
+                    if (st.empty()) res = max(res, i-last);
+                    else    res = max(res, i-st.top());
+                }
+            }
+        }
+        return res;
+    }
+};
+{% endhighlight %}
 
 * [Leetcode 241. Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)
 
