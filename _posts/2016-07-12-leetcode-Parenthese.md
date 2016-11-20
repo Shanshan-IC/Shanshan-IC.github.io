@@ -1,7 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (20, 22, 
-241) Parentheses Series
+title:      Leetcode  (20, 22, 32, 241) Parentheses Series
 category:   [Leetcode] 
 tags:		[Leetcode, algorithms, recursion]
 ---
