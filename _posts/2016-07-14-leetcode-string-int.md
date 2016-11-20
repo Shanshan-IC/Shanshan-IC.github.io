@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Leetcode  (8)	String with Int
+category:   [Leetcode] 
 tags:		[Leetcode, algorithms, string]
 ---
 

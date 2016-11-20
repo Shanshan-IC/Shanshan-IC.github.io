@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Leetcode  (5)	Palindromic Series
+category:   [Leetcode] 
 tags:		[Leetcode, algorithms, palindromic]
 ---
 

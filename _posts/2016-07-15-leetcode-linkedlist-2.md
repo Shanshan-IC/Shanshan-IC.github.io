@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Leetcode  (2)	ListNode Series
+category:   [Leetcode] 
 tags:		[Leetcode, algorithms, ListNode]
 ---
 

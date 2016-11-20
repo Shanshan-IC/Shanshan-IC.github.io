@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      Leetcode  (7)	Math
+category:   [Leetcode] 
 tags:		[Leetcode, algorithms, math]
 ---
 
