@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (2)	ListNode Series
+title:      Leetcode  (2)	Add Two Numbers 
 category:   [Leetcode] 
 tags:		[Leetcode, algorithms, ListNode]
 ---
