@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (100, 101, 104, 226, ) Binary Tree Series
+title:      Leetcode  (100, 101, 104, 226) Binary Tree Series
 category:   [Leetcode] 
 tags:		[Leetcode, algorithms, binary tree, recursion]
 ---
@@ -17,21 +17,6 @@ struct TreeNode {
 * [Leetcode 101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
 
 Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
-
-For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
-
-    1
-   / \
-  2   2
- / \ / \
-3  4 4  3
-
-But the following [1,2,2,null,3,null,3] is not:
-    1
-   / \
-  2   2
-   \   \
-   3    3
 
 {% highlight C++ %}
 class Solution {
@@ -52,19 +37,6 @@ public:
 * [Leetcode 226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
 
 Invert a binary tree.
-
-     4
-   /   \
-  2     7
- / \   / \
-1   3 6   9
-to
-     4
-   /   \
-  7     2
- / \   / \
-9   6 3   1
-
 {% highlight C++ %}
 class Solution {
 public:
@@ -99,7 +71,6 @@ public:
 Given a binary tree, find its maximum depth.
 
 The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
-
 {% highlight C++ %}
 class Solution {
 public:
