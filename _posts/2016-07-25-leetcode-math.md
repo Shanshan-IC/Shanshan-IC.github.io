@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (7)	Math
+title:      Leetcode  (7, 9, 11, 66)	Math
 category:   [Leetcode] 
 tags:		[Leetcode, algorithms, math]
 ---
@@ -75,6 +75,30 @@ public:
             else    right--;
         }
         return res;
+    }
+};
+{% endhighlight %}
+
+* [Leetcode 66. Plus One](https://leetcode.com/problems/plus-one/)
+
+Given a non-negative number represented as an array of digits, plus one to the number.
+
+The digits are stored such that the most significant digit is at the head of the list.
+
+{% highlight C++ %}
+class Solution {
+public:
+    vector<int> plusOne(vector<int>& digits) {
+       for (int i=digits.size()-1; i>=0; i--) {
+           digits[i]++;
+           if (digits[i]<10) break;
+           digits[i] = 0;
+       }
+       if (digits[0]==0) {
+           digits[0] = 1;
+           digits.push_back(0);
+       }
+       return digits;
     }
 };
 {% endhighlight %}
