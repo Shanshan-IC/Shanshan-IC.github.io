@@ -1,7 +1,6 @@
 ---
 layout: post
-title: DirectX Small Task
-description: DirectX 
+title: DirectX Task
 keywords: DirectX
 categories : [DirectX]
 tags : [C++, DirectX, Graphics]
