@@ -1,6 +1,6 @@
-------
+---
 layout: post
-title: Irrlicht Task
+title: Irrlicht Small Task
 keywords: Irrlicht
 categories : [Irrlicht]
 tags : [C++, Irrlicht, Graphics]
