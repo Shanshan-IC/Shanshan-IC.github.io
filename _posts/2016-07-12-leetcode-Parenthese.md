@@ -65,7 +65,6 @@ public:
         helper(res, str, 0, n);
         return res;
     }
-    
     void helper(vector<string> &res, string str, int right, int left) {
         if (left==0 && right==0) {
             res.push_back(str);
@@ -161,6 +160,5 @@ public:
             res.push_back(stoi(input));
         return res;
     }
-    
 };
 {% endhighlight %}
