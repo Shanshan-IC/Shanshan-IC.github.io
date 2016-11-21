@@ -1,8 +1,8 @@
 ---
 layout: post
 title: DirectX Tutroial 1 First Window
-description: Irrlicht Tutroial
-keywords: Irrlicht
+description: DirectX Tutroial
+keywords: DirectX
 categories : [DirectX]
 tags : [C++, DirectX, Graphics]
 ---
@@ -11,7 +11,7 @@ This tutorials are based on the [DirectX Tutorial](http://www.directxtutorial.co
 
 The basic Direct3D Program, includes four basic steps:
 
-1. Create the global variable and function prototypes
+* Create the global variable and function prototypes
 {% highlight C++ %}
 // include the basic windows header files and the Direct3D header file
 #include <windows.h>
@@ -34,7 +34,7 @@ void cleanD3D(void);    // closes Direct3D and releases memory
 LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 {% endhighlight %}
 
-2. Create a function to initialize Direct3D and create the Direct3D Device
+* Create a function to initialize Direct3D and create the Direct3D Device
 {% highlight C++ %}
 // this function initializes and prepares Direct3D for use
 void initD3D(HWND hWnd)
@@ -58,7 +58,7 @@ void initD3D(HWND hWnd)
 }
 {% endhighlight %}
 
-3. Create a function to render a frame
+* Create a function to render a frame
 {% highlight C++ %}
 // this is the function used to render a single frame
 void render_frame(void)
@@ -76,7 +76,7 @@ void render_frame(void)
 }
 {% endhighlight %}
 
-4. Create a function to close Direct3D
+* Create a function to close Direct3D
 {% highlight C++ %}
 // this is the function that cleans up Direct3D and COM
 void cleanD3D(void)
