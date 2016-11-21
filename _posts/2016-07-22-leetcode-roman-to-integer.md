@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (12， 13) Roman to Integer and reverse
+title:      Leetcode  (12, 13) Roman to Integer and reverse
 category:   [Leetcode] 
 tags:		[Leetcode, algorithms]
 ---
