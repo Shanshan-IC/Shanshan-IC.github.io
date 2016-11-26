@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (4, 50)	Math Series	
+title:      Leetcode  (4, 50, 172, 204)	Math Series	
 category:   [Leetcode] 
 tags:		[Leetcode, algorithms, Math]
 ---
