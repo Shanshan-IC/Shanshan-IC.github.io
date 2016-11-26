@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (4, 80)	emove Duplicates from Sorted Array I, II
+title:      Leetcode  (4, 80)	Remove Duplicates from Sorted Array I, II
 category:   [Leetcode] 
 tags:		[Leetcode, Algorithms, Array]
 ---
@@ -56,9 +56,4 @@ public:
         return index;
     }
 };
-{% endhighlight %}
-
-
-{% highlight C++ %}
-
 {% endhighlight %}
