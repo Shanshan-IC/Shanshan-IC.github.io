@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (7, 9, 11, 66)	Math
+title:      Leetcode  (7, 9, 11, 41, 66)	Math
 category:   [Leetcode] 
 tags:		[Leetcode, algorithms, math]
 ---
@@ -99,6 +99,33 @@ public:
            digits.push_back(0);
        }
        return digits;
+    }
+};
+{% endhighlight %}
+
+* [Leetcode 41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+
+Given an unsorted integer array, find the first missing positive integer.
+
+For example,
+Given [1,2,0] return 3,
+and [3,4,-1,1] return 2.
+
+Your algorithm should run in O(n) time and uses constant space.
+
+{% highlight C++ %}
+class Solution {
+public:
+    int firstMissingPositive(vector<int>& nums) {
+        if (nums.empty())   return 1;
+        const int n = nums.size();
+        for (int i=0; i<n; i++)
+            while (nums[i]>0 && nums[i]<n && nums[nums[i]-1]!=nums[i])
+                swap(nums[i], nums[nums[i]-1]);
+        for (int i=0; i<n; i++)
+            if (nums[i] != i+1)
+                return i+1;
+        return n+1;
     }
 };
 {% endhighlight %}

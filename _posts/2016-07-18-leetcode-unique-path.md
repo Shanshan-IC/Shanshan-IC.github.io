@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (62, 58) Unique Paths I, II
+title:      Leetcode  (62, 63) Unique Paths I, II
 category:   [Leetcode] 
 tags:		[Leetcode, Algorithms, DP]
 ---
