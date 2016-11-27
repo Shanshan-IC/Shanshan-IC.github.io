@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (19, 61) ListNode Series
+title:      Leetcode  (19, 61, 86) ListNode Series
 category:   [Leetcode] 
 tags:		[Leetcode, algorithms, ListNode]
 ---
