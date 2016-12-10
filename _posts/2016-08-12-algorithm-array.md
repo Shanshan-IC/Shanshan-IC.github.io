@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      Algorithm array and string
-category:   [Leetcode] 
-tags:		[Leetcode, Algorithms, String, Array]
+category:   [Algorithms] 
+tags:		[Algorithms, String, Array]
 ---
 
 * Array

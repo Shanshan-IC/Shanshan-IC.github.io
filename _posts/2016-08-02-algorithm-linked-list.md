@@ -44,6 +44,40 @@ Dynamic size and Ease of insertion/deletion
 
 2) Extra memory space for a pointer is required with each element of the list.
 
+Delete an element from a linked list
+
+{% highlight C++ %}
+void delNode(ListNode *prev) {
+  	ListNode *curr = prev->next;
+  	prev->next = curr->next;    
+  	delete curr;    // 清理trash指针
+}
+{% endhighlight %}
+
+* 快慢指针
+
+快慢指的是指针向前移动的步长，一般来说，快指针每次移动 2，慢指针每次移动 1, 主要有两个应用
+
+快速找出未知长度单链表的中间节点
+	
+	设置两个指针 *fast 和 *slow 都指向头节点
+	*fast 移动速度是 *slow 的两倍
+	*fast 指向末尾节点时，*slow 正好就在中间
+
+判断单链表是否有环
+
+	设置两个指针 *fast 和 *slow 都指向头节点
+	*fast 移动速度是 *slow 的两倍
+	如果 *fast == null 说明该单链表不是循环链表
+	如果 *fast == *slow 说明该链表是循环链表
+
+其他应用
+
+	找倒数第 N 个节点
+	设置两个指针 *fast 和 *slow 都指向头节点
+	*fast 先移动 N 步，然后两个指针一起前进
+	*fast 到达末尾时，*slow 即为倒数第 N 个节点
+
 * Doubly linked list
 
 Link − Each link of a linked list can store a data called an element.
