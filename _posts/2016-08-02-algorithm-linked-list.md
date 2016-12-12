@@ -2,7 +2,7 @@
 layout: post
 title: Linked List Theory
 category: Algorithms
-tag: [linkedList, algorithms]
+tag: [LinkedList, Algorithms]
 ---
 
 Linked List Basic Knowledge (some from geeksforgeeks)

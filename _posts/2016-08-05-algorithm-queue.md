@@ -2,7 +2,7 @@
 layout: post
 title: Queue Theory
 category: Algorithms
-tag: [Queue, algorithms]
+tag: [Queue, Algorithms]
 ---
 
 Queue Basic Knowledge (some from geeksforgeeks)

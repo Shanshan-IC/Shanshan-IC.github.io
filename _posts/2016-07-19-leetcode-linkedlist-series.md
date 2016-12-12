@@ -2,10 +2,10 @@
 layout:     post
 title:      Leetcode  (19, 61, 86) ListNode Series
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, ListNode]
+tags:		[Leetcode, Algorithms, ListNode]
 ---
 
-* [Leetcode 19. VRemove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+* [Leetcode 19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 
 Given a linked list, remove the nth node from the end of list and return its head.
 
