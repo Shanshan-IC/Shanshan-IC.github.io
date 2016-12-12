@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (33, 81) Search in Rotated Sorted Array I, II
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, array]
+tags:		[Leetcode, Algorithms, Array]
 ---
 
 * [Leetcode 33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)

@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (206, 92) Reverse Linked List I and II
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, linkedList]
+tags:		[Leetcode, Algorithms, LinkedList]
 ---
 
 [Leetcode 206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)

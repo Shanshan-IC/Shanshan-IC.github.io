@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (20, 22, 32, 241) Parentheses Series
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, recursion]
+tags:		[Leetcode, Algorithms, Recursion]
 ---
 
 * [Leetcode 20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)

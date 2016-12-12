@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (5, 125)	Palindromic Series
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, palindromic]
+tags:		[Leetcode, Algorithms, Palindromic]
 ---
 
 * [Leetcode 5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)

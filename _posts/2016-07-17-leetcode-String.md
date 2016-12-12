@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (14, 58) String Series
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, binary tree, recursion]
+tags:		[Leetcode, Algorithms, Binary Tree, Recursion]
 ---
 
 * [Leetcode 58. Length of Last Word](https://leetcode.com/problems/length-of-last-word/)

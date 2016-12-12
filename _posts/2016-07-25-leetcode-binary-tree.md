@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (100, 101, 104, 226) Binary Tree Series
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, binary tree, recursion]
+tags:		[Leetcode, Algorithms, Binary Tree, Recursion]
 ---
 
 {% highlight C++ %}

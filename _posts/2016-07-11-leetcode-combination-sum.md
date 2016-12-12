@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (39, 40) Combination Sum I, II
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, recursion]
+tags:		[Leetcode, Algorithms, Recursion]
 ---
 
 * [Leetcode 39. Combination Sum](https://leetcode.com/problems/combination-sum/)

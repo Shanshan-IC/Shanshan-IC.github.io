@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (141, 142) Linked List Cycle I and II
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, linkedList]
+tags:		[Leetcode, Algorithms, LinkedList]
 ---
 
 [Leetcode 141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
