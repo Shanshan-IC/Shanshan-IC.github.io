@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (217, 219, 220) Contains Duplicate I, II, III
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, hash]
+tags:		[Leetcode, Algorithms, Hash]
 ---
 
 * [Leetcode 217. Contains Duplicate](https://leetcode.com/problems/merge-two-sorted-lists/)

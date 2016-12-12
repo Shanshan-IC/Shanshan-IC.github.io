@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (21, 23) Merge Sorted Lists
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, linkedList]
+tags:		[Leetcode, Algorithms, LinkedList]
 ---
 
 * [Leetcode 21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)

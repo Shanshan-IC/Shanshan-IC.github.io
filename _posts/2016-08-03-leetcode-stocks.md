@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (121, 122, 123)   Best Time to Buy and Sell Stock
 category:   [Leetcode] 
-tags:       [Leetcode, algorithms, ListNode]
+tags:       [Leetcode, Algorithms, ListNode]
 ---
 
 * [Leetcode 121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)

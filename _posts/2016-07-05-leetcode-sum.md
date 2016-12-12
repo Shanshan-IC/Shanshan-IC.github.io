@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode (1, 15, 16, 18) Sum 
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, math]
+tags:		[Leetcode, Algorithms, Math]
 ---
 Leetcode Sum Serials
 

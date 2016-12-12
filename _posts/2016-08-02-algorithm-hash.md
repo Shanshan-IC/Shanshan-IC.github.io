@@ -2,7 +2,7 @@
 layout: post
 title: Hash Theory
 category: Algorithms
-tag: [hash, algorithms]
+tag: [Hash, Algorithms]
 ---
 
 Hash Basic Knowledge (some from geeksforgeeks)

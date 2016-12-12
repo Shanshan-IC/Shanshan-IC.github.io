@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (231, 326, 342) Power of 2, 3, 4
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, math]
+tags:		[Leetcode, Algorithms, Math]
 ---
 
 * [Leetcode 231. Power of Two](https://leetcode.com/problems/power-of-two/)

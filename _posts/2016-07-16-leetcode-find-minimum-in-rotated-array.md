@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (153, 154) Find Minimum in Rotated Sorted Array I, II
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, array]
+tags:		[Leetcode, Algorithms, Array]
 ---
 
 * [Leetcode 153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)

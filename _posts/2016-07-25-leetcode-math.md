@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (7, 9, 11, 41, 66)	Math
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, math]
+tags:		[Leetcode, Algorithms, Math]
 ---
 
 * [Leetcode 7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)

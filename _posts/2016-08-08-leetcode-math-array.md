@@ -2,7 +2,7 @@
 layout:     post
 title:      Leetcode  (4, 50, 172, 204)	Math Series	
 category:   [Leetcode] 
-tags:		[Leetcode, algorithms, Math]
+tags:		[Leetcode, Algorithms, Math]
 ---
 
 * [Leetcode 4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)

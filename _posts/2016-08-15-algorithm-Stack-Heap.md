@@ -2,7 +2,7 @@
 layout: post
 title: Stack and Heap Theory
 category: Algorithms
-tag: [Stack, Heap, algorithms]
+tag: [Stack, Heap, Algorithms]
 ---
 
 Stack and Heap Basic Knowledge (some from geeksforgeeks)
