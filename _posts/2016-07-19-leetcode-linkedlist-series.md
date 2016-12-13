@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      Leetcode  (19, 61, 86) ListNode Series
+title:      Leetcode  (19, 61, 86, 203) Linked List Series
 category:   [Leetcode] 
-tags:		[Leetcode, Algorithms, ListNode]
+tags:		[Leetcode, Algorithms, LinkedList]
 ---
 
 * [Leetcode 19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
@@ -107,6 +107,26 @@ public:
         p2->next = NULL;
         p1->next = l2->next;
         return l1->next;
+    }
+};
+{% endhighlight %}
+
+* [Leetcode 203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)
+
+Remove all elements from a linked list of integers that have value val.
+
+Example
+
+    Given: 1 --> 2 --> 6 --> 3 --> 4 --> 5 --> 6, val = 6
+    Return: 1 --> 2 --> 3 --> 4 --> 5
+
+{% highlight C++ %}
+class Solution {
+public:
+    ListNode* removeElements(ListNode* head, int val) {
+        if (!head)  return head;
+        head->next = removeElements(head->next, val);
+        return head->val==val?head->next:head;
     }
 };
 {% endhighlight %}
