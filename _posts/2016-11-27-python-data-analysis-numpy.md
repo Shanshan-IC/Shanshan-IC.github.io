@@ -6,6 +6,7 @@ tags:		[Python, Data Analysis, Numpy]
 ---
 
 {% highlight Python %}
+
 import numpy as np
 import pylab as plt
 import seaborn
