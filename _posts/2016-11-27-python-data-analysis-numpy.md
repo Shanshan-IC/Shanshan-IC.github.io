@@ -73,6 +73,7 @@ x = np.random.uniform(1, 100, 1000)
 y = np.log(x) + np.random.normal(0, .3, 1000)
 plt.scatter(x, y)
 plt.show()
+
 {% endhighlight %}
 
 Try it, see the compile results!!!
