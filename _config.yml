@@ -36,4 +36,5 @@ config:
   img_dir:
   css_dir:
 
-excerpt_separator:""
+excerpt_separator:
+  ""
