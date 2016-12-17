@@ -75,6 +75,34 @@ y = np.log(x) + np.random.normal(0, .3, 1000)
 plt.scatter(x, y)
 plt.show()
 
+#  sort and searching
+# sort x along the second axis
+x = np.array([[1, 4], [3, 1]])
+out = np.sort(x, axis = 1)
+x.sort(axis = 1)
+assert np.array_equal(out, x)
+print out
+# Sort pairs of surnames and first names and return their indices. (first by surname, then by name).
+surnames =    ('Hertz',    'Galilei', 'Hertz')
+first_names = ('Heinrich', 'Galileo', 'Gustav')
+print np.lexsort((first_names, surnames))
+# searching
+# get the maximum and minimium value
+x = np.random.permutation(10).reshape(2, 5)
+print "x = ", x
+print "maximum values = ", np.max(x, 1)
+print "maximum indices = ", np.argmax(x, 1)
+print "minimum values = ", np.min(x, 1)
+print "minimum indices = ", np.argmin(x, 1)
+print "-------------"
+x = np.array([[1,0,2,0,3,0,4,5,6,7,8], [1,0,2,0,3,0,4,5,6,7,8]])[1]
+print np.where(x == 0)
+print "-------------"
+
+print np.__version__
+# specific help
+print np.lookfor('linear algebra')
+print np.info(np.dot)
 {% endhighlight %}
 
 Try it, see the compile results!!!
