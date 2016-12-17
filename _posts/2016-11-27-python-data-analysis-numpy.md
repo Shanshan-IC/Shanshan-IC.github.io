@@ -5,7 +5,7 @@ category:   [Python]
 tags:		[Python, Data Analysis, Numpy]
 ---
 
-{% highlight Python %}
+{% capture Python %}
 
 import numpy as np
 import pylab as plt
@@ -75,6 +75,6 @@ y = np.log(x) + np.random.normal(0, .3, 1000)
 plt.scatter(x, y)
 plt.show()
 
-{% endhighlight %}
+{% endcapture %}
 
 Try it, see the compile results!!!
