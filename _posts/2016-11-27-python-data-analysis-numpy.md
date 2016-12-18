@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Python For Data Analysis Introduction to Numpy
+title:      Python For Data Analysis Numpy
 category:   [Python] 
 tags:		[Python, Data Analysis, Numpy]
 ---

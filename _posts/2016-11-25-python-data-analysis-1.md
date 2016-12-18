@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Python For Data Analysis Introduction to Pandas
+title:      Python For Data Analysis Pandas
 category:   [Python] 
 tags:		[Python, Data Analysis, Pandas]
 ---
