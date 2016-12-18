@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Which is better for data analysis R or Python (From Quora)
+title:      Which is better for data analysis R or Python 
 category:   [Data Mining] 
 tags:		[Data Mining, R, Python]
 ---
