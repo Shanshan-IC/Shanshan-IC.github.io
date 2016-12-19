@@ -70,6 +70,8 @@ for weights in ['uniform', 'distance']:
 plt.show()
 {% endhighlight %}
 
+![](/images/ML/KNN-result.png)
+
 Example 2
 
 {% highlight Python %}
@@ -102,7 +104,7 @@ knn.predict([18,90])
 	metric_params: Additional keyword arguments for the metric function.
 
 	n_jobs: The number of parallel jobs to run for neighbors search.
-	
+
 * When to use the KNN Algorithm
 
 KNN can be used for both classification and regression predictive problems. There are 3 import aspects:
@@ -119,7 +121,7 @@ KNN can be used for both classification and regression predictive problems. Ther
 
 As you can see, the error rate at K=1 is always zero for the training sample. This is because the closest point to any training data point is itself.Hence the prediction is always accurate with K=1. If validation error curve would have been similar, our choice of K would have been 1. Following is the validation error curve with varying value of K:
 
-![](/images/ML/KNN-error2.png)
+![](/images/ML/KNN-error2png.png)
 
 This makes the story more clear. At K=1, we were overfitting the boundaries. Hence, error rate initially decreases and reaches a minima. After the minima point, it then increase with increasing K. To get the optimal value of K, you can segregate the training and validation from the initial dataset. Now plot the validation error curve to get the optimal value of K. This value of K should be used for all predictions.
 
