@@ -22,12 +22,12 @@ csv_path = 'python_code/data/Heart.csv'
 rawdata = pd.read_csv(csv_path)
 excel_path = 'python_code/data/energy_efficiency.xlsx'
 raw_data2 = pd.read_excel(excel_path)
-{% endhighglight %}
+{% endhighlight %}
 Understand data with statistics
 {% highlight Python %}
 print "data summary"
 print rawdata.describe()
-{% endhighglight %}
+{% endhighlight %}
 Then you will get
 
 	                 id        year       stint           g          ab 
@@ -52,7 +52,7 @@ Get the size of the data
 {% highlight Python %}
 nrow, ncol = rawdata.shape
 print nrow, ncol
-{% endhighglight %}
+{% endhighlight %}
 Check the data format 
 {% highlight Python %}
 print rawdata.dtypes
@@ -83,7 +83,7 @@ print rawdata.corr()
 # covariance Matrix
 print "\n covariance Matrix"
 print rawdata.corr()
-{% endhighglight %}
+{% endhighlight %}
 Understand data with visualization
 {% highlight Python %}
 from scipy import stats
@@ -103,6 +103,6 @@ plt.subplot(211) # 2 rows, 1 col
 plt.subplot(212) # 2 rows, 1 col
 sns.distplot(attr, kde=False, fit=stats.gamma)
 plt.show()
-{% endhighglight %}
+{% endhighlight %}
 ![](images/ML/corr.png)
 ![](images/ML/preprocess.png)
