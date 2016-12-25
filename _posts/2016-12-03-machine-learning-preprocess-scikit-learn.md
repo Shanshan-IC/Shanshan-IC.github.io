@@ -104,5 +104,5 @@ plt.subplot(212) # 2 rows, 1 col
 sns.distplot(attr, kde=False, fit=stats.gamma)
 plt.show()
 {% endhighlight %}
-![](images/ML/corr.png)
-![](images/ML/preprocess.png)
+![](/images/ML/corr.png)
+![](/images/ML/corr.png)
