@@ -21,23 +21,24 @@ What are the top 10 data mining or machine learning algorithms?
 
 One potential answer to this question comes from the Analytics 1305 documentation:
 
-	Kernel Density Estimation and Non-parametric Bayes Classifier
-	
-	K-Means
-	
-	Kernel Principal Components Analysis
-	
-	Linear Regression
-	
-	Neighbors (Nearest, Farthest, Range, k, Classification)
-	
-	Non-Negative Matrix Factorization
-	
-	Support Vector Machines
-	
-	Dimensionality Reduction
-	
-	Fast Singular Value Decomposition
-	
-	Decision Tree
-	Bootstapped SVM
+* Kernel Density Estimation and Non-parametric Bayes Classifier
+
+* K-Means
+
+* Kernel Principal Components Analysis
+
+* Linear Regression
+
+* Neighbors (Nearest, Farthest, Range, k, Classification)
+
+* Non-Negative Matrix Factorization
+
+* Support Vector Machines
+
+* Dimensionality Reduction
+
+* Fast Singular Value Decomposition
+
+* Decision Tree
+
+* Bootstapped SVM
