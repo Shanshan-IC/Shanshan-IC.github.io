@@ -56,7 +56,7 @@ print nrow, ncol
 Check the data format 
 {% highlight Python %}
 print rawdata.dtypes
-{% endhighglight %}
+{% endhighlight %}
 Then you will get
 
 	id          int64
