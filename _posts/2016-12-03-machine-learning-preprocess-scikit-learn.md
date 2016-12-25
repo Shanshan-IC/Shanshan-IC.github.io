@@ -104,12 +104,5 @@ plt.subplot(212) # 2 rows, 1 col
 sns.distplot(attr, kde=False, fit=stats.gamma)
 plt.show()
 {% endhighglight %}
-
-
-{% highlight Python %}
-
-{% endhighglight %}
-
-{% highlight Python %}
-
-{% endhighglight %}
+![](images/ML/corr.png)
+![])images/ML/preprocess.png
