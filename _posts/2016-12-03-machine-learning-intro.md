@@ -43,6 +43,6 @@ One potential answer to this question comes from the Analytics 1305 documentatio
 
 * Bootstapped SVM
 
-An awesome Tour of Machine Learning Algorithms was published online by [Jason Brownlee](http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/) in 2013, it still is a good category diagram.
+An awesome Tour of Machine Learning Algorithms was published online by [Jason Brownlee](http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/) in 2013.
 
 ![](/images/ML/datamingDiagram.png)
