@@ -39,18 +39,14 @@ sklearn also provides sklearn.preprocessing.StandardScaler to compute the mean a
 sklearn.preprocessing.StandardScaler(copy=True, with_mean=True, with_std=True)
 
 	with_mean: If True, center the data before scaling.
-
 	with_str: If True, scale the data to unit variance.
-
 	copy: If False, try to avoid a copy and do inplace scaling instead. 
 
 Attributes:
+
 	scale_
-
 	mean_
-
 	var_
-
 	n_samples_seen_: The number of samples processed by the estimator. 
 
 StandardScaler Examples	
@@ -65,22 +61,14 @@ print scaler.transform(x)
 {% endhighlight %}
 The output is 
 
-	Mean is 
-	
-	[ 1.          0.          0.33333333]
-	
+	Mean is 	
+	[ 1.          0.          0.33333333]	
 	Std is 
-	
-	[ 0.81649658  0.81649658  1.24721913]
-	
-	Scale is 
-	
-	[ 0.81649658  0.81649658  1.24721913]
-	
-	[[ 0.         -1.22474487  1.33630621]
-	
-	 [ 1.22474487  0.         -0.26726124]
-	
+	[ 0.81649658  0.81649658  1.24721913]	
+	Scale is 	
+	[ 0.81649658  0.81649658  1.24721913]	
+	[[ 0.         -1.22474487  1.33630621]	
+	 [ 1.22474487  0.         -0.26726124]	
 	 [-1.22474487  1.22474487 -1.06904497]]
 
 * Scaling features to a range
@@ -106,18 +94,12 @@ print "min_max_scaler min is \n", x_minmax.min_
 {% endhighlight %}
 The output is 
 
-	[[ 0.5         0.          1.        ]
-	 
-	 [ 1.          0.5         0.33333333]
-	 
-	 [ 0.          1.          0.        ]]
-	
-	min_max_scaler scale is 
-	
-	[ 0.5         0.5         0.33333333]
-	
-	min_max_scaler min is 
-	
+	[[ 0.5         0.          1.        ]	 
+	 [ 1.          0.5         0.33333333]	 
+	 [ 0.          1.          0.        ]]	
+	min_max_scaler scale is 	
+	[ 0.5         0.5         0.33333333]	
+	min_max_scaler min is 	
 	[ 0.          0.5         0.33333333]
 
 MaxAbsScaler works in a very similar fashion, but scales in a way that the training data lies within the range [-1, 1] by dividing through the largest maximum value in each feature. It is meant for data that is already centered at zero or sparse data.
