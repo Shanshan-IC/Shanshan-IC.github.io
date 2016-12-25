@@ -15,11 +15,11 @@ If you desire to have a more centralized set of normalized data, with zero being
 
 To standardize your data, you will want the data to reflect how many standard deviations from the average that that data lies, with the following normal distribution curve representing the probability of each standard deviation for a normal distribution. The Z-Score is what will be calculated to standardize the data, and it reflects how many standard deviations from the average that the data point falls.
 
-![](/images/ML/scale.png)
+![](/images/ML/scales.png)
 
 To determine the Z-Score of each data point, the following equation should be used:
 
-![](images/ML/Standardize.jpg)
+![](/images/ML/Standardize.jpg)
 
 Normalized and Standardized can be used to remove their scale from the models. However, standardizing is the preferred method because it produces meaningful information about each data point, and where it falls  within its normal distribution, plus provides a crude indicator of outliers.
 
