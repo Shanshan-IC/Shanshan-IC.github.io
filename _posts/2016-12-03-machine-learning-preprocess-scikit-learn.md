@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Data Mining Procedures and
+title:      Data Mining Procedures in Python
 category:   [Data Mining] 
 tags:		[Data Mining, Python]
 ---
@@ -105,4 +105,4 @@ sns.distplot(attr, kde=False, fit=stats.gamma)
 plt.show()
 {% endhighglight %}
 ![](images/ML/corr.png)
-![])images/ML/preprocess.png
+![](images/ML/preprocess.png)
