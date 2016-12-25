@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Data Mining Proprocessing in Python Scaling
+title:      Data Mining Proprocessing in Python Standardization and Normalization
 category:   [Data Mining] 
 tags:		[Data Mining, Python]
 ---
@@ -127,3 +127,14 @@ If your data contains many outliers, scaling using the mean and variance of the 
 sklearn.preprocessing.robust_scale(X, axis=0, with_centering=True, with_scaling=True, quantile_range=(25.0, 75.0), copy=True)
 
 class sklearn.preprocessing.RobustScaler(with_centering=True, with_scaling=True, quantile_range=(25.0, 75.0), copy=True)
+
+* Normalization
+{% highglight Python %}
+# normalization
+X_normalized = preprocessing.normalize(X, norm='l2')
+print X_normalized
+# The preprocessing module further provides a utility class Normalizer
+normalizer = preprocessing.Normalizer().fit(X)
+print normalizer
+print normalizer.transform(X)
+{% endhighlight %}
