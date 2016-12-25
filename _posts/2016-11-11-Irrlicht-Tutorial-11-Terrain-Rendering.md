@@ -67,4 +67,4 @@ driver->setTextureCreationFlag(video::ETCF_CREATE_MIP_MAPS, true);
 MyEventReceiver receiver(terrain, skybox, skydome);
 device->setEventReceiver(&receiver);
 {% endhighlight %}
-You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/12.TerrainRendering)
+You can get the complete codes from [Github](https://github.com/Shanshan-IC/DirectX-Irrlicht-Tutorial/tree/master/Irrlicht-examples/12.TerrainRendering)

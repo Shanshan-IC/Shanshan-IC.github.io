@@ -44,4 +44,4 @@ device->getCursorControl()->setVisible(false);
 
 In the end draw Everything.
 
-You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/02.Quake3Map)
+You can get the complete codes from [Github](https://github.com/Shanshan-IC/DirectX-Irrlicht-Tutorial/tree/master/Irrlicht-examples/02.Quake3Map)

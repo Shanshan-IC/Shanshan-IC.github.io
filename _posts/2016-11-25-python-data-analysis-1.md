@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Python For Data Analysis Pandas
-category:   [Python] 
+category:   [Data Mining] 
 tags:		[Python, Data Analysis, Pandas]
 ---
 

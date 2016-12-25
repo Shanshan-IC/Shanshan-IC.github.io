@@ -83,4 +83,4 @@ Finally draw a half-transparent rect under the mouse cursor.
 		driver->endScene();
 {% endhighlight %}
 
-You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/06.2DGraphics)
+You can get the complete codes from [Github](https://github.com/Shanshan-IC/DirectX-Irrlicht-Tutorial/tree/master/Irrlicht-examples/06.2DGraphics)

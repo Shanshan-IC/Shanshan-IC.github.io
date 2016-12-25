@@ -104,4 +104,4 @@ device -> drop();
 return 0;
 {% endhighlight %}
 
-You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/01.HelloWorld)
+You can get the complete codes from [Github](https://github.com/Shanshan-IC/DirectX-Irrlicht-Tutorial/tree/master/Irrlicht-examples/01.HelloWorld)

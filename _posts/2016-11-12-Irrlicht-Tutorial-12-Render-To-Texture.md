@@ -48,4 +48,4 @@ And in the run loop, set render target texture
 
 driver->setRenderTarget(rt, true, true, video::SColor(0,0,0,255));
 
-You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/13.RenderToTexture)
+You can get the complete codes from [Github](https://github.com/Shanshan-IC/DirectX-Irrlicht-Tutorial/tree/master/Irrlicht-examples/13.RenderToTexture)

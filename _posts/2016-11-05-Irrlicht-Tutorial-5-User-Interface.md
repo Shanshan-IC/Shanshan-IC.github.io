@@ -175,4 +175,4 @@ env->addImage(driver->getTexture("../../media/irrlichtlogo2.png"),
 Done, Draw everything
 
 
-You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/05.UserInterface)
+You can get the complete codes from [Github](https://github.com/Shanshan-IC/DirectX-Irrlicht-Tutorial/tree/master/Irrlicht-examples/05.UserInterface)

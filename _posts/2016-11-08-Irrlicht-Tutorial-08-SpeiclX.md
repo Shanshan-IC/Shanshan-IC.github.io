@@ -117,4 +117,4 @@ smgr->setShadowColor(video::SColor(150,0,0,0));
 anode->setScale(core::vector3df(2,2,2));
 anode->setMaterialFlag(video::EMF_NORMALIZE_NORMALS, true);
 {% endhighlight %}
-You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/08.SpecialFX)
+You can get the complete codes from [Github](https://github.com/Shanshan-IC/DirectX-Irrlicht-Tutorial/tree/master/Irrlicht-examples/08.SpecialFX

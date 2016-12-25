@@ -182,4 +182,4 @@ while (device->run()) {
 	}
 }
 {% endhighlight %}
-You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/07.Collision)
+You can get the complete codes from [Github](https://github.com/Shanshan-IC/DirectX-Irrlicht-Tutorial/tree/master/Irrlicht-examples/07.Collision)

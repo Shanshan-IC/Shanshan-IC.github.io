@@ -78,4 +78,4 @@ scene::ISceneNode * cube = smgr->getSceneNodeFromType(scene::ESNT_CUBE);
 if(cube)
     camera->setTarget(cube->getAbsolutePosition());
 {% endhighlight %}
-You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/15.LoadIrrFile)
+You can get the complete codes from [Github](https://github.com/Shanshan-IC/DirectX-Irrlicht-Tutorial/tree/master/Irrlicht-examples/15.LoadIrrFile)

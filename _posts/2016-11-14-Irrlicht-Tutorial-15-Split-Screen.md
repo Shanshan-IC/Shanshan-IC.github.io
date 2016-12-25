@@ -64,4 +64,4 @@ while(device->run())
 }
 device->drop();
 {% endhighlight %}
-You can get the complete codes from [Github](https://github.com/Shanshan-IC/irrlicht/tree/master/examples/18.SplitScreen)
+You can get the complete codes from [Github](https://github.com/Shanshan-IC/DirectX-Irrlicht-Tutorial/tree/master/Irrlicht-examples/18.SplitScreen)
