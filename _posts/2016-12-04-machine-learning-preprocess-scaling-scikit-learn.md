@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Data Mining Proprocessing in Python: Scaling
+title:      Data Mining Proprocessing in Python Scaling
 category:   [Data Mining] 
 tags:		[Data Mining, Python]
 ---
@@ -27,17 +27,11 @@ print "Scale std is \n",x_scale.std(axis = 0)
 The output is 
 
 	[[ 0.         -1.22474487  1.33630621]
-	 
 	 [ 1.22474487  0.         -0.26726124]
-	 
 	 [-1.22474487  1.22474487 -1.06904497]]
-	
 	Scale mean is 
-	
 	[ 0.  0.  0.]
-	
 	Scale std is 
-	
 	[ 1.  1.  1.]
 
 sklearn also provides sklearn.preprocessing.StandardScaler to compute the mean and standard deviation on a training set in case that training data uses the same transformation.
