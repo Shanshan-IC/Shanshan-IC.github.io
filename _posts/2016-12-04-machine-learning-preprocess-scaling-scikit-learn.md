@@ -129,7 +129,7 @@ sklearn.preprocessing.robust_scale(X, axis=0, with_centering=True, with_scaling=
 class sklearn.preprocessing.RobustScaler(with_centering=True, with_scaling=True, quantile_range=(25.0, 75.0), copy=True)
 
 * Normalization
-{% highglight Python %}
+{% highlight Python %}
 # normalization
 X_normalized = preprocessing.normalize(X, norm='l2')
 print X_normalized
