@@ -72,6 +72,6 @@ print np.sqrt(metrics.mean_squared_error(y_test, y_pred))
 {% endhighlight %}
 
 Scatter Figure
-![/images/ML/scatter.png]
+![](/images/ML/scatter.png)
 Linear Regression Figure
-![/images/ML/linear_regression.png]
+![](/images/ML/linear_regression.png)
