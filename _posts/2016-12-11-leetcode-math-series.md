@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (69) Math Series
+title:      Leetcode  (69, 88) Math Series
 category:   [Leetcode] 
 tags:		[Leetcode]
 ---
