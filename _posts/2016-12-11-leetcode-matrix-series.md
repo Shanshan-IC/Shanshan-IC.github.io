@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Leetcode  (73) Matrix Series
+title:      Leetcode  (73, 74) Matrix Series
 category:   [Leetcode] 
 tags:		[Leetcode]
 ---
@@ -32,6 +32,42 @@ public:
             if (col[j] == 1)
                 for (int i=0; i<m; i++)
                     matrix[i][j] = 0;
+    }
+};
+{% endhighlight %}
+
+* [Leetcode 74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
+
+Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+
+Integers in each row are sorted from left to right.
+The first integer of each row is greater than the last integer of the previous row.
+
+
+For example, Consider the following matrix:
+
+	[
+	  [1,   3,  5,  7],
+	  [10, 11, 16, 20],
+	  [23, 30, 34, 50]
+	]
+
+Given target = 3, return true.
+
+{% highlight C++ %}
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        if (matrix.empty()) return false;
+        const int m = matrix.size();
+        const int n = matrix[0].size();
+        int col = n-1, row = 0;
+        while(col>=0 && row<m) {
+            if (matrix[row][col] == target) return true;
+            else if (matrix[row][col] > target) col--;
+            else    row++;
+        }
+        return false;
     }
 };
 {% endhighlight %}
