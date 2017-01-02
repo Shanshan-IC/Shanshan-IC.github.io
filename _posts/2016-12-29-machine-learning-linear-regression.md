@@ -5,10 +5,10 @@ category:   [Data Mining]
 tags:		[Data Mining, Python]
 ---
 
-* About Linear Regression
+1. About Linear Regression
 Regression is a data mining function that predicts a number. A regression task begins with a data set in which the target values are known. The simplest form of regression to visualize is linear regression with a single predictor. 
 
-* Preparing Data for Linear Regression
+2. Preparing Data for Linear Regression
 
 	Linear Assumption. Linear regression assumes that the relationship between your input and output is linear. It does not support anything else. This may be obvious, but it is good to remember when you have a lot of attributes. You may need to transform data to make the relationship linear (e.g. log transform for an exponential relationship).
 
@@ -20,7 +20,7 @@ Regression is a data mining function that predicts a number. A regression task b
 	
 	Rescale Inputs: Linear regression will often make more reliable predictions if you rescale input variables using standardization or normalization.
 
-* How does Linear Regression Work?
+3. How does Linear Regression Work?
 
 In mathematical notion, if \hat{y} is the predicted value.
 
@@ -32,9 +32,7 @@ LinearRegression fits a linear model with coefficients w = (w_1, ..., w_p) to mi
 
 ![](/images/ML/linear_square.png)
 
-* Making Predictions with Linear Regression
-
-* Test Linear Regression
+4. Test Linear Regression
 
 Root Mean Squared Error
 
