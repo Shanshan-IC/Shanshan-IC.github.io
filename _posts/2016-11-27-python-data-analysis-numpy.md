@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Python For Data Analysis Numpy
-category:   [Data Mining] 
+category:   [DataMining] 
 tags:		[Python, Data Analysis, Numpy]
 ---
 

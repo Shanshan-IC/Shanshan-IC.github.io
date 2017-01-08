@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Which is better for data analysis R or Python 
-category:   [Data Mining] 
+category:   [DataMining] 
 tags:		[Data Mining, R, Python]
 ---
 

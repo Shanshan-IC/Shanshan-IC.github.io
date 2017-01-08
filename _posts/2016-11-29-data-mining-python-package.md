@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Python Packages for Data Mining and Machine Learning
-category:   [Data Mining] 
+category:   [DataMining] 
 tags:		[Data Mining, R, Python]
 ---
 
