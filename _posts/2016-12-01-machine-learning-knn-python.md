@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      KNN K-Nearest Neighbor Learning and Implementation in Python
-category:   [Data Mining] 
+category:   [DataMining] 
 tags:		[Data Mining, Machine Learning, Python]
 ---
 
