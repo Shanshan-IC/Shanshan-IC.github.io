@@ -16,7 +16,7 @@ Given n = 3, there are a total of 5 unique BST's.
 class Solution {
 public:
     int numTrees(int n) {
-        int res[n+1];
+        int res[n+1] = {0};
         res[0] = res[1] = 1;
         for (int i=2; i<=n; i++)
             for (int j=1; j<=i; j++)

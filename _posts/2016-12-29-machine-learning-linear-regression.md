@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Simple Linear Regression Model
-category:   [Data Mining] 
+category:   [DataMining] 
 tags:		[Data Mining, Python]
 ---
 
