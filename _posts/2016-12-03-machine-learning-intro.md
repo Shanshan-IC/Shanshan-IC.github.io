@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Machine Learning Intro
-category:   [Machine Learning] 
+category:   [DataMining] 
 tags:		[Machine Learning]
 ---
 
