@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Linear Regression Example in Python using scikit learn
-category:   [Data Mining] 
+title:      Linear Regression Example in Pytho
+category:   [DataMining] 
 tags:		[Data Mining, Python]
 ---
 
