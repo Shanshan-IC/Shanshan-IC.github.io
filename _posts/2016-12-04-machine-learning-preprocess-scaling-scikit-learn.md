@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Data Mining Proprocessing in Python Standardization and Normalization
-category:   [Data Mining] 
+category:   [DataMining] 
 tags:		[Data Mining, Python]
 ---
 

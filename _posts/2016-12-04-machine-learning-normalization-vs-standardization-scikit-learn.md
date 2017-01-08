@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Data Normalization vs Standardization
-category:   [Data Mining] 
+category:   [DataMining] 
 tags:		[Data Mining]
 ---
 
