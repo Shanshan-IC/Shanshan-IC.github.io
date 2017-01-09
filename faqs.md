@@ -7,6 +7,9 @@ title: "Faqs"
 2. Google Scholar Mirror
 [Glgoo](http://scholar.glgoo.org/)
 3.  Markdown <http://wowubuntu.com/markdown/basic.html>  
+4. Python tips:
+Python Chinese comments: before import, add "# -*- coding: utf-8 -*-"
+Python export csv Chinese Problems: df.to_csv(path+'\\'+filename+'.csv', encoding='gb18030', index=False)
 
 <!-- Blog Comments -->
 <div class="media">
