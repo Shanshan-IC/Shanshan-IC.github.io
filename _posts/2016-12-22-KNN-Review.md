@@ -14,6 +14,7 @@ K Nearest Neighbor is one of classification algorithms that are very simple to u
 When a prediction is required for a unseen data instance, the KNN algorithm will search through the training dataset for the k-most similar instances. The prediction attribute of the most similar instances is summarized and returned as the prediction for the unseen instance.
 
 Take a simple example to describe it:
+
 ![](/images/ML/KNN_Example.png)
 
 In Figure 1, there are two type data, including blue diamond and red triangle. Assume that our task is to find which class the green data belong to. How do we do it? Assume that only the nearest ones are helpful to find its classification. But how many objects to determine it? If k = 3 (solid line circle) it is assigned to the second class because there are 2 triangles and only 1 square inside the inner circle. If k = 5 (dashed line circle) it is assigned to the first class (3 squares vs. 2 triangles inside the outer circle).
@@ -25,7 +26,7 @@ In Figure 1, there are two type data, including blue diamond and red triangle. A
 	Step 3: Choose the minimum K distance
 	Step 4: Return the classification with the highest frequency
 
-*Distance Calculation
+* Distance Calculation
 
 Often, the classification accuracy of KNN can be improved significantly if the distance metric is learned with specialized algorithms such as Large Margin Nearest Neighbor [2] or Neighborhood components analysis [3].
 Euclidean metric is the most popular choice for the distance function. If the measurement variables are not of comparable units and scales, it is more meaningful to standardize the variables before using the Euclidean distance for classification.
@@ -63,19 +64,35 @@ Number of Instances: 150 (50 in each of three classes)
 
 Reference
 [1] Cover T, Hart P. Nearest neighbor pattern classification[J]. IEEE transactions on information theory, 1967, 13(1): 21-27.
+
 [2] Weinberger K Q, Blitzer J, Saul L K. Distance metric learning for large margin nearest neighbor classification[C]//Advances in neural information processing systems. 2005: 1473-1480.
+
 [3] Goldberger J, Hinton G E, Roweis S T, et al. Neighbourhood components analysis[C]//Advances in neural information processing systems. 2004: 513-520.
+
 [4] Dudani S A. The distance-weighted k-nearest-neighbor rule[J]. IEEE Transactions on Systems, Man, and Cybernetics, 1976 (4): 325-327.
+
 [5] Tan S. Neighbor-weighted k-nearest neighbor for unbalanced text corpus[J]. Expert Systems with Applications, 2005, 28(4): 667-671.
+
 [6] Sebastiani F. Machine learning in automated text categorization[J]. ACM computing surveys (CSUR), 2002, 34(1): 1-47.
+
 [7] Tan S. An effective refinement strategy for KNN text classifier[J]. Expert Systems with Applications, 2006, 30(2): 290-298.
+
 [8] Loftsgaarden D O, Quesenberry C P. A nonparametric estimate of a multivariate density function[J]. The Annals of Mathematical Statistics, 1965, 36(3): 1049-1051.
+
 [9] Lachenbruch P A, Mickey M R. Estimation of error rates in discriminant analysis[J]. Technometrics, 1968, 10(1): 1-11.
+
 [10] Stone M. Cross-validation: a review 2[J]. Statistics: A Journal of Theoretical and Applied Statistics, 1978, 9(1): 127-139.
+
 [11] Ghosh A K, Chaudhuri P. Optimal smoothing in kernel discriminant analysis[J]. Statistica Sinica, 2004: 457-483.
+
 [12] Mahalanobis P C. On the generalized distance in statistics[J]. Proceedings of the National Institute of Sciences (Calcutta), 1936, 2: 49-55.
+
 [13] Friedman J H. Flexible metric nearest neighbor classification[R]. Technical report, Department of Statistics, Stanford University, 1994.
+
 [14] Hastie T, Tibshirani R. Discriminant adaptive nearest neighbor classification[J]. IEEE transactions on pattern analysis and machine intelligence, 1996, 18(6): 607-616.
+
 [15] Friedman J H. Flexible metric nearest neighbor classification[R]. Technical report, Department of Statistics, Stanford University, 1994.
+
 [16] Hastie T, Tibshirani R. Discriminant adaptive nearest neighbor classification[J]. IEEE transactions on pattern analysis and machine intelligence, 1996, 18(6): 607-616.
+
 [17] Cover T, Hart P. Nearest neighbor pattern classification[J]. IEEE transactions on information theory, 1967, 13(1): 21-27.
