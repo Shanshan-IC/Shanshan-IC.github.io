@@ -6,7 +6,7 @@ title: "About：About"
 ## About Me：
 
 * Shanshan Fu
-* C++ Software Developer、Web Developer
+* C++ Software Developer、Python Data Mining
 * Living in Shanghai
 
 ## Contact
