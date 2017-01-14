@@ -124,4 +124,7 @@ plt.tight_layout()
 plt.show()
 
 {% endhighlight %}
-![](images/ML/comparation.png)
+
+The result is:
+
+![](/images/ML/comparation.png)
