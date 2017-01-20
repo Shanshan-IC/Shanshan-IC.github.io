@@ -8,7 +8,9 @@ tags:       [Data Mining]
 * When is Principal Component Analysis needed?
 
 	too many features
+
 	most of features are correlated
+
 	poor accuracy with too many data
 
 * What is PCA?
@@ -30,6 +32,10 @@ where,
 	Φp¹ is the loading vector comprising of loadings (Φ¹, Φ²..) of first principal component. The loadings are constrained to a sum of square equals to 1. This is because large magnitude of loadings may lead to large variance. It also defines the direction of the principal component (Z¹) along which data varies the most. It results in a line in p dimensional space which is closest to the n observations. Closeness is measured using average squared euclidean distance.
 	
 	X¹..Xp are normalized predictors. Normalized predictors have mean equals to zero and standard deviation equals to one.
+
+* How to calculate it?
+
+
 
 * Limitation
 
