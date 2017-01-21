@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      SQL Chinese in string
-category:   [Python] 
-tags:       [Python]
+category:   [SQL] 
+tags:       [SQL]
 ---
 
 It works  in MySQL!

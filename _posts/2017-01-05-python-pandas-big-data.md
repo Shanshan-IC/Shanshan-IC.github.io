@@ -1,4 +1,9 @@
-C
+ ---
+layout:     post
+title:      Python Pandas Handles Big Data
+category:   [Python] 
+tags:       [Python]
+---
 
 Python block for reading the big data and handling it!
 
