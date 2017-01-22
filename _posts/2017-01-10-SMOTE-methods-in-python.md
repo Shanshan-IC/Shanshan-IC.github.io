@@ -74,7 +74,7 @@ plt.show()
 
 The result is:
 
-![](images/ML/smote_result.png)
+![](/images/ML/smote_result.png)
 
 More SMOTE Improvement methods can be got here [imblearn.over_sampling.SMOTE](http://contrib.scikit-learn.org/imbalanced-learn/generated/imblearn.over_sampling.SMOTE.html)
 
