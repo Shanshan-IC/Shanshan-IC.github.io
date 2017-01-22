@@ -1,4 +1,4 @@
- ---
+---
 layout:     post
 title:      Some Python Annoying Staff
 category:   [Python] 
