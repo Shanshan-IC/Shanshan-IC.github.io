@@ -18,3 +18,9 @@ company_list = companys.values.tolist()
 # string output Chinese
 str(company_list).replace('[', '').replace(']', '').decode('string_escape') 
 {% endhighlight %}
+
+# read csv with Chinese
+df = pd.read_csv("data.csv", encoding = 'gbk')
+
+# dataframe to dictionary
+data = full_data.set_index('id')['values'].to_dict()

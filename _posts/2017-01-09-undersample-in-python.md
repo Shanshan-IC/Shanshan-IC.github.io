@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Undersampel Methods in Python
+title:      Undersample Methods in Python
 category:   [DataMining] 
 tags:		[Data Mining, Python]
 ---
