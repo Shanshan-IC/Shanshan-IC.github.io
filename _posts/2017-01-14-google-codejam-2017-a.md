@@ -1,6 +1,6 @@
- ---
+---
 layout:     post
-title:      Google CodeJam Problem A Diwali lightings
+title:      Google CodeJam ProblemE A Diwali lightings
 category:   [Google] 
 tags:       [Google]
 ---
@@ -14,7 +14,6 @@ For example, if S is BBRB, the infinite sequence Pari builds would be BBRBBBRBBB
 Blue is Pari's favorite color, so she wants to know the number of blue bulbs between the Ith bulb and Jth bulb, inclusive, in the infinite sequence she built (lights are numbered with consecutive integers starting from 1). In the sequence above, the indices would be numbered as follows:
 
 	B  B  R  B  B  B  R  B  B  B  R  B...
-
 	1  2  3  4  5  6  7  8  9  10 11 12
 
 So, for example, there are 4 blue lights between the 4th and 8th positions, but only 2 between the 10th and 12th.
@@ -53,19 +52,19 @@ Sample
 
 Input 
  
-3
-BBRB
-4 8
-BBRB
-10 12
-BR
-1 1000000
+    3
+    BBRB
+    4 8
+    BBRB
+    10 12
+    BR
+    1 1000000
 
 Output 
 
-Case #1: 4
-Case #2: 2
-Case #3: 500000
+    Case #1: 4
+    Case #2: 2
+    Case #3: 500000
 
 Solution:
 
@@ -93,8 +92,8 @@ void countF(string pattern, LL left, LL right) {
 int main() {
     int N;
     LL left, right;
-    freopen("//Users//fushanshan//Downloads//A-large-practice.in","r",stdin);
-    freopen("//Users//fushanshan//Downloads//A-large-attempt0.out","w",stdout);
+    freopen("//Downloads//A-large-practice.in","r",stdin);
+    freopen("//Downloads//A-large-attempt0.out","w",stdout);
     cin >> N;
     string pattern;
     for (int i=0; i<N; i++) {
