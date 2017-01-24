@@ -34,19 +34,13 @@ For each test case, output one line containing Case #x: y, where x is the test c
 
 Limits
 
-1 ≤ T ≤ 100.
-
-1 ≤ length of S ≤ 100.
-
-Each character of S is either uppercase B or uppercase R.
-
-Small dataset
-
-1 ≤ I ≤ J ≤ 106.
-
-Large dataset
-
-1 ≤ I ≤ J ≤ 1018.
+    1 ≤ T ≤ 100.
+    1 ≤ length of S ≤ 100.
+    Each character of S is either uppercase B or uppercase R.
+    Small dataset
+    1 ≤ I ≤ J ≤ 106.
+    Large dataset
+    1 ≤ I ≤ J ≤ 1018.
 
 Sample
 
