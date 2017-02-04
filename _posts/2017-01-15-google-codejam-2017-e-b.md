@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Google CodeJam ProblemE B Beautiful Numbers
+title:      Google CodeJam Round E 2017 B Beautiful Numbers
 category:   [Google] 
 tags:       [Google]
 ---

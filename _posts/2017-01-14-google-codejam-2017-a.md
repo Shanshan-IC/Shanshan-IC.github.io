@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Google CodeJam ProblemE A Diwali lightings
+title:      Google CodeJam Round E 2017 Problem A Diwali lightings
 category:   [Google] 
 tags:       [Google]
 ---
