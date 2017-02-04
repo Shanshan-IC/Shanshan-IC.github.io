@@ -54,6 +54,7 @@ Output
 	Case #1: 10
 	Case #2: 1
 	Case #3: 0
+
 In sample case #1, the possible distributions are:
 
 	1 1 1 1 1 1 1
@@ -95,8 +96,8 @@ long long getPartioning(int num, int d) {
     return res;    
 }
 int main() {
-    freopen("//Users//fushanshan//Downloads//C-small-practice.in","r",stdin);
-    freopen("//Users//fushanshan//Downloads//C-small-attempt0.out","w",stdout);
+    freopen("//Downloads//C-small-practice.in","r",stdin);
+    freopen("//Downloads//C-small-attempt0.out","w",stdout);
     int N;
     cin >> N;
     int num, d;
