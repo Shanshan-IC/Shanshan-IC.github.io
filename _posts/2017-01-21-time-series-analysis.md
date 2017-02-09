@@ -134,9 +134,9 @@ delshift(ts_log)
 
 Removing the differences, you can get the images:
 
-![](images/ML/timeseries1.png)
-![](images/ML/timeseries2.png)
-![](images/ML/timeseries3.png)
+![](/images/ML/timeseries1.png)
+![](/images/ML/timeseries2.png)
+![](/images/ML/timeseries3.png)
 
 method 4: Decomposition
 
@@ -171,7 +171,7 @@ def residuals(timeseries):
 
 The decomposition diagram
 
-![](images/ML/timeseries4.png)
+![](/images/ML/timeseries4.png)
 
 Step 5: Prediction: ARIMA model
 
@@ -199,7 +199,7 @@ def plotpacf(ts_log_diff):
     plt.show()
 {% endhighlight %}
 
-![](images/ML/timeseries5.png)
+![](/images/ML/timeseries5.png)
 
 As we can see ,
 
@@ -240,4 +240,4 @@ def backPredict(results_ARIMA, ts_log, ts):
     plt.title('RMSE: %.4f' % np.sqrt(sum((predictions_ARIMA - ts) ** 2) / len(ts)))
 {% endhighlight %}
 
-![](images/ML/timeseries6.png)
+![](/images/ML/timeseries6.png)
