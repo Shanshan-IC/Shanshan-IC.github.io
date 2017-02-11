@@ -9,4 +9,22 @@ Naive Bayes Algorithms
 
 1. The foundation: Probabilistic model
 
-Abstractly, naive Bayes is a conditional probability model: given a problem instance to be classified, represented by a vector {\displaystyle \mathbf {x} =(x_{1},\dots ,x_{n})} {\mathbf  {x}}=(x_{1},\dots ,x_{n}) representing some n features (independent variables), it assigns to this instance probabilities
+Abstractly, naive Bayes is a conditional probability model: given a problem instance to be classified, how to calculate P(B|A) when P(A|B) is known. Bayes Probability terminology:
+
+![](/images/ML/bayes1.png)
+
+2.  Knowledgement and Process
+
+The sample belongs to the type with the highest probability. The definition is:
+
+a. ![](/images/ML/bayes2.png) is the features data, a means x's every feature
+
+b. Multiple classes: ![](/images/ML/bayes3.png)
+
+c. Calculate conditional Probabilistic: ![](/images/ML/bayes4.png)
+
+d. If ![](/images/ML/bayes5.png), then ![](/images/ML/bayes6.png)
+
+
+
+
