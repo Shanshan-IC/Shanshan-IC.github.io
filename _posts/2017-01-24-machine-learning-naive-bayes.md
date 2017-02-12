@@ -43,10 +43,9 @@ Because the denominator is constant, so maximum the numerator, and features are 
 
 Part 3. Constructing a classifier from the probability model
 
-The discussion so far has derived the independent feature model, that is, the naive Bayes probability model. The naive Bayes classifier combines this model with a decision rule. One common rule is to pick the hypothesis that is most probable; this is known as the maximum a posteriori or MAP decision rule. The corresponding classifier, a Bayes classifier, is the function that assigns a class label 
-![](/images/ML/bayes10.png) for some k as follows:
+The discussion so far has derived the independent feature model, that is, the naive Bayes probability model. The naive Bayes classifier combines this model with a decision rule. One common rule is to pick the hypothesis that is most probable; this is known as the maximum a posteriori or MAP decision rule. The corresponding classifier, a Bayes classifier, is the function that assigns a class label for some k as follows:
 
-![](/images/ML/bayes11.png)
+![](/images/ML/bayes10.png)
 
 Part 4. Parameter estimation and event models
 
