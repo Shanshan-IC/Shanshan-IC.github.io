@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Selection Sort and Implementation in Python
+title:      Insertion Sort and Implementation in Python
 category:   [Algorithms] 
 tags:       [Algorithms]
 ---
