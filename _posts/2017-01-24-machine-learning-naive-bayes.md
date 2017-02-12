@@ -7,13 +7,13 @@ tags:       [Data Mining]
 
 Naive Bayes Algorithms
 
-1. The foundation: Probabilistic model
+Part 1. The foundation: Probabilistic model
 
 Abstractly, naive Bayes is a conditional probability model: given a problem instance to be classified. Bayes Probability terminology:
 
 ![](/images/ML/bayes1.png)
 
-2.  Knowledgement and Process
+Part 2.  Knowledgement and Process
 
 The sample belongs to the type with the highest probability. The definition is:
 
@@ -41,11 +41,15 @@ Because the denominator is constant, so maximum the numerator, and features are 
 
 ![](/images/ML/bayes9.png)
 
-3. Constructing a classifier from the probability model
+Part 3. Constructing a classifier from the probability model
 
 The discussion so far has derived the independent feature model, that is, the naive Bayes probability model. The naive Bayes classifier combines this model with a decision rule. One common rule is to pick the hypothesis that is most probable; this is known as the maximum a posteriori or MAP decision rule. The corresponding classifier, a Bayes classifier, is the function that assigns a class label ![](/images/ML/bayes10.png) for some k as follows:
 
 ![](/images/ML/bayes11.png)
 
-4. Parameter estimation and event models
+Part 4. Parameter estimation and event models
+
+* Gaussian Naive Bayes
+
+
 
