@@ -24,9 +24,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 
 ```
 1,2,3 → 1,3,2
-
 3,2,1 → 1,2,3
-
 1,1,5 → 1,5,1
 ```
 
@@ -101,8 +99,7 @@ Given a collection of numbers that might contain duplicates, return all possible
 For example, [1,1,2] have the following unique permutations:
 
 ```
-    [
-        
+    [   
         [1,1,2],
         [1,2,1],
         [2,2,1],
