@@ -1,23 +1,26 @@
 ---
 layout:     post
-title:      Insertion Sort and Implementation in Python
-category:   [Algorithms] 
-tags:       [Algorithms]
+title:      "Insertion Sort and Implementation in Python"
+category:   Algorithms
+tags:       Algorithms
 ---
+
+* content
+{:toc}
 
 Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. In this post, we only present the 
 
-Complexity:
+## Complexity
 
 ![](/images/algorithms/insert2.png)
 
-Example
+## Example
 
 ![](/images/algorithms/insert.png)
 
-Pseudocode
+## Pseudocode
 
-{% highlight Python %}
+```python
 for i ← 1 to length(A)
     j ← i
     while j > 0 and A[j-1] > A[j]
@@ -25,11 +28,11 @@ for i ← 1 to length(A)
         j ← j - 1
     end while
 end for
-{% endhighlight %}
+```
 
-Implementation in Python
+## Implementation in Python
 
-{% highlight Python %}
+```python
 # -*- coding:utf-8 -*-
 
 # 插入排序就是每一步都将一个待排数据按其大小插入到已经排序的数据中的适当位置，直到全部插入完毕。
@@ -53,4 +56,4 @@ def main():
     print li
 
 main()
-{% endhighlight %}
+```

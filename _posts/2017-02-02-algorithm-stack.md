@@ -4,7 +4,12 @@ title:      "Stack Implementation in Python"
 category:   Algorithms
 tags:       Algorithms
 ---
+* content
+{:toc}
 
+Two ways to implement stack.
+
+## Codes
 ```C++
 #include <iostream>
 using namespace std;
