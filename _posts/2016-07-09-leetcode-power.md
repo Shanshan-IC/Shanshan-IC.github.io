@@ -2,8 +2,12 @@
 layout:     post
 title:      "Leetcode  (231, 326, 342) Power of 2, 3, 4"
 category:   Leetcode
-tags:		Leetcode Algorithms Math
+tags:		Leetcode Math
 ---
+* content
+{:toc}
+
+Power Series
 
 ## Leetcode 231. Power of Two
 

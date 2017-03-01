@@ -2,7 +2,7 @@
 layout:     post
 title:      "Leetcode  (217, 219, 220) Contains Duplicate I, II, III"
 category:   Leetcode
-tags:		Leetcode Algorithms Hash
+tags:		Leetcode Hash
 ---
 
 * content

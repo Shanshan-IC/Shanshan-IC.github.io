@@ -2,7 +2,7 @@
 layout:     post
 title:      "Leetcode (31, 46, 47, 60) Permutation"
 category:   Leetcode
-tags:		Leetcode Algorithms
+tags:		Leetcode 
 ---
 
 * content

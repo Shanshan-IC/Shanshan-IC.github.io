@@ -2,7 +2,7 @@
 layout:     post
 title:      "Leetcode (1, 15, 16, 18) Sum Series"
 category:   Leetcode
-tags:		Leetcode Algorithms Math
+tags:		Leetcode Math
 ---
 * content
 {:toc}

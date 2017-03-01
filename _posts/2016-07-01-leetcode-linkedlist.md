@@ -2,7 +2,7 @@
 layout:     post
 title:      "Leetcode  (141, 142): Linked List Cycle I and II"
 category:   Leetcode 
-tags:		Leetcode Algorithms LinkedList
+tags:		Leetcode LinkedList
 ---
 * content
 {:toc}
