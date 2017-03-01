@@ -9,7 +9,7 @@ tags:       Algorithms
 
 Two ways to implement stack.
 
-## Codes
+## Implement stack using array
 
 ```cpp
 #include <iostream>
@@ -59,7 +59,7 @@ int main() {
 ```
 
 
-Two queue Implement stack
+## Two queue Implement stack
 
 ```cpp
 #include <queue>
