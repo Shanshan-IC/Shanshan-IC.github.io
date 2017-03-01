@@ -60,7 +60,7 @@ int main() {
 
 Two queue Implement stack
 
-```C++
+```cpp
 #include <queue>
 using namespace std;
 
