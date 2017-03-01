@@ -1,11 +1,11 @@
 ---
 layout:     post
-title:      Stack Implementation in Python
-category:   [Algorithms] 
-tags:       [Algorithms]
+title:      "Stack Implementation in Python"
+category:   Algorithms
+tags:       Algorithms
 ---
 
-{% highlight C++ %}
+```C++
 #include <iostream>
 using namespace std;
 
@@ -50,13 +50,12 @@ int main() {
     cout << s->isempty() << endl;
     return 0;
 }
-
-{% endhighlight %}
+```
 
 
 Two queue Implement stack
 
-{% highlight C++ %}
+```C++
 #include <queue>
 using namespace std;
 
@@ -81,4 +80,4 @@ public:
         q.pop();
     }
 };
-{% endhighlight %}
+```
