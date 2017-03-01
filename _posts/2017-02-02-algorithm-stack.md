@@ -10,7 +10,7 @@ tags:       Algorithms
 Two ways to implement stack.
 
 ## Codes
-```C++
+```c
 #include <iostream>
 using namespace std;
 
