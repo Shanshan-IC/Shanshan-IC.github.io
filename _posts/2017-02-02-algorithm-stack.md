@@ -1,15 +1,11 @@
 ---
 layout:     post
 title:      "Stack Implementation in Python"
-category:   Algorithms
+category:   Algorithms 
 tags:       Algorithms
 ---
 * content
 {:toc}
-
-Two ways to implement stack.
-
-## Implement stack using array
 
 ```cpp
 #include <iostream>
@@ -56,10 +52,11 @@ int main() {
     cout << s->isempty() << endl;
     return 0;
 }
+
 ```
 
 
-## Two queue Implement stack
+Two queue Implement stack
 
 ```cpp
 #include <queue>

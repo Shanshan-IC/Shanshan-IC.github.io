@@ -1,12 +1,13 @@
 ---
 layout:     post
 title:      "Insertion Sort and Implementation in Python"
-category:   Algorithms
+category:   Algorithms 
 tags:       Algorithms
 ---
-
 * content
 {:toc}
+
+## Insertion Sort
 
 Insertion sort is a simple sorting algorithm that builds the final sorted array (or list) one item at a time. In this post, we only present the 
 
@@ -20,12 +21,12 @@ Insertion sort is a simple sorting algorithm that builds the final sorted array 
 
 ## Pseudocode
 
-```
-for i from 1 to length(A)
-    j from i
+```python
+for i ← 1 to length(A)
+    j ← i
     while j > 0 and A[j-1] > A[j]
         swap A[j] and A[j-1]
-        j = j - 1
+        j ← j - 1
     end while
 end for
 ```

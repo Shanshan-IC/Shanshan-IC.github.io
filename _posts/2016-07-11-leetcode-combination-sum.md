@@ -22,13 +22,7 @@ Note:
 * The solution set must not contain duplicate combinations.
 
 For example, given candidate set [2, 3, 6, 7] and target 7, A solution set is: 
-	
-```
-[
-	[7],
-	[2, 2, 3]
-]
-```
+[[7],[2, 2, 3]]
 
 ```cpp
 class Solution {
@@ -56,6 +50,7 @@ public:
 ```
 
 ## Leetcode 40. Combination Sum II
+
 * [Leetcode 40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
 
 Given a collection of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.
@@ -68,15 +63,7 @@ Note:
 * The solution set must not contain duplicate combinations.
 
 For example, given candidate set [10, 1, 2, 7, 6, 1, 5] and target 8, A solution set is: 
-
-```
-[
-	[1, 7],
-	[1, 2, 5],
-	[2, 6],
-	[1, 1, 6]
-]
-```
+[[1, 7],[1, 2, 5],[2, 6],[1, 1, 6]]
 
 ```cpp
 class Solution {
