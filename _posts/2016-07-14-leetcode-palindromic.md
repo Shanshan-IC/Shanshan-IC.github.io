@@ -18,8 +18,11 @@ Given a string s, find the longest palindromic substring in s. You may assume th
 Example:
 
 > Input: "babad"
+>
 > Output: "bab"
+>
 > Input: "cbbd"
+>
 > Output: "bb"
 
 ```cpp
