@@ -10,7 +10,7 @@ Binary Tree
 
 ## Leetcode 110. Balanced Binary Tree
 
-*[Leetcode 110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+* [Leetcode 110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
 
 Given a binary tree, determine if it is height-balanced.
 

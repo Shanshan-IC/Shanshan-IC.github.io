@@ -12,7 +12,7 @@ Binary Search Tree
 
 ## Leetcode 108. Convert Sorted Array to Binary Search Tree
 
-*[Leetcode 108. Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+* [Leetcode 108. Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
 
 Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
 
@@ -36,7 +36,7 @@ public:
 
 ## Leetcode 109. Convert Sorted List to Binary Search Tree
 
-*[Leetcode 109. Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
+* [Leetcode 109. Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
 
 Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
 
