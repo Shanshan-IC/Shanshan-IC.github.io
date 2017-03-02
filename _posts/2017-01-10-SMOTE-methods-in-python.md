@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Oversample Method SMOTE"
+title:      "Oversample Method SMOTE"
 category:   DataMining 
 tags:		DataMining
 ---
