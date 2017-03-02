@@ -11,8 +11,6 @@ type: page
 
 ## About me
 
-<iframe src="https://githubbadge.appspot.com/gaohaoyang?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
-
 * 2016.03-Present iQiyi
 * 2016.11-2017.03 PingAn Tech
 * 2015.10-2016-10 Imperial College London
@@ -21,7 +19,7 @@ type: page
 
 ## Contact Me
 
-* GitHub：[Gaohaoyang](https://github.com/Gaohaoyang)
+* GitHub：[Shanshan-IC](https://github.com/Gaohaoyang)
 * Email：33sharewithu@sina.com
 * [Zhihu](https://www.zhihu.com/people/fu-shan-shan-58/activities)
 
