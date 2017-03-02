@@ -10,7 +10,7 @@ tags : 	CPP DirectX Graphics
 
 This tutorials are based on the [DirectX Tutorial](http://www.directxtutorial.com/), show how to deal with the render depth problems using DirectX 9.
 
-##　Understanding the Problem At Hand
+## Understanding the Problem At Hand
 
 Let's say we wanted to draw two triangles, one behind the other, and then view them from an angle where the farther triangle was partially behind the other. If we did this with what code we've covered so far, this is how that might look:
 
@@ -38,7 +38,7 @@ Whenever a pixel is drawn, it takes the closest pixel to the camera and draws th
 
 There are some steps to get Z-Buffering.
 
-1. Setting the Appropriate Presentation Parameters
+Step 1. Setting the Appropriate Presentation Parameters
 
 ```cpp
 D3DPRESENT_PARAMETERS d3dpp;
@@ -52,12 +52,14 @@ d3dpp.BackBufferHeight = SCREEN_HEIGHT;
 d3dpp.EnableAutoDepthStencil = TRUE;	// tell D3D to create it automatically
 d3dpp.AutoDepthStencilFormat = D3DFMT_D16;	// This means that each pixel is 16-bit. 
 ```
-2. Turning On Z-Buffering
+
+Step 2. Turning On Z-Buffering
 ```cpp
 d3ddev->SetRenderState(D3DRS_LIGHTING, FALSE);    // turn off the 3D lighting
 d3ddev->SetRenderState(D3DRS_ZENABLE, TRUE);    // turn on the z-buffer
 ```
-3. Clearing the Z-Buffer
+
+Step 3. Clearing the Z-Buffer
 ```cpp
 d3ddev->Clear(0, NULL, D3DCLEAR_TARGET, D3DCOLOR_XRGB(0, 0, 0), 1.0f, 0);
 d3ddev->Clear(0, NULL, D3DCLEAR_ZBUFFER, D3DCOLOR_XRGB(0, 0, 0), 1.0f, 0);

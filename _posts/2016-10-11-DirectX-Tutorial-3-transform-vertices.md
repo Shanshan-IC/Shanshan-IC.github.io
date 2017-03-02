@@ -18,9 +18,9 @@ let's take a look at everything that happens to translate something from 3D coor
 Before we go to the details, let me explain the three transforms in a very easy way.
 When we are going to take a pictures, there are four steps:
 	
->	put the staff you are going to photo in the position (world transformation)
->
->	modify the camera angle (view transformation)
+> put the staff you are going to photo in the position (world transformation)
+> 
+> modify the camera angle (view transformation)
 >
 >	modify the focal distance (project transformation)
 >
@@ -56,7 +56,7 @@ Let's see how to do them in DirectX3D.
 
 ## Setting the World Transformation
 
-1. Transformation
+Transformation
 
 ```cpp
 D3DXMATRIX matTranslate;    // a matrix to store the translation information
@@ -69,7 +69,7 @@ D3DXMatrixTranslation(&matTranslate, 12.0f, 4.0f, 0.0f);
 d3ddev->SetTransform(D3DTS_WORLD, &matTranslate);
 ```
 
-2. Rotation
+Rotation
 
 ```cpp
 D3DXMATRIX matRotateX;    // a matrix to store the rotation information
@@ -80,7 +80,7 @@ D3DXMatrixRotationX(&matRotateX, 3.14f);
 d3ddev->SetTransform(D3DTS_WORLD, &matRotateX);
 ```
 
-3. Scaling 
+Scaling 
 
 ```cpp
 D3DXMATRIX matScale;    // a matrix to store the scaling information

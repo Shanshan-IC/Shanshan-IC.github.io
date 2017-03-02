@@ -27,15 +27,15 @@ I am going to give you the algebraic function (not C++ function) for attenuation
 
 Atten = 1 / (att0 + att1 * d + att2 * d2)
 
->	Atten: It is a number between 1.0 and 0.0 which indicates the intensity of light. 1.0 is full intensity, while 0.0 is no intensity (no light).
+> Atten: It is a number between 1.0 and 0.0 which indicates the intensity of light. 1.0 is full intensity, while 0.0 is no intensity (no light).
 >
->	d: the distance between the vertex and the light
+> d: the distance between the vertex and the light
 >
->	att0: a constant modifier. if you put 0.5 in this value, you will get a half-lit light that will extend all the way to the maximum range of the light.
+> att0: a constant modifier. if you put 0.5 in this value, you will get a half-lit light that will extend all the way to the maximum range of the light.
 >
->	att1: If used by itself, it is an inverse function, meaning that the light will dissipate more slowly as the distance increases. 
+> att1: If used by itself, it is an inverse function, meaning that the light will dissipate more slowly as the distance increases. 
 >
->	att2:  If used by itself, it is an inverse square function, meaning that the light will not only dissipate more slowly as the distance increases, but the dissipation will be very rapid at first, then sharply slow down. 
+> att2:  If used by itself, it is an inverse square function, meaning that the light will not only dissipate more slowly as the distance increases, but the dissipation will be very rapid at first, then sharply slow down. 
 
 Coding a Point Light
 ```cpp
