@@ -21,7 +21,7 @@ total = item_one + \
 days = ['Monday', 'Tuesday', 'Wednesday',
         'Thursday', 'Friday']
 ```
-## Python Quotation, '', "", """ (means multiple lines words)
+## Python Quotation
 ```python
 word = 'word'
 sentence = "This is a sentence."
@@ -155,7 +155,9 @@ for x in xrange(10):
         continue
     print x
 ```
-* Pass: pass in python is a blank sentence, does not do anything
+
+Pass: pass in python is a blank sentence, does not do anything
+
 ## Number
 ```python
 var = 1
@@ -221,7 +223,7 @@ list2 = [1, 2, 3, 4, 5, 6, 7 ];
 print "list1[0]: ", list1[-2]
 print "list2[1:5]: ", list2[1:5]
 ```
-* List Operations
+List Operations
 ```python
 # update:
 list1[2] = 2000
@@ -237,7 +239,7 @@ for x in [1, 2, 3]:
 	print x
 ```
 
-* List Functions
+List Functions
 ```python
 cmp(list1, list2)
 list.append(obj)
