@@ -43,6 +43,7 @@ while(device->run() && driver)
 		driver->beginScene(true, true, video::SColor(255,120,102,136));
 ```
 draw 3 sprites
+
 ```cpp
 		// draw fire & dragons background world
 		driver->draw2DImage(images, core::position2d<s32>(50,50),
@@ -60,7 +61,7 @@ draw 3 sprites
 			video::SColor(255,(time) % 255,255,255), true);
 ```
 Draw some texts
-{% highlight Java %}
+```cpp
 		if (font)
 			font->draw(L"This demo shows that Irrlicht is also capable of drawing 2D graphics.",
 				core::rect<s32>(130,10,300,50),
