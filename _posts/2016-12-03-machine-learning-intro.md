@@ -16,9 +16,9 @@ We can separate learning problems into a few categories:
 
 data comes with additional attributes that we want to predict:
 
->	classification: samples belong to two or more classes and we want to learn from already labeled data how to predict the class of unlabeled data. 
+> classification: samples belong to two or more classes and we want to learn from already labeled data how to predict the class of unlabeled data. 
 >
->	regression: if the desired output consists of one or more continuous variables, then the task is called regression. 
+> regression: if the desired output consists of one or more continuous variables, then the task is called regression. 
 
 ## unsupervised learning
 

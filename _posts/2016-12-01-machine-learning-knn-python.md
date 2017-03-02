@@ -20,13 +20,13 @@ Look at the above image, we have two type data, including blue diamond and red t
 
 ## How does the KNN algorithm work?
 
->	Step 1: Calculate the distances between the current node and the nodes in the dataset
+> Step 1: Calculate the distances between the current node and the nodes in the dataset
 >	
->	Step 2: Sort all the distances
+> Step 2: Sort all the distances
 >	
->	Step 3: Calculate the frequency of the first K nodes in the classes
+> Step 3: Calculate the frequency of the first K nodes in the classes
 >	
->	Step 4: Return the classification with the highest frequence
+> Step 4: Return the classification with the highest frequence
 
 ## Implementation in Python
 
@@ -90,23 +90,23 @@ knn.predict([18,90])
 
 ## Explain some parameters in the functions
 
->	class sklearn.neighbors.KNeighborsClassifier(n_neighbors=5, weights='uniform', algorithm='auto', leaf_size=30, p=2, metric='minkowski', metric_params=None, n_jobs=1, **kwargs)[source].
+> class sklearn.neighbors.KNeighborsClassifier(n_neighbors=5, weights='uniform', algorithm='auto', leaf_size=30, p=2, metric='minkowski', metric_params=None, n_jobs=1, **kwargs)[source].
 >
->	n_neighbors: k, means the number of neighbors, default = 5.
+> n_neighbors: k, means the number of neighbors, default = 5.
 >
->	weights : str or callable, optional (default = ‘uniform’). 'uniform' means all points in each neighborhood are weighted equally. 'distance' means that weight points by the inverse of their distance. [callable] : a user-defined function which accepts an array of distances, and returns an array of the same shape containing the weights.
+> weights : str or callable, optional (default = ‘uniform’). 'uniform' means all points in each neighborhood are weighted equally. 'distance' means that weight points by the inverse of their distance. [callable] : a user-defined function which accepts an array of distances, and returns an array of the same shape containing the weights.
 >
->	algorithm: ‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’.
+> algorithm: ‘auto’, ‘ball_tree’, ‘kd_tree’, ‘brute’.
 >
->	leaf_size: Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
+> leaf_size: Leaf size passed to BallTree or KDTree. This can affect the speed of the construction and query, as well as the memory required to store the tree. The optimal value depends on the nature of the problem.
 >
->	metric: the distance metric to use for the tree.
+> metric: the distance metric to use for the tree.
 >
->	p: Power parameter for the Minkowski metric. 
+> p: Power parameter for the Minkowski metric. 
 >
->	metric_params: Additional keyword arguments for the metric function.
+> metric_params: Additional keyword arguments for the metric function.
 >
->	n_jobs: The number of parallel jobs to run for neighbors search.
+> n_jobs: The number of parallel jobs to run for neighbors search.
 
 ## When to use the KNN Algorithm
 
