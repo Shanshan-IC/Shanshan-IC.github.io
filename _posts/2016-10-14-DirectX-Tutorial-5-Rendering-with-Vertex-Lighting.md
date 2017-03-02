@@ -47,7 +47,7 @@ Let's go practice.
 
 ## Creating Lights
 
-1. Setting Up a New Flexible Vertex Format
+Step 1. Setting Up a New Flexible Vertex Format
 
 ```cpp
 struct CUSTOMVERTEX {FLOAT X, Y, Z; D3DVECTOR NORMAL;};
@@ -57,19 +57,19 @@ typedef struct D3DVECTOR {
     float x, y, z;
 } D3DVECTOR, *LPD3DVECTOR;
 ```
-2. Turning the Lighting On
+Step 2. Turning the Lighting On
 
 ```cpp
 d3ddev->SetRenderState(D3DRS_LIGHTING, TRUE);
 ```
 
-3. Setting the Ambient Light
+Step 3. Setting the Ambient Light
 
 ```cpp
 d3ddev->SetRenderState(D3DRS_AMBIENT, D3DCOLOR_XRGB(50, 50, 50));    // ambient light
 ```
 
-4. Creating and Setting the Diffuse Light
+Step 4. Creating and Setting the Diffuse Light
 
 ```cpp
 // this is the function that sets up the lights and materials
@@ -88,7 +88,7 @@ void init_light(void)
 }
 ```
 
-5. Creating and Setting the Material
+Step 5. Creating and Setting the Material
 
 ```cpp
 material.Diffuse = D3DXCOLOR(1.0f, 1.0f, 1.0f, 1.0f);    // set diffuse color to white
