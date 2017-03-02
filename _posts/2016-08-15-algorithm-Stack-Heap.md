@@ -21,27 +21,27 @@ Stack and Heap Basic Knowledge (some from geeksforgeeks)
 ## Why is Binary Heap Preferred over BST for Priority Queue?
 
 A typical Priority Queue requires following operations to be efficient.
->	Get Top Priority Element (Get minimum or maximum)
+> Get Top Priority Element (Get minimum or maximum)
 >
->	Insert an element
+> Insert an element
 >
->	Remove top priority element
+> Remove top priority element
 >
->	Decrease Key
+> Decrease Key
 
 ## why is Binary Heap Preferred for Priority Queue?
 
->	Since Binary Heap is implemented using arrays, there is always better locality of reference and operations are more cache friendly.
+> Since Binary Heap is implemented using arrays, there is always better locality of reference and operations are more cache friendly.
 >
->	Although operations are of same time complexity, constants in Binary Search Tree are higher.
+> Although operations are of same time complexity, constants in Binary Search Tree are higher.
 >
->	We can build a Binary Heap in O(n) time. Self Balancing BSTs require O(nLogn) time to construct.
+> We can build a Binary Heap in O(n) time. Self Balancing BSTs require O(nLogn) time to construct.
 >
->	Binary Heap doesn’t require extra space for pointers.
+> Binary Heap doesn’t require extra space for pointers.
 >
->	Binary Heap is easier to implement.
+> Binary Heap is easier to implement.
 >
->	There are variations of Binary Heap like Fibonacci Heap that can support insert and decrease-key in Θ(1) time
+> There are variations of Binary Heap like Fibonacci Heap that can support insert and decrease-key in Θ(1) time
 
 ## Stack
 
@@ -68,14 +68,14 @@ There are two ways to implement a stack:
 
 ## Applications of stack:
 
-Balancing of symbols:
+* Balancing of symbols:
 
-Infix to Postfix/Prefix conversion
+* Infix to Postfix/Prefix conversion
 
-Redo-undo features at many places like editors, photoshop.
+* Redo-undo features at many places like editors, photoshop.
 
-Forward and backward feature in web browsers
+* Forward and backward feature in web browsers
 
-Used in many algorithms like Tower of Hanoi, tree traversals, stock span problem, histogram problem.
+* Used in many algorithms like Tower of Hanoi, tree traversals, stock span problem, histogram problem.
 
-Other applications can be Backtracking, Knight tour problem, rat in a maze, N queen problem and sudoku solver
+* Other applications can be Backtracking, Knight tour problem, rat in a maze, N queen problem and sudoku solver

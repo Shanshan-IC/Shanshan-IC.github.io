@@ -75,12 +75,3 @@ Heap is generally preferred for priority queue implementation because heaps prov
 
 With Fibonacci heap, insert() and getHighestPriority() can be implemented in O(1) amortized time and deleteHighestPriority() can be implemented in O(Logn) amortized time.
 
-``` Some operations
-
-Check it's full
-
-front==(rear+1)%n
-
-Check it's empty
-
-front == rear
