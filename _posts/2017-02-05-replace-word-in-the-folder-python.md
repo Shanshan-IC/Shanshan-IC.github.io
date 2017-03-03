@@ -7,7 +7,7 @@ tags:       Python
 * content
 {:toc}
 
-```
+```python
 import os
 
 # list files
