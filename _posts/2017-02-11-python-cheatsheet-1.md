@@ -108,6 +108,10 @@ a = [1, 2, 3, 4, 5]
 print a[0]
 print a[:-1]
 print a[0:-1:2]
+# copy
+ex = [0] * 10
+# extend
+ex = [1, 2, 3] + ['a', 'b']
 # get index and item in the loop
 for idx, item in enumerate(a):
 	print (idx, item),
@@ -124,9 +128,51 @@ list(set(a))
 b = a[::-1]
 ```
 
+## Smart Dictionary
+```python
+a = {"1":1, "2":2, "3":3}
+b = {"2":2, "3":3, "4":4}
+print a.keys()
+print a.itemes()
+# find same key between two dictionary
+[_ for _ in a.keys() if _ in b.keys()
+# another way
+c = set(a).intersection(set(b))
+# update dictionary
+a.update(b)
+```
 
+## for else
+```python
+for _ in range(5):
+	print _,
+else:
+	print "\n no breaks"
+```
 
+## try else
+```python
+try:
+	print "No exception"
+except:
+	pass
+else:
+	print "No exception occurred"
+```
 
+## lambda function
+```python
+fn = lambda x: x**2
+```
+
+## Option arguments
+```python
+def example(a, b=None, *args, **kwargs):
+	print a, b
+	print args
+	print kwargs
+example(1, "var", 2, 3, word="hello")
+```
 
 
 
