@@ -57,6 +57,9 @@ The likelihood of the features is assumed to be Gaussian:
 
 ![](/images/ML/bayes12.png)
 
+
+## Codes
+using scikit-learn package
 ```python
 from sklearn import datasets
 iris = datasets.load_iris()
@@ -67,7 +70,7 @@ y_pred = gnb.fit(iris.data, iris.target).predict(iris.data)
 print("Number of mislabeled points out of a total %d points : %d" % (iris.data.shape[0],(iris.target != y_pred).sum()))
 ```
 
-* Multinomial Naive Bayes
+## Multinomial Naive Bayes
 
 MultinomialNB implements the naive Bayes algorithm for multinomially distributed data, and is one of the two classic naive Bayes variants used in text classification (where the data are typically represented as word vector counts, although tf-idf vectors are also known to work well in practice). 
 

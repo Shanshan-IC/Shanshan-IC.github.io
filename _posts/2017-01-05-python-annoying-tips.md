@@ -27,4 +27,8 @@ df = pd.read_csv("data.csv", encoding = 'gbk')
 
 # dataframe to dictionary
 data = full_data.set_index('id')['values'].to_dict()
+
+# set to list
+l = list(set([0, 1, 2]))
 ```
+
