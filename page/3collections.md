@@ -11,37 +11,17 @@ type: page
 
 ## 工具
 
-* [box-shadow generator](http://www.cssmatic.com/box-shadow)
+* [impress.js](https://github.com/impress/impress.js)
 
-    生成 box-shadow 的工具。
+    It's a presentation framework based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com.
+    [demo](https://resume33.firebaseapp.com/About/index.html)
 
-* [gradient-generator](http://www.cssmatic.com/gradient-generator)
+* [Smallpdf](https://smallpdf.com/)
 
-    渐变生成器。
-
-* [Ultimate CSS Gradient Generator](http://www.colorzilla.com/gradient-editor/)
-
-    也是渐变生成器
-
-* [CSS Generators -CSSREFLEX](http://www.cssreflex.com/css-generators/)
-
-    CSS3 生成器
-
-- [tiny png](https://tinypng.com/)
-
-    用于压缩 png 或 jpg 的在线工具
-
-* [图床 https://sm.ms/](https://sm.ms/)
-
-    有 API 可用。
-
-* [新浪微博图床 Chrome扩展](https://github.com/Suxiaogang/WeiboPicBed)
-
-* [Unix 时间戳 Unix timestamp](http://tool.chinaz.com/Tools/unixtime.aspx)
+    Make PDF easy: Compress PDF, Merge PDF, Split PDF, Rotate PDF, Protect PDF, PPT, JPG, WORD, EXCEL to PDF and reverse
 
 - [在线正则表达式匹配](https://regex101.com/)
     - 这个功能更强大一点，能清楚的区分出贪婪和懒惰正则。
-- [http://regexr.com/](http://regexr.com/)
 
 ## 编程语言
 
@@ -270,23 +250,11 @@ Syntax Theme: Atom Dark or One Dark
 
 * [JS前端开发群月报 -豪情等人维护](http://www.kancloud.cn/jsfront/month/82796)
 
-## 交互设计相关
+## Useful Website
 
-- [Framer](https://framerjs.com/)
+- [Python Cheatsheet](https://www.pythonsheets.com)
 
-    Design the impossible with Framer
-
-- [FLINTO](https://www.flinto.com/)
-
-    App Prototyping Tools for Designers
-
-- [Principle](http://principleformac.com/)
-
-    Animate Your Ideas, Design Better Apps
-
-- [https://gyrosco.pe/](https://gyrosco.pe/)
-
-    首页的卡片翻动效果非常赞。
+    Python Cheatsheet
 
 ## Comments
 
