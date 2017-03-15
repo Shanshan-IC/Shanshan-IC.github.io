@@ -12,6 +12,11 @@ tags:       Python
 # Python Chinese comments
 # -*- coding: utf-8 -*-
 
+# UnicodeEncodeError: 'ascii' codec can't encode characters in position 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 # python export csv Chinese Problems: 
 df.to_csv(path+'\\'+filename+'.csv', encoding='gb18030', index=False)
 
