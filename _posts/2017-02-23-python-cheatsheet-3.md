@@ -72,5 +72,5 @@ print re.sub(r'(\d{4})-(\d{2})-(\d{2})',r'\2/\3/\1/',date)
 ```
 
 ## Full
-![](images/python/regularexpression.png)
+![](/images/python/regularexpression.png)
 
