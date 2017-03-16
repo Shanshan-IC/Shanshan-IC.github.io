@@ -25,7 +25,6 @@ company_list = companys.values.tolist()
 
 # string output Chinese
 str(company_list).replace('[', '').replace(']', '').decode('string_escape') 
-```
 
 # read csv with Chinese
 df = pd.read_csv("data.csv", encoding = 'gbk')
