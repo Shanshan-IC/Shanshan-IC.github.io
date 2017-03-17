@@ -1,0 +1,1681 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>2017-02-18-500-lines-or-less-6</title></head><body><article class="markdown-body"><hr />
+<p>layout:     post<br />
+title:      &ldquo;500 Lines or Less Chapter 5: A Web Crawler With asyncio Coroutines 翻译&rdquo;<br />
+category:   Translation<br />
+tags:       Python Translation</p>
+<hr />
+<ul>
+<li toc="toc">content<br /></li>
+</ul>
+<p><a href="https://github.com/aosabook/500lines">500 Lines or Less</a></p>
+<p>作者是来自纽约A. Jesse Jiryu Davis是的工程师A. Jesse Jiryu Davis。 他贡献asyncio和Tornado在http://reedysqua.re上。和Python之父Guido van Rossum。 Guido的博客地址是http://<a href="http://www.python.org/~guido/">www.python.org/~guido/</a>。</p>
+<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>引言</h2>
+<p>经典计算机科学强调的是高效算法，尽可能快地完成计算。但许多网络程序更多的时间不是用在计算，而是缓慢的打开许多链接，或者处理一些不常见的情况。其中的挑战是：高效地等待大量的网络事件。当前处理这个问题的方法是异步I/O。</p>
+<p>本章介绍一个简单的网络爬虫。爬虫也是一个异步应用程序，它等待很多响应但计算量很少。一次获取的页面越多，越早完成程序。如果它将线程分配给每个请求，则随着并发请求数量的增加，它将耗尽内存或其他线程的相关资源，直到它耗尽套接字。通过使用异步I/O避开对线程的需求。</p>
+<p>我们在三个阶段提出的例子。首先，展示一个异步事件循环，并使用带回调的事件循环的爬虫：这非常有效，但是扩展到更复杂的问题将导致无法管理代码。第二，因此表明Python协程是高效和可扩展的。我们使用生成器函数在Python中实现简单的协同程序。在第三阶段，使用来自Python标准库里的<code>asyncio</code>的协同程序，并使用异步队列来协调它们。</p>
+<h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>任务</h2>
+<p>网络抓取工具查找和下载网站上的所有网页，也可以对其进行归档或编制索引。 从根URL开始，它获取每个页面，解析它的链接到没打开的的页面，并将它们添加到队列中。当它获取没打开的的页面的链接并且队列为空时，停止工作。</p>
+<p>我们可以通过同时下载多页来加快这个过程。当爬虫找到新链接时，它会在单独的套接字上启动新页面的同步抓取操作。在响应到达时解析响应，向队列添加新链接。可能会出现一些减少返回的点，其中过多的并发性降低性能，因此我们限制并发请求的数量，并将剩余的链接留在队列中，直到请求完成。</p>
+<h2 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>传统的方法</h2>
+<p>我们如何实现爬行器并发？ 传统的方法里，我们创建一个线程池。每个线程将负责通过套接字一页页下载。例如，要从<code>xkcd.com</code>下载一个页面：</p>
+<pre><code class="python">def fetch(url):
+    sock = socket.socket()
+    sock.connect(('xkcd.com', 80))
+    request = 'GET {} HTTP/1.0\r\nHost: xkcd.com\r\n\r\n'.format(url)
+    sock.send(request.encode('ascii'))
+    response = b''
+    chunk = sock.recv(4096)
+    while chunk:
+        response += chunk
+        chunk = sock.recv(4096)
+
+    # Page is now downloaded.
+    links = parse_links(response)
+    q.add(links)
+</code></pre>
+
+<p>默认情况下，套接字操作是阻塞的：当线程调用leisi connect或recv的方法时，它会停止直到操作完成。因此，为了一次下载多个页面，我们需要许多线程。一个复杂的应用程序通过将线程池中的空闲线程保持在线程池中，然后将它们检出以重用它们用于后续任务来摊销线程创建的成本;它对连接池中的套接字执行相同操作。</p>
+<p>但是线程成本昂贵的，而且操作系统对进程，操作系统对一个进程、一个用户、一台机器能使用线程做了不同的硬性限制。在Jesse的系统中，Python线程需要大约50k的内存，并且启动数以万计的线程就会导致失败。如果我们在并发套接字上扩展到数万个并发操作，我们就会耗尽线程用完套接字。每个线程的开销和系统的限制就是这种方式的瓶颈所在。</p>
+<p>在他其有影响的文章&rdquo;The C10K problem&rdquo;中，Dan Kegel概述了I/O并发的多线程的局限性。</p>
+<blockquote>
+<p>如今网络服务器要同时处理一万个客户端，你不这么觉得吗？毕竟，网络规模已经很大了。</p>
+</blockquote>
+<p>凯格尔在1999年创造了&rdquo;C10K&rdquo;这个术语。一万个连接现在听起来很好，但其实也只是在尺寸上变化。那时，使用C10K的每个连接的线程是不切实际的。现在是更高的数量级。事实上，我们的网络爬虫使用线程正常工作。然而对于非常大规模的应用程序，有成千上万的连接，仍然存在上限：超过该限制大多数系统仍然可以创建套接字，在耗尽了线程的时候。我们应该如何克服这一点？</p>
+<h2 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>异步</h2>
+<p>异步I/O框架使用非阻塞套接字在单个线程上执行并行操作。在我们的异步爬虫中，在我们连接到服务器之前设置套接字无阻塞：</p>
+<p><pre><code class="python">sock = socket.socket()
+sock.setblocking(False)
+try:
+    sock.connect(('xkcd.com', 80))
+except BlockingIOError:
+    pass
+</code></pre><br />
+令人恼火的是非阻塞套接字抛出异常，即使它正常工作。这个异常复制了底层C函数讨人厌的行为，它将<code>errno</code>设置为<code>EINPROGRESS</code>来告诉你它已经开始工作。</p>
+<p>现在我们的爬虫需要一种方法来确定连接何时建立，才可以发送HTTP请求。 我们可以写一个简单的循环：</p>
+<pre><code class="python">request = 'GET {} HTTP/1.0\r\nHost: xkcd.com\r\n\r\n'.format(url)
+encoded = request.encode('ascii')
+
+while True:
+    try:
+        sock.send(encoded)
+        break  # Done.
+    except OSError as e:
+        pass
+
+print('sent')
+</code></pre>
+
+<p>这种方法不仅耗CPU，而且不能有效地等待多个套接字。 过去BSD Unix的解决这个问题的解决方案是选择一个C函数，等待一个事件发生在一个非阻塞的套接字或一个小数组。 如今，对具有大量连接的互联网应用的需求导致了诸如&rsquo;poll&rsquo;的替换，然后是BSD的<code>kqueue</code>和Linux上的<code>epoll</code>。这些类似于<code>select</code>的API，但是对于非常大量的连接非常有效。</p>
+<p>Python 3.4的<code>DefaultSelector</code>使用系统上可用的最佳选择函数。要注册有关网络I/O 的提醒，我们需要创建一个非阻塞套接字并使用默认选择器注册它：</p>
+<pre><code class="python">from selectors import DefaultSelector, EVENT_WRITE
+
+selector = DefaultSelector()
+
+sock = socket.socket()
+sock.setblocking(False)
+try:
+    sock.connect(('xkcd.com', 80))
+except BlockingIOError:
+    pass
+
+def connected():
+    selector.unregister(sock.fileno())
+    print('connected!')
+
+selector.register(sock.fileno(), EVENT_WRITE, connected)
+</code></pre>
+
+<p>我们忽略了这个伪错误并调用<code>selector.register</code>，传递套接字的文件描述符和一个常量，代表我们正在等待的事件。 要在连接建立时通知，我们传递<code>EVENT_WRITE</code>：也就是说，我们想知道套接字何时是&rdquo;可写的&rdquo;。 我们还传递一个Python函数，<code>connected</code>当事件发生时运行。该函数称为回调。</p>
+<p>当选择器接收到它们时，我们在一个循环中处理I/O通知：</p>
+<pre><code class="python">def loop():
+    while True:
+        events = selector.select()
+        for event_key, event_mask in events:
+            callback = event_key.data
+            callback()
+</code></pre>
+
+<p>这个<code>connected</code>回调被存储为<code>event_key.data</code>，一旦非阻塞套接字被连接便检索和执行。</p>
+<p>不像前面的快速循环，这里<code>select</code>暂停调用，等待下一个I/O事件。然后循环运行等待这些事件的回调。尚未完成的操作将保持pending，直到进到下一个事件循环时执行。</p>
+<p>到目前为止我们展示了什么？我们展示了如何开始I/O操作和执行回调。异步框架建立展示的两个特性（非阻塞套接字和事件循环），以在单个线程上运行并发操作。</p>
+<p>我们在这里实现了“并发”，但不是传统上被称为“并行性”。也就是说，我们构建了一个重叠I/O的小系统。它能够开始新的行动，而其他也在操作。它实际上并不利用多个核来并行执行计算。但是，这个系统是为I/O绑定的问题设计的，而不是CPU限制的。</p>
+<p>因此，我们的事件循环在并发I/O方面是高效的，因为它不会将线程资源分配给每个连接。但在我们继续前，纠正一个常见的误解，即异步的速度比多线程快。通常不是，事实上在Python中，像我们这样的事件循环比服务少数非常活跃的连接的多线程慢。在没有全局解释器锁的运行时，线程在这样的工作负载上表现更好。“什么是异步，它如何工作，什么时候该用它？”一文中指出了异步所适用和不适用的场景。</p>
+<h2 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>回调</h2>
+<p>目前我们已经构建异步框架，将如何继续构建一个网络爬虫？ 即使写一个简单的URL爬取也是痛苦的是痛苦。</p>
+<p>我们先从全局的URL集合开始，我们看到的URL：</p>
+<pre><code class="python">urls_todo = set(['/'])
+seen_urls = set(['/'])
+</code></pre>
+
+<p><code>seen_urls</code>集里包括<code>urls_todo</code>加完成的URL。这两个集合用于初始化URL“/”。</p>
+<p>获取页面将需要一系列回调。<code>connected</code>在连接套接字时触发回调，并向服务器发送GET请求。但是它必须等待响应，所以需要注册另一个回调。 如果，当回调触发时，它不能读取完整的响应，它再次注册，等等。</p>
+<p>让我们把这些回调放在一个<code>Fetcher</code>对象中，它需要一个URL，一个套接字，还需要一个地方保存返回的字节：</p>
+<pre><code class="python">class Fetcher:
+    def __init__(self, url):
+        self.response = b''  # Empty array of bytes.
+        self.url = url
+        self.sock = None
+</code></pre>
+
+<p>我们开始调用<code>Fetcher.fetch</code></p>
+<pre><code class="python">    # Method on Fetcher class.
+    def fetch(self):
+        self.sock = socket.socket()
+        self.sock.setblocking(False)
+        try:
+            self.sock.connect(('xkcd.com', 80))
+        except BlockingIOError:
+            pass
+
+        # Register next callback.
+        selector.register(self.sock.fileno(),
+                          EVENT_WRITE,
+                          self.connected)
+</code></pre>
+
+<p><code>fetch</code>函数开始连接套接字。 但请注意，该方法在建立连接之前返回。 它必须将控制权返回到事件循环，以等待连接。为了理解为什么，想象我们的整个应用程序的结构：</p>
+<pre><code class="python"># Begin fetching http://xkcd.com/353/
+fetcher = Fetcher('/353/')
+fetcher.fetch()
+
+while True:
+    events = selector.select()
+    for event_key, event_mask in events:
+        callback = event_key.data
+        callback(event_key, event_mask)
+</code></pre>
+
+<p>所有事件提醒在调用<code>select</code>时在事件循环中处理。 因此，<code>fetch</code>必须手动控制到事件循环，以便程序知道套接字何时连接。 只有这样，循环才会运行连接的回调，这在<code>fetch</code>的结尾处注册。</p>
+<p>以下是实现<code>connected</code>的代码：</p>
+<pre><code class="python">    # Method on Fetcher class.
+    def connected(self, key, mask):
+        print('connected!')
+        selector.unregister(key.fd)
+        request = 'GET {} HTTP/1.0\r\nHost: xkcd.com\r\n\r\n'.format(self.url)
+        self.sock.send(request.encode('ascii'))
+
+        # Register the next callback.
+        selector.register(key.fd,
+                          EVENT_READ,
+                          self.read_response)
+</code></pre>
+
+<p>该方法发送<code>GET</code>请求。真正的应用程序将检查<code>send</code>的返回值，以防整个消息不能立即发送。不过这里的程序不复杂。 它调用<code>send</code>，然后等待响应。当然，它必须注册另一个回调，并放弃对事件循环的控制。 最后一个回调<code>read_response</code>处理服务器的回应：</p>
+<pre><code class="python">    # Method on Fetcher class.
+    def read_response(self, key, mask):
+        global stopped
+
+        chunk = self.sock.recv(4096)  # 4k chunk size.
+        if chunk:
+            self.response += chunk
+        else:
+            selector.unregister(key.fd)  # Done reading.
+            links = self.parse_links()
+
+            # Python set-logic:
+            for link in links.difference(seen_urls):
+                urls_todo.add(link)
+                Fetcher(link).fetch()  # &lt;- New Fetcher.
+
+            seen_urls.update(links)
+            urls_todo.remove(self.url)
+            if not urls_todo:
+                stopped = True
+</code></pre>
+
+<p>每次选择器看到套接字是“可读的”时，就会执行回调，这意味着：套接字有数据或已关闭。</p>
+<p>回调从套接字请求最多4千字节的数据。如果更少，<code>chunk</code>包含任何可用的数据。如果有更多，<code>chunk</code>有4千字节长，并且套接字保持可读，因此事件循环在下一个响应时再次运行这个回调。当响应完成时，服务器已关闭套接字并且<code>chunk</code>为空。</p>
+<p><code>parse_links</code>方法返回一组URL。我们为每个新网址开始一个新的抓取器，没有并发上限。注意使用回调的异步编程的一个很好的功能：我们不需要围绕共享数据的变化的互斥，例如当我们添加链接到<code>seen_urls</code>。 没有优先的多任务，所以我们不能在代码中的任意点被打断。</p>
+<p>我们添加一个全局<code>stop</code>变量，并使用它来控制循环：</p>
+<pre><code class="python">stopped = False
+
+def loop():
+    while not stopped:
+        events = selector.select()
+        for event_key, event_mask in events:
+            callback = event_key.data
+            callback()
+</code></pre>
+
+<p>一旦下载所有页面，抓取器会停止全局事件循环，程序退出。</p>
+<p>这个例子使异步问题变得很简单。我们需要一些方法来表达一系列计算和I/O操作，并且调度多个一系列操作以并发运行。但是没有线程，一系列操作不能被收集到单个函数中：每当一个函数开始I/O操作时，它显式地保存将来所需要的任何状态，然后返回。 你可以思考以下如何编写这个状态节省代码。</p>
+<p>让我们来解释一下。考虑我们如何简单地在一个具有常规阻塞套接字的线程上获取一个URL：</p>
+<pre><code class="python"># Blocking version.
+def fetch(url):
+    sock = socket.socket()
+    sock.connect(('xkcd.com', 80))
+    request = 'GET {} HTTP/1.0\r\nHost: xkcd.com\r\n\r\n'.format(url)
+    sock.send(request.encode('ascii'))
+    response = b''
+    chunk = sock.recv(4096)
+    while chunk:
+        response += chunk
+        chunk = sock.recv(4096)
+
+    # Page is now downloaded.
+    links = parse_links(response)
+    q.add(links)
+</code></pre>
+
+<p>这个函数在一个套接字操作和下一个套接字操作之间记录了什么？它有套接字，一个URL和积累的<code>response</code>。在线程上运行的函数使用编程语言的基本特性将该临时状态存储在其堆栈中的局部变量中。该函数还有一个“继续”，即它计划在I/O完成后执行的代码。运行时通过存储线程的指令指针来记住。您不必考虑恢复这些局部变量和I/O后的继续。它是内置的语言。</p>
+<p>但是使用基于回调的异步框架，这些语言功能并没有什么帮助。在等待I/O时，函数必须显式地保存其状态，因为该函数在I/O完成之前返回并丢失其堆栈。Fetcher实例中我们的基于回调存储的<code>sock</code>和<code>response</code>作为<code>self</code>的属性。代替指令指针，它通过注册<code>connected</code>的回调和<code>read_response</code>来存储它的连续。随着应用程序的功能增加，我们在回调中手动保存状态的复杂性也在增加。</p>
+<p>更糟的是，如果回调引发异常，在调度链中的下一个回调之前会发生什么？所以在<code>parse_links</code>方法上做的并不好，它抛出解析HTML的异常：</p>
+<pre><code class="python">Traceback (most recent call last):
+  File &quot;loop-with-callbacks.py&quot;, line 111, in &lt;module&gt;
+    loop()
+  File &quot;loop-with-callbacks.py&quot;, line 106, in loop
+    callback(event_key, event_mask)
+  File &quot;loop-with-callbacks.py&quot;, line 51, in read_response
+    links = self.parse_links()
+  File &quot;loop-with-callbacks.py&quot;, line 67, in parse_links
+    raise Exception('parse error')
+Exception: parse error
+</code></pre>
+
+<p>堆跟踪仅显示事件循环正在运行回调。我们不记得是什么导致的错误。链条在两端都断了：我们忘了我们去哪里，我们为何而来。这种上下文的丢失被称为“stack ripping”，并且在许多情况下它混淆了研究者。堆栈翻录还阻止我们为回调链安装异常处理程序，“try/except”块包装函数调用及其后代的方式.</p>
+<p>因此，除了关于多线程和异步的相对效率的长期争论之外，还有另一个争论是更容易出错的：如果你使错误同步它们，线程就容易受到数据竞争，但是回调是固执的调试由于堆栈翻录。</p>
+<h2 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>协同</h2>
+<p>可以编写异步代码，将回调的效率与多线程编程的经典好看结合起来。这种组合是通过“协同程序”的模式来实现。使用Python3.4的标准asyncio库和“aiohttp”的包，在协程中非常直接获取URL：</p>
+<pre><code class="python">    @asyncio.coroutine
+    def fetch(self, url):
+        response = yield from self.session.get(url)
+        body = yield from response.read()
+</code></pre>
+
+<p>它也是可扩展的。与每个线程的50k内存和操作系统对线程的硬限制相比，Python协程在Jesse的系统上只需要3k的内存。 Python可以轻松启动数十万个协程。</p>
+<p>协同程序的概念，可以追溯到很早以前的计算机科学：它是一个可以暂停和恢复的子程序。而线程是由操作系统抢占式多任务，协同多任务协作：他们选择何时暂停，以及哪个协程运行下一步。</p>
+<p>有很多协同程序的实现，在Python就有好几个。Python3.4中的标准“asyncio”库中的协程是基于生成器，Future类和“yield from”语句构建的。从Python3.5开始，协程是语言本身的一个本地特性;然而，了解协同程序，，使用预先存在的语言设施，是解决Python3.5的本地协同程序的基础。</p>
+<p>为了解释Python3.4的基于生成器的协同程序，我们将介绍一些生成器以及它们如何在asyncio中用作协程，并且相信你会喜欢阅读它。一旦我们解释了基于生成器的协同程序，我们将使用它们在我们的异步Web爬虫。</p>
+<h2 id="python"><a name="user-content-python" href="#python" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python生成器如何工作</h2>
+<p>在掌握Python生成器之前，您必须了解常规Python函数的工作原理。通常，当Python函数调用子例程时，子例程保留控制，直到返回或抛出异常。然后控制权返回给调用者：</p>
+<pre><code class="python">&gt;&gt;&gt; def foo():
+...     bar()
+...
+&gt;&gt;&gt; def bar():
+...     pass
+</code></pre>
+
+<p>标准的Python解释器是用C编写的。执行Python函数的C函数被称<code>PyEval_EvalFrameEx</code>。它需要一个Python栈框架对象，并在框架的上下文中评估Python字节码。 这里是foo的字节码：</p>
+<pre><code class="python">&gt;&gt;&gt; import dis
+&gt;&gt;&gt; dis.dis(foo)
+  2           0 LOAD_GLOBAL              0 (bar)
+              3 CALL_FUNCTION            0 (0 positional, 0 keyword pair)
+              6 POP_TOP
+              7 LOAD_CONST               0 (None)
+             10 RETURN_VALUE
+</code></pre>
+
+<p><code>foo</code>函数加载<code>bar</code>到其堆中调用，然后从堆中弹出其返回值，将<code>None</code>加载到堆栈，并返回<code>None</code>。</p>
+<p>当<code>PyEval_EvalFrameEx</code>遇到<code>CALL_FUNCTION</code>字节码时，它会递归创建一个新的<code>Python</code>栈：也就是说，它使用新的堆递归调用<code>PyEval_EvalFrameEx</code>，用于执行<code>bar</code>。</p>
+<p>了解Python堆栈帧在堆内存中分配是很重要的！Python解释器是一个C程序，所以它的堆框架也是正常的堆栈帧。但Python堆框架是在建立堆上。 除此之外，这意味着Python堆框架可以为其函数调用。要以交互方式查看，从<code>bar</code>保存当前的框架</p>
+<pre><code class="python">&gt;&gt;&gt; import inspect
+&gt;&gt;&gt; frame = None
+&gt;&gt;&gt; def foo():
+...     bar()
+...
+&gt;&gt;&gt; def bar():
+...     global frame
+...     frame = inspect.currentframe()
+...
+&gt;&gt;&gt; foo()
+&gt;&gt;&gt; # The frame was executing the code for 'bar'.
+&gt;&gt;&gt; frame.f_code.co_name
+'bar'
+&gt;&gt;&gt; # Its back pointer refers to the frame for 'foo'.
+&gt;&gt;&gt; caller_frame = frame.f_back
+&gt;&gt;&gt; caller_frame.f_code.co_name
+'foo'
+</code></pre>
+
+<p><img alt="" src="/images/python/500lines1.png" /></p>
+<p>该阶段是设置Python生成器，使用相同的构建块 - 代码对象和堆。</p>
+<p>这是一个生成器函数：</p>
+<pre><code class="python">&gt;&gt;&gt; def gen_fn():
+...     result = yield 1
+...     print('result of yield: {}'.format(result))
+...     result2 = yield 2
+...     print('result of 2nd yield: {}'.format(result2))
+...     return 'done'
+...     
+</code></pre>
+
+<p>当Python将<code>gen_fn</code>编译为字节码时，它会看到<code>yield</code>状态，并且知道<code>gen_fn</code>是一个生成器函数，而不是一个常规函数。 它设置一个标志记住：</p>
+<pre><code class="python">&gt;&gt;&gt; # The generator flag is bit position 5.
+&gt;&gt;&gt; generator_bit = 1 &lt;&lt; 5
+&gt;&gt;&gt; bool(gen_fn.__code__.co_flags &amp; generator_bit)
+True
+</code></pre>
+
+<p>当你调用一个生成器函数，Python看到生成器标志，它实际上并不运行该函数。 相反，它创建一个生成器：</p>
+<pre><code class="python">&gt;&gt;&gt; gen = gen_fn()
+&gt;&gt;&gt; type(gen)
+&lt;class 'generator'&gt;
+</code></pre>
+
+<p>Python生成器封装了一个堆和一些代码的引用，<code>gen_fn</code>的主体：</p>
+<pre><code class="python">&gt;&gt;&gt; gen.gi_code.co_name
+'gen_fn'
+</code></pre>
+
+<p>所有从<code>gen_fn</code>调用的生成器都指向这个相同的代码。但每个都有自己的堆。 这个堆栈帧不在任何实际堆中，它坐在栈内存等待使用：</p>
+<p><img alt="" src="/images/python/500lines2.png" /></p>
+<p>该框架具有“last instruction”指针，它是最新执行的指令。 开始时，last instruction指针是-1，表示生成器尚未开始：</p>
+<pre><code class="python">&gt;&gt;&gt; gen.gi_frame.f_lasti
+-1
+</code></pre>
+
+<p>当我们调用<code>send</code>时，生成器到底第一个<code>yield</code>并且暂停。<code>send</code>的返回值是1，因为这是<code>gen</code>传递给<code>yield</code>表达式：</p>
+<pre><code class="python">&gt;&gt;&gt; gen.send(None)
+1
+</code></pre>
+
+<p>生成器的指令指针现在是从开始的3个字节码，部分通过编译的Python的56个字节：</p>
+<pre><code class="python">&gt;&gt;&gt; gen.gi_frame.f_lasti
+3
+&gt;&gt;&gt; len(gen.gi_code.co_code)
+56
+</code></pre>
+
+<p>生成器可以在任何时候从任何函数恢复，因为它的堆实际上不在堆上：它在栈上。它在调用层次结构中的位置 不固定的，并且它不需要遵守常规函数执行的先进先出顺序。</p>
+<p>我们可以将值“hello”发送到生成器，它成为<code>yield</code>表达式的结果，并且生成器继续，直到它产生yield 2：</p>
+<pre><code class="python">&gt;&gt;&gt; gen.send('hello')
+result of yield: hello
+2
+</code></pre>
+
+<p>它的堆现在包括了局部变量<code>result</code></p>
+<pre><code class="python">&gt;&gt;&gt; gen.gi_frame.f_locals
+{'result': 'hello'}
+</code></pre>
+
+<p>从<code>gen_fn</code>创建的其他生成器将有自己的堆和局部变量。</p>
+<p>当我们再次调用<code>send</code>时，生成器继续通过它的第二个<code>yield</code>，并抛出特别的<code>StopIteration</code>异常结束：</p>
+<pre><code class="python">&gt;&gt;&gt; gen.send('goodbye')
+result of 2nd yield: goodbye
+Traceback (most recent call last):
+  File &quot;&lt;input&gt;&quot;, line 1, in &lt;module&gt;
+StopIteration: done
+</code></pre>
+
+<p>这个异常有一个值，它是生成器的返回值：字符串“done”。</p>
+<h2 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>使用生成器构建协同程序</h2>
+<p>从保存的值恢复，具有返回值。听起来很好地构建一个异步编程模型。 我们想建立一个“协同程序”：一个与程序中的其他程序一起调度的程序。 我们的协程将是Python标准“asyncio”库中的简化版本。 在asyncio中，我们将使用generator，futures和“yield from”语句。</p>
+<p>首先，我们需要一种方法来表示协同程序正在等待的未来结果。精简的版本如下：</p>
+<pre><code class="python">class Future:
+    def __init__(self):
+        self.result = None
+        self._callbacks = []
+
+    def add_done_callback(self, fn):
+        self._callbacks.append(fn)
+
+    def set_result(self, result):
+        self.result = result
+        for fn in self._callbacks:
+            fn(self)
+</code></pre>
+
+<p>future 初始时pending，它通过调用<code>set_result</code>解析。</p>
+<p>让我们使用futures和coroutines来调整抓取器。通过回调来写<code>fetch</code> </p>
+<pre><code class="python">class Fetcher:
+    def fetch(self):
+        self.sock = socket.socket()
+        self.sock.setblocking(False)
+        try:
+            self.sock.connect(('xkcd.com', 80))
+        except BlockingIOError:
+            pass
+        selector.register(self.sock.fileno(),
+                          EVENT_WRITE,
+                          self.connected)
+
+    def connected(self, key, mask):
+        print('connected!')
+        # And so on....
+</code></pre>
+
+<p><code>fetch</code>方法开始连接套接字，然后注册回调，<code>connected</code>，当套接字准备好时执行。现在我们可以将这两个步骤组合成一个协同程序</p>
+<pre><code class="python">    def fetch(self):
+        sock = socket.socket()
+        sock.setblocking(False)
+        try:
+            sock.connect(('xkcd.com', 80))
+        except BlockingIOError:
+            pass
+
+        f = Future()
+
+        def on_connected():
+            f.set_result(None)
+
+        selector.register(sock.fileno(),
+                          EVENT_WRITE,
+                          on_connected)
+        yield f
+        selector.unregister(sock.fileno())
+        print('connected!')
+</code></pre>
+
+<p>现在<code>fetch</code>是一个生成器函数，而不是一个常规函数，因为它包含<code>yield</code>语句。我们创建一个pending future，然后让它暂停<code>fetch</code>直到套接字准备就绪。内部函数<code>on_connected</code>解析future。</p>
+<p>但是，当future解析式，是什么重启生成器呢？ 我们需要一个协程驱动程序。 称之为“任务”：</p>
+<pre><code class="python">lass Task:
+    def __init__(self, coro):
+        self.coro = coro
+        f = Future()
+        f.set_result(None)
+        self.step(f)
+
+    def step(self, future):
+        try:
+            next_future = self.coro.send(future.result)
+        except StopIteration:
+            return
+
+        next_future.add_done_callback(self.step)
+
+# Begin fetching http://xkcd.com/353/
+fetcher = Fetcher('/353/')
+Task(fetcher.fetch())
+
+loop()
+</code></pre>
+
+<p>任务通过向其发送<code>None</code>来启动<code>fetch</code>生成器。 然后<code>fetch</code>运行，直到它产生一个future，任务用<code>next_future</code>捕获。当套接字连接时，事件循环运行回调<code>on_connected</code>，它解析<code>future</code>调用<code>step</code>，恢复<code>fetch</code>。</p>
+<h2 id="yield-from"><a name="user-content-yield-from" href="#yield-from" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>用<code>yield from</code>转换协同</h2>
+<p>一旦套接字连接，我们发送HTTP GET请求并读取服务器响应。 这些步骤不再分散在回调中; 我们将它们收集到相同的生成函数中：</p>
+<pre><code class="python">    def fetch(self):
+        # ... connection logic from above, then:
+        sock.send(request.encode('ascii'))
+
+        while True:
+            f = Future()
+
+            def on_readable():
+                f.set_result(sock.recv(4096))
+
+            selector.register(sock.fileno(),
+                              EVENT_READ,
+                              on_readable)
+            chunk = yield f
+            selector.unregister(sock.fileno())
+            if chunk:
+                self.response += chunk
+            else:
+                # Done reading.
+                break
+</code></pre>
+
+<p>这个代码从套接字读取整个消息。我们如何将它从<code>fetch</code>转换为子程序？ 现在Python3的<code>yield from</code>接管了这个阶段。 它把一个生成器委托给另一个。</p>
+<p>让我们回到我们简单的生成器示例：</p>
+<pre><code class="python">&gt;&gt;&gt; def gen_fn():
+...     result = yield 1
+...     print('result of yield: {}'.format(result))
+...     result2 = yield 2
+...     print('result of 2nd yield: {}'.format(result2))
+...     return 'done'
+...     
+</code></pre>
+
+<p>要从另一个生成器调用此生成器，请使用<code>yield</code>：</p>
+<pre><code class="python">&gt;&gt;&gt; # Generator function:
+&gt;&gt;&gt; def caller_fn():
+...     gen = gen_fn()
+...     rv = yield from gen
+...     print('return value of yield-from: {}'
+...           .format(rv))
+...
+&gt;&gt;&gt; # Make a generator from the
+&gt;&gt;&gt; # generator function.
+&gt;&gt;&gt; caller = caller_fn()
+</code></pre>
+
+<p><code>caller</code>生成器就像是<code>gen</code>，它被委托给：</p>
+<pre><code class="python">&gt;&gt;&gt; caller.send(None)
+1
+&gt;&gt;&gt; caller.gi_frame.f_lasti
+15
+&gt;&gt;&gt; caller.send('hello')
+result of yield: hello
+2
+&gt;&gt;&gt; caller.gi_frame.f_lasti  # Hasn't advanced.
+15
+&gt;&gt;&gt; caller.send('goodbye')
+result of 2nd yield: goodbye
+return value of yield-from: done
+Traceback (most recent call last):
+  File &quot;&lt;input&gt;&quot;, line 1, in &lt;module&gt;
+StopIteration
+</code></pre>
+
+<p>当<code>caller</code>yield from<code>gen1</code>，<code>caller</code>不继续往前。它的指令指针保持在15，它的<code>yield from</code>的位置，即使内部生成器<code>gen</code>从一个<code>yield</code>语句到下一个。从<code>caller</code>外部，我们无法知道它产生的值是从<code>caller</code>或从其委派的生成器。从<code>gen</code>内部，我们不能知道值是从<code>caller</code>还是从外部发送。<code>yield from</code>是一个无摩擦通道，从它的值输入和<code>gen</code>输出直到<code>gen</code>完成。</p>
+<p>协同程序可以将工作委托给一个有<code>yield from</code>子协同程序，并从中接收工作结果。 注意，上面<code>caller</code>打印“return value of yield-from: done”。 当<code>gen</code>完成时，其返回值成为<code>caller</code>中<code>yield from</code>的值：</p>
+<pre><code class="python">    rv = yield from gen
+</code></pre>
+
+<p>早些时候，当我们批评基于回调的异步编程时，我们最强烈的投诉是&rdquo;&ldquo;stack ripping&rdquo;：当回调抛出异常时，堆跟踪通常是无用的。它只显示事件循环正在运行回调，而不是为什么。协程如何运行？</p>
+<pre><code class="python">&gt;&gt;&gt; def gen_fn():
+...     raise Exception('my error')
+&gt;&gt;&gt; caller = caller_fn()
+&gt;&gt;&gt; caller.send(None)
+Traceback (most recent call last):
+  File &quot;&lt;input&gt;&quot;, line 1, in &lt;module&gt;
+  File &quot;&lt;input&gt;&quot;, line 3, in caller_fn
+  File &quot;&lt;input&gt;&quot;, line 2, in gen_fn
+Exception: my error
+</code></pre>
+
+<p>这更有用！ 堆跟踪显示<code>caller_fn</code>在委托<code>gen_fn</code>时抛出错误。 更令人欣慰的是，我们可以将调用包装到异常处理程序中的子协程，同样使用正常的子程序：</p>
+<pre><code class="python">&gt;&gt;&gt; def gen_fn():
+...     yield 1
+...     raise Exception('uh oh')
+...
+&gt;&gt;&gt; def caller_fn():
+...     try:
+...         yield from gen_fn()
+...     except Exception as exc:
+...         print('caught {}'.format(exc))
+...
+&gt;&gt;&gt; caller = caller_fn()
+&gt;&gt;&gt; caller.send(None)
+1
+&gt;&gt;&gt; caller.send('hello')
+caught uh oh
+</code></pre>
+
+<p>因此，我们用子协同因子转换逻辑，就像使用常规子程序一样。 让我们用抓取器转化一些有用的子协程。我们写一个<code>read</code>协程来接收块：</p>
+<pre><code class="python">def read(sock):
+    f = Future()
+
+    def on_readable():
+        f.set_result(sock.recv(4096))
+
+    selector.register(sock.fileno(), EVENT_READ, on_readable)
+    chunk = yield f  # Read one chunk.
+    selector.unregister(sock.fileno())
+    return chunk
+</code></pre>
+
+<p>用<code>read_all</code>协程来构建<code>read</code>，获取所有的信息</p>
+<pre><code class="python">def read_all(sock):
+    response = []
+    # Read whole response.
+    chunk = yield from read(sock)
+    while chunk:
+        response.append(chunk)
+        chunk = yield from read(sock)
+
+    return b''.join(response)
+</code></pre>
+
+<p>如果你以正确的方式倾斜，<code>yield from</code>消失，这看起来像阻塞I/O的常规函数。但事实上，<code>read</code>和<code>read_all</code>是协程。<code>read</code>暂停<code>read_all</code>直到I/O完成。当<code>read_all</code>暂停时，异步事件循环执行其他工作，并等待其他I/O事件; <code>read_all</code>在恢复事件准备好后，在下一个循环上读取的结果。</p>
+<p>在堆根目录，<code>fetch</code>调用<code>read_all</code>：</p>
+<pre><code class="python">class Fetcher:
+    def fetch(self):
+         # ... connection logic from above, then:
+        sock.send(request.encode('ascii'))
+        self.response = yield from read_all(sock)
+</code></pre>
+
+<p>奇怪的是，Task类不需要修改。它和之前一样驱动外部<code>fetch</code>协同程序：</p>
+<pre><code class="python">Task(fetcher.fetch())
+loop()
+</code></pre>
+
+<p>当<code>read</code>产生future时，任务通过<code>yield from</code>语句的通道获取，就好像future直接从<code>fetch</code>产生。 当循环解析future时，任务将其结果发送到<code>fetch</code>，并且<code>read</code>接收该值，就好像任务直接驱动<code>read</code>一样：</p>
+<p><img alt="" src="/images/python/500lines3.png" /></p>
+<p>为了完善协程，我们抛出一个错误：在等待未来时使用<code>yield</code>，当它委托给一个子协程时<code>yield from</code>。</p>
+<p>我们利用Python生成器和迭代器之间的深层对应。 推进生成器对于调用者，与推进迭代器相同。 所以我们通过一个特殊的方法使我们的Future类可迭代：</p>
+<pre><code class="python">    # Method on Future class.
+    def __iter__(self):
+        # Tell Task to resume me here.
+        yield self
+        return self.result
+</code></pre>
+
+<p>future的<code>__iter__</code>方法是yield future的协程。现在我们使用以下的代码：</p>
+<pre><code class="python"># f is a Future.
+yield f
+</code></pre>
+
+<p>用这个：</p>
+<pre><code class="python"># f is a Future.
+yield from f
+</code></pre>
+
+<p>结果是一样的！驱动Task从其调用<code>send</code>获取future，当未来被解析时，其将新的结果发送回协同。</p>
+<p>使用<code>yield from</code>有什么优点？为什么用<code>yield</code>等待future和用<code>yield from</code>委托到子协同更好？因为它可以自由地改变其实现而不影响调用者：它可能是一个正常的方法返回future将解析为一个值，它也可能是包含<code>yield from</code>语句的，并返回值。在任何一种情况下，调用者只需要从方法中yield，以便等待结果。</p>
+<p>温柔的读者，我们已经到达了我们愉快的协作在asyncio的结束。我们探讨了发电机的机制，并草拟了一个期货和任务的实施。我们概述了asyncio如何实现两个世界中最好的：并发I / O比线程更有效，比回调更清晰。当然，真正的asyncio比我们的草图更复杂。真正的框架解决了零拷贝I / O，公平调度，异常处理和大量其他功能。</p>
+<p>对于asyncio用户，用协同程序编码比你在这里看到的要简单得多。在上面的代码中，我们从第一个原则实现协程，所以你看到回调，任务和期货。你甚至看到非阻塞套接字和调用select。但是当使用asyncio构建应用程序时，这些都不会出现在您的代码中。正如我们承诺的，你现在可以顺利地获取一个URL：</p>
+<pre><code class="python">    @asyncio.coroutine
+    def fetch(self, url):
+        response = yield from self.session.get(url)
+        body = yield from response.read()
+</code></pre>
+
+<p>满意这个博览会，我们回到我们原来的任务：写一个异步的网络爬虫，使用asyncio。</p>
+<p>协调协同<br />
+我们开始描述我们如何希望我们的爬行器工作。现在是时候实现它与asyncio协程。</p>
+<p>我们的抓取工具会抓取第一页，解析其链接，并将其添加到队列中。在这之后，它扇出网站，同时抓取页面。但是为了限制客户端和服务器上的负载，我们希望运行一些最大数量的工作，并且没有更多。每当工作者完成提取页面时，它应该立即从队列中拉下一个链接。我们将过去没有足够工作的周期，所以一些工人必须暂停。但是当一个工作者点击一个富有新链接的页面时，队列突然增长，任何暂停的工作者都应该醒来并开始破解。最后，我们的程序必须在其工作完成后退出。</p>
+<p>想象一下，如果工人是线程。我们将如何表达爬虫的算法？我们可以使用Python标准库中的同步queue11。每次将项目放入队列时，队列都会增加其“任务”的计数。完成对项目的工作后，工作线程调用task_done。主线程在Queue.join上阻塞，直到每个放入队列的项目被一个task_done调用匹配，然后它退出。</p>
+<p>协程使用与asyncio队列完全相同的模式！首先我们导入它12：</p>
+<h2 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>引用</h2>
+<ol>
+<li>
+<p>Guido introduced the standard asyncio library, called &ldquo;Tulip&rdquo; then, at PyCon 2013.</p>
+</li>
+<li>
+<p>Even calls to send can block, if the recipient is slow to acknowledge outstanding messages and the system&rsquo;s buffer of outgoing data is full.</p>
+</li>
+<li>
+<p><a href="http://www.kegel.com/c10k.html">http://www.kegel.com/c10k.html</a></p>
+</li>
+<li>
+<p>Python&rsquo;s global interpreter lock prohibits running Python code in parallel in one process anyway. Parallelizing CPU-bound algorithms in Python requires multiple processes, or writing the parallel portions of the code in C. But that is a topic for another day.</p>
+</li>
+<li>
+<p>Jesse listed indications and contraindications for using async in &ldquo;What Is Async, How Does It Work, And When Should I Use It?&rdquo;:. Mike Bayer compared the throughput of asyncio and multithreading for different workloads in &ldquo;Asynchronous Python and Databases&rdquo;:</p>
+</li>
+<li>
+<p>For a complex solution to this problem, see <a href="http://www.tornadoweb.org/en/stable/stack_context.html">http://www.tornadoweb.org/en/stable/stack_context.html</a></p>
+</li>
+<li>
+<p>The @asyncio.coroutine decorator is not magical. In fact, if it decorates a generator function and the PYTHONASYNCIODEBUG environment variable is not set, the decorator does practically nothing. It just sets an attribute, _is_coroutine, for the convenience of other parts of the framework. It is possible to use asyncio with bare generators not decorated with @asyncio.coroutine at all.</p>
+</li>
+<li>
+<p>Python 3.5&rsquo;s built-in coroutines are described in PEP 492, &ldquo;Coroutines with async and await syntax.&rdquo;</p>
+</li>
+<li>
+<p>This future has many deficiencies. For example, once this future is resolved, a coroutine that yields it should resume immediately instead of pausing, but with our code it does not. See asyncio&rsquo;s Future class for a complete implementation.</p>
+</li>
+<li>
+<p>In fact, this is exactly how &ldquo;yield from&rdquo; works in CPython. A function increments its instruction pointer before executing each statement. But after the outer generator executes &ldquo;yield from&rdquo;, it subtracts 1 from its instruction pointer to keep itself pinned at the &ldquo;yield from&rdquo; statement. Then it yields to its caller. The cycle repeats until the inner generator throws StopIteration, at which point the outer generator finally allows itself to advance to the next instruction.</p>
+</li>
+<li>
+<p><a href="https://docs.python.org/3/library/queue.html">https://docs.python.org/3/library/queue.html</a></p>
+</li>
+<li>
+<p><a href="https://docs.python.org/3/library/asyncio-sync.html">https://docs.python.org/3/library/asyncio-sync.html</a></p>
+</li>
+<li>
+<p>The actual asyncio.Queue implementation uses an asyncio.Event in place of the Future shown here. The difference is an Event can be reset, whereas a Future cannot transition from resolved back to pending.</p>
+</li>
+<li>
+<p><a href="https://glyph.twistedmatrix.com/2014/02/unyielding.html">https://glyph.twistedmatrix.com/2014/02/unyielding.html</a></p>
+</li>
+</ol></article></body></html>
