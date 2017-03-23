@@ -1,0 +1,517 @@
+
+---
+layout:     post
+title:      "500 Lines or Less Chapter 7: DBDB: Dog Bed Database 翻译"
+category:   Translation
+tags:       Python Translation
+---
+
+* content
+{:toc}
+
+[500 Lines or Less](https://github.com/aosabook/500lines)
+
+
+## 介绍
+
+DBDB（Dog Bed Database）是一个实现简单的键/值数据库的Python库。它允许你将键与值关联，并将其存储在磁盘上以供稍后检索。
+
+DBDB旨在保护数据在面临计算机崩溃和错误条件，避免将所有数据保存在RAM中，因此你可以存储比RAM多的数据。
+
+## 内存
+
+我记得我第一次卡在一个bug。当我写完我的基础程序并运行它，奇怪的闪光像素出现在屏幕上，程序提前中止。当我回看代码时，最后几行代码消失了。
+
+我妈妈的一个朋友知道如何编程，所以我们打了个电话。在与她谈话的几分钟内，我发现了问题：程序太大，侵犯到了视频内存。清除屏幕截断程序，闪烁是Applesoft BASIC在程序结束之后将程序状态存储在RAM中的行为的工件。
+
+从此我非常关心内存分配。我学习了指针和如何使用malloc分配内存，数据结构是如何在内存中布局。我学会了非常，非常小心地改变它们。
+
+几年后，在阅读Erlang的面向过程的语言时，我发现它实际上不需要复制数据来在进程之间发送消息，因为一切都是不可变的。然后我在Clojure中发现了不可变的数据结构。
+
+2013年当我阅读CouchDB的时候，我只是微笑和点头，认识到管理复杂数据的结构和机制，因为它会改变。
+
+我学会了你可以设计围绕不可变数据构建的系统。
+
+然后我同意为这本书写一章节。
+
+我想，描述CouchDB的核心数据存储概念将是有趣的。
+
+在试图写一个二叉树算法来改变树的地方，我很沮丧事情变得复杂。边缘案例的数量，并试图解释树一部分的变化如何影响其他人，让我很是头痛。我不知道我将如何解释这一切。
+
+记住经验教训，我看了一个递归算法更新不可变二叉树，结果是相对而直接。
+
+我再次学到，更容易推理不可变的事情。
+
+## 为什么是有趣的
+
+大多数项目需要某种数据库。你需要自己写;有许多边缘情况会打击你，即使你只是写JSON到磁盘：
+
+* 如果文件系统空间不足，会发生什么？
+
+* 如果您的笔记本电脑在保存时会死机怎么办？
+
+* 如果您的数据大小超过可用内存会怎么样？（不适用于现代台式机上的大多数应用程序，但不大可能用于移动设备或服务器端Web应用程序）。
+
+然而，如果你想了解数据库如何处理所有这些问题，自己写一个可能会更好。
+
+我们在这里讨论的技术和概念适用于需要在面对失败时具有理性的，可预测的行为的任何问题。
+
+说到失败...
+
+## 表征故障
+
+数据库的特征通常在于它们紧密地符合ACID属性：原子性，一致性，隔离和持久性。
+
+DBDB中的更新是原子性和持久性的，两个属性将在本章后面描述。 DBDB不提供一致性保证，因为对存储的数据没有约束。同样不实现隔离。
+
+应用程序代码当然可以加强一致性保证，但适当的隔离需要事务管理器。我们不在这里尝试;但是，您可以在CircleDB一章中了解有关事务管理的更多信息。
+
+我们还有其他系统维护问题需要考虑。在此实现中不会回收陈旧的数据，因此重复更新（即使是相同的密钥）将最终占用所有磁盘空间。 （你会很快发现为什么会是这种情况。）PostgreSQL调用这个回收“真空”（使旧行空间可供重用），CouchDB称之为“压缩”（通过重写数据的“活”部分到一个新文件，并原子地移动它在旧的文件）。
+
+可以添加压缩功能增强DBDB，但是这个问题留给读者练习。
+
+## DBDB的架构
+
+DBDB将数据的逻辑结构（在本例中为二叉树;逻辑层）中的“放在磁盘上的某处”（如何将数据布置在文件中;物理层）的关注从键/值存储（将键`a`与值`foo`关联;公共API）。
+
+许多数据库将逻辑和物理方面分开，因为提供的可选实现方式通常是有用的，以获得不同的性能特性，例如， DB2的SMS（文件系统中的文件）与DMS（原始块设备）表空间或MySQL的替代引擎实现。
+
+## 探索设计
+
+本书中的大部分章节描述了一个程序是如何从开始到完成的。然而，这不是我们与开发的代码进行的交互。我们经常看别人写的代码，并找出如何修改或扩展它来做不同的事情。
+
+在本章中，我们假设DBDB是一个完整的项目，并通过它来了解它是如何工作的。首先，让我们来探索整个项目的结构。
+
+## 组织单位
+
+单位按距离最终用户的距离排序;也就是说，第一个模块是这个程序的用户可能需要知道的最多的模块，而最后一个模块只有很少的交互。
+
+* `tool.py`定义了用于从终端窗口探索数据库的命令行工具。
+
+* `interface.py`定义了实现Python字典API的类（`DBDB`），它使用的是`BinaryTree`。这是你如何在Python程序中使用DBDB。
+
+* `logical.py`定义逻辑层。它是一个键/值存储的抽象接口。
+
+** `LogicalBase`提供了用于逻辑更新（如get，set和commit）的API和用一个具体的子类来实现更新本身。它还管理存储锁定和解除引用内部节点。
+
+** `ValueRef`是一个Python对象，它引用存储在数据库中的二进制blob。间接允许我们避免将整个数据存储一次性加载到内存中。
+
+* `binary_tree.py`在逻辑接口下定义了一个具体的二叉树算法。
+
+** `BinaryTree`提供了一个二叉树的具体实现，包括获取，插入和删除键/值的方法。`BinaryTree`表示不可变树;通过返回与旧的树共享共同结构的新树来执行更新。
+
+** `BinaryNode`实现二叉树的一个节点。
+
+** ·BinaryNodeRef·是一个专门的`ValueRef`，它知道如何序列化和反序列化一个`BinaryNode`。
+
+* `physical.py`定义物理层。`Storage`类提供持久的（大多数）仅追加记录存储。
+
+这些模块从试图给每个类一个单一的责任。换句话说，每个类都只有一个改变的理由。
+
+## 读取值
+
+我们将从最简单的情况开始：从数据库读取值。当我们尝试在`example.db`中获取与键`foo`关联的值时会发生什么：
+
+```python
+$ python -m dbdb.tool example.db get foo
+```
+
+这运行了模块`dbdb.tool`里的`main()`函数：
+
+```python
+# dbdb/tool.py
+def main(argv):
+    if not (4 <= len(argv) <= 5):
+        usage()
+        return BAD_ARGS
+    dbname, verb, key, value = (argv[1:] + [None])[:4]
+    if verb not in {'get', 'set', 'delete'}:
+        usage()
+        return BAD_VERB
+    db = dbdb.connect(dbname)          # CONNECT
+    try:
+        if verb == 'get':
+            sys.stdout.write(db[key])  # GET VALUE
+        elif verb == 'set':
+            db[key] = value
+            db.commit()
+        else:
+            del db[key]
+            db.commit()
+    except KeyError:
+        print("Key not found", file=sys.stderr)
+        return BAD_KEY
+    return OK
+```
+
+`connect()`函数打开数据库文件（可能创建，但不会覆盖它），并返回DBDB的实例：
+
+```python
+# dbdb/__init__.py
+def connect(dbname):
+    try:
+        f = open(dbname, 'r+b')
+    except IOError:
+        fd = os.open(dbname, os.O_RDWR | os.O_CREAT)
+        f = os.fdopen(fd, 'r+b')
+    return DBDB(f)
+```
+
+```python
+# dbdb/interface.py
+class DBDB(object):
+
+    def __init__(self, f):
+        self._storage = Storage(f)
+        self._tree = BinaryTree(self._storage)
+```
+
+DBDB有一个对`Storage`的实例的引用，但它也与`self._tree`共享该引用。 为什么？ 不能`self._tree`管理对存储本身的访问？
+
+在设计中哪些对象“拥有”资源是一个重要的问题，因为它给我们提示的变化可能是不安全的。 让我们继续跟进这个问题。
+
+一旦我们有一个DBDB实例，通过字典查找（`db [key]`）获得`key`的值，这将导致Python解释器调用`DBDB .__ getitem __（）`。
+
+```python
+# dbdb/interface.py
+class DBDB(object):
+# ...
+    def __getitem__(self, key):
+        self._assert_not_closed()
+        return self._tree.get(key)
+
+    def _assert_not_closed(self):
+        if self._storage.closed:
+            raise ValueError('Database closed.')
+```
+
+`__getitem __（)`通过调用`_assert_not_closed`确保数据库仍处于打开状态。这里我们看到至少一个原因为什么DBDB需要直接访问我们的存储实例：所以它是强制执行的前提条件。 （你同意这个设计吗？或者你想出一种不同的方式，我们可以这样做吗？）
+
+DBDB然后通过调用`_tree.get（)`（由`LogicalBase`提供）检索与内部`_tree`的键相关联的值：
+
+```python
+# dbdb/logical.py
+class LogicalBase(object):
+# ...
+    def get(self, key):
+        if not self._storage.locked:
+            self._refresh_tree_ref()
+        return self._get(self._follow(self._tree_ref), key)
+```
+
+`get()`检查我们是否锁定了存储。我们不是100％肯定为什么可能有锁在这里，但我们可以猜测，它可能存在，允许writer序列化访问数据。 如果存储未锁定，会发生什么？
+
+```python
+# dbdb/logical.py
+class LogicalBase(object):
+# ...
+def _refresh_tree_ref(self):
+        self._tree_ref = self.node_ref_class(
+            address=self._storage.get_root_address())
+```
+
+`_refresh_tree_ref`将树的“视图”重置为当前磁盘上的数据，从而允许我们执行最新的读取。
+
+如果我们尝试读取时存储被锁定怎么办？ 这意味着其他一些进程可能正在改变我们现在想要读取的数据; 我们读取的不是最新的数据的当前状态。这通常被称为“脏读”。这种模式允许许多reader访问数据，而不必担心阻塞。
+
+现在，让我们来看看实际如何检索数据：
+
+```python
+# dbdb/binary_tree.py
+class BinaryTree(LogicalBase):
+# ...
+    def _get(self, node, key):
+        while node is not None:
+            if key < node.key:
+                node = self._follow(node.left_ref)
+            elif node.key < key:
+                node = self._follow(node.right_ref)
+            else:
+                return self._follow(node.value_ref)
+        raise KeyError
+```
+
+这是一个标准的二叉树搜索，指向它们的节点。 我们从`BinaryTree`文档中知道`Nodes`和`NodeRefs`是值对象：它们是不可变的，它们的内容从不改变。使用关联的键和值以及左和右子节点创建节点。 这些关联也从不改变。 当根节点被替换时，整个`BinaryTree`的内容仅可见地改变。 这意味着我们不需要担心在我们执行搜索时树的内容被更改。
+
+一旦找到相关的值，它被`main()`写入`stdout`，而不添加任何额外的换行符，以保留用户的数据。
+
+插入和更新
+
+现在我们在`example.db`中将键`foo`设置为`value bar`：
+
+```python
+$ python -m dbdb.tool example.db set foo bar
+```
+
+再次运行模块`dbdb.tool`里的`main()`函数。在我们看代码之前，我们先强调一下这个重要的部分：
+
+```python
+# dbdb/tool.py
+def main(argv):
+    ...
+    db = dbdb.connect(dbname)          # CONNECT
+    try:
+        ...
+        elif verb == 'set':
+            db[key] = value            # SET VALUE
+            db.commit()                # COMMIT
+        ...
+    except KeyError:
+        ...
+```
+
+这里我们设置`db[key] = value`的值调用`DBDB.__setitem__()`.
+
+```python
+# dbdb/interface.py
+class DBDB(object):
+# ...
+    def __setitem__(self, key, value):
+        self._assert_not_closed()
+        return self._tree.set(key, value)
+```
+
+`__setitem__`确保数据库仍然处于打开状态，然后通过调用`_tree.set()`将关联从键值传递到内部`_tree`。
+
+`_tree.set()`由LogicalBase提供:
+
+```python
+# dbdb/logical.py
+class LogicalBase(object):
+# ...
+    def set(self, key, value):
+        if self._storage.lock():
+            self._refresh_tree_ref()
+        self._tree_ref = self._insert(
+            self._follow(self._tree_ref), key, self.value_ref_class(value))
+```
+
+`set()`第一次检查存储锁:
+
+```python
+# dbdb/storage.py
+class Storage(object):
+    ...
+    def lock(self):
+        if not self.locked:
+            portalocker.lock(self._f, portalocker.LOCK_EX)
+            self.locked = True
+            return True
+        else:
+            return False
+```
+
+这里有两个重要的事情需要注意：
+
+* 我们的锁由一个第三方文件锁库portalocker提供。
+
+* 如果数据库已经被锁定，`lock()`返回`False`，否则返回`True`。
+
+回到`_tree.set()`，我们现在可以理解为什么它首先检查`lock()`的返回值：它允许我们为最近的根节点引用调用`_refresh_tree_ref`，所以我们不会丢失另一个进程的更新。然后，它用包含插入（或更新）的键/值的新树替换根树节点。
+
+插入或更新树不会改变任何节点，因为`_insert()`返回一个新的树。新树与前一个树共享未更改的部分，以节省内存和执行时间。 自然地递归实现：
+
+```python
+# dbdb/binary_tree.py
+class BinaryTree(LogicalBase):
+# ...
+    def _insert(self, node, key, value_ref):
+        if node is None:
+            new_node = BinaryNode(
+                self.node_ref_class(), key, value_ref, self.node_ref_class(), 1)
+        elif key < node.key:
+            new_node = BinaryNode.from_node(
+                node,
+                left_ref=self._insert(
+                    self._follow(node.left_ref), key, value_ref))
+        elif node.key < key:
+            new_node = BinaryNode.from_node(
+                node,
+                right_ref=self._insert(
+                    self._follow(node.right_ref), key, value_ref))
+        else:
+            new_node = BinaryNode.from_node(node, value_ref=value_ref)
+        return self.node_ref_class(referent=new_node)
+```
+
+注意我们如何总是返回一个新的节点（包裹在`NodeRef中`）。 不是更新一个节点来指向一个新的子树，而是创建一个共享未改变的子树的新节点。 这是什么使这个二叉树是一个不可变的数据结构。
+
+你可能注意到了一些奇怪的事情：我们还没有对磁盘上的任何东西进行任何更改。 我们所做的是通过移动树节点来操纵我们对磁盘数据的视图。
+
+为了将这些更改实际写入磁盘，我们需要显式调用`commit()`，我们在本节开头的`tool.py`中的是`set`操作的第二部分。
+
+提交包括写出内存中的所有脏状态，然后保存树的新根节点的磁盘地址。
+
+从API开始：
+
+```python
+# dbdb/interface.py
+class DBDB(object):
+# ...
+    def commit(self):
+        self._assert_not_closed()
+        self._tree.commit()
+```
+
+`_tree.commit()`来自LogicalBase:
+
+```python
+# dbdb/logical.py
+class LogicalBase(object)
+# ...
+    def commit(self):
+        self._tree_ref.store(self._storage)
+        self._storage.commit_root_address(self._tree_ref.address)
+```
+
+所有`NodeRefs`都知道如何通过`prepare_to_store()`让他们的子进程序列化来将其串行到磁盘：
+
+```python
+# dbdb/logical.py
+class ValueRef(object):
+# ...
+    def store(self, storage):
+        if self._referent is not None and not self._address:
+            self.prepare_to_store(storage)
+            self._address = storage.write(self.referent_to_string(self._referent))
+```
+
+LogicalBase离得`self._tree_ref`实际上是一个二进制`NodeRef`（`ValueRef`的子类），所以`prepare_to_store()`的具体实现是：
+
+```python
+# dbdb/binary_tree.py
+class BinaryNodeRef(ValueRef):
+    def prepare_to_store(self, storage):
+        if self._referent:
+            self._referent.store_refs(storage)
+```
+
+问题里的BinaryNode，`_referent`，其引用存储自己：
+
+```python
+# dbdb/binary_tree.py
+class BinaryNode(object):
+# ...
+    def store_refs(self, storage):
+        self.value_ref.store(storage)
+        self.left_ref.store(storage)
+        self.right_ref.store(storage)
+```
+
+这对于未写入的更改的`NodeRef`（即，没有`_address`），一直向下递归。
+
+现在我们再次在`ValueRef`的`store`方法中备份栈。`store()`的最后一步是序列化此节点并保存其存储地址：
+
+```python
+# dbdb/logical.py
+class ValueRef(object):
+# ...
+    def store(self, storage):
+        if self._referent is not None and not self._address:
+            self.prepare_to_store(storage)
+            self._address = storage.write(self.referent_to_string(self._referent))
+```
+
+在这一点上，`NodeRef`的`_referent`保证有可用于它自己的所有refs的地址，所以我们通过创建表示这个节点的bytestring来序列化它：
+
+```python
+# dbdb/binary_tree.py
+class BinaryNodeRef(ValueRef):
+# ...
+    @staticmethod
+    def referent_to_string(referent):
+        return pickle.dumps({
+            'left': referent.left_ref.address,
+            'key': referent.key,
+            'value': referent.value_ref.address,
+            'right': referent.right_ref.address,
+            'length': referent.length,
+        })
+```
+
+更新`store()`方法中的地址技术上是`ValueRef`的一个突变。 因为它对用户可见的值没有影响，所以可以认为它是不可变的。
+
+一旦在根`_tree_ref`上的`store()`完成（在`LogicalBase.commit()`），我们知道所有的数据都写入磁盘。现在我们可以通过调用提交根地址：
+
+```python
+# dbdb/physical.py
+class Storage(object):
+# ...
+    def commit_root_address(self, root_address):
+        self.lock()
+        self._f.flush()
+        self._seek_superblock()
+        self._write_integer(root_address)
+        self._f.flush()
+        self.unlock()
+```
+
+刷新文件（以便操作系统知道我们希望所有的数据保存到稳定的存储，如SSD），并写出根节点的地址。我们知道最后一个写是原子的，因为我们将磁盘地址存储在扇区边界上。这是第一件要做的事，因此无论扇区大小如何，单扇区磁盘写入保证是由磁盘硬件原子。
+
+因为根节点地址具有旧值或新值，其他进程可以从数据库读取而不获取锁。外部进程可能会看到旧的或新的树，但不会混合两者。所以，提交是原子的。
+
+因为我们在写入根节点地址之前将新数据写入磁盘并调用`fsync syscall`，所以未提交的数据不可访问。相反的，一旦根节点地址被更新，我们知道它引用的所有数据也在磁盘上。所以，提交是持久的。
+
+这样就完成了！
+
+## NodeRefs如何保存内存
+
+为了避免在存储器中同时保持整个树结构，当从磁盘读入逻辑节点时，将其左右孩子的磁盘地址（及其值）加载到存储器中。访问孩子及其值需要一个额外的函数调用`NodeRef.get()`取消引用数据。
+
+我们需要构造的一个`NodeRef`是一个地址：
+
+`
++---------+
+| NodeRef |
+| ------- |
+| addr=3  |
+| get()   |
++---------+
+`
+
+调用`get()`将返回具体的节点，以及该节点的引用`NodeRefs`：
+
+`
++---------+     +---------+     +---------+
+| NodeRef |     | Node    |     | NodeRef |
+| ------- |     | ------- | +-> | ------- |
+| addr=3  |     | key=A   | |   | addr=1  |
+| get() ------> | value=B | |   +---------+
++---------+     | left  ----+
+                | right ----+   +---------+
+                +---------+ |   | NodeRef |
+                            +-> | ------- |
+                                | addr=2  |
+                                +---------+
+`
+
+当未提交对树的更改时，它们存在于内存中，从根到引用到更改的树叶。更改尚未保存到磁盘，因此更改的节点包含具体的键和值，并且没有磁盘地址。进行写操作的进程可以看到未提交的更改，并且可以在发出提交之前进行更改，因为如果`NodeRef.get()`有一个提交，它将返回未提交的值;当通过API访问时，提交和未提交数据之间没有区别。所有更新将原子地显示给其他读者，因为更改在新的根节点地址写入磁盘之前不可见。并发更新被磁盘上的lockfile阻止。锁在第一次更新时获取，并在提交后释放。
+
+## 读者的练习
+
+DBDB允许许多进程同时读取同一个数据库而不阻塞，但读者有时可以检索旧数据。如果我们需要一致地读取一些数据怎么办？一个常见的用例是读取一个值，然后根据该值更新它。你将如何在DBDB来实现这一点？
+
+用于更新数据存储的算法可以通过替换`interface.py`中的字符串`BinaryTree`完全改变。数据存储趋向于使用更复杂的搜索树，例如B树，B+树等，以提高性能。虽然一个平衡的二叉树需要做`O(log2(n))`随机节点读取找到一个值，B+树需要少量，例如`O(log32(n))`，因此每个节点分裂32路而不是2路。这在实践中有巨大的不同，到`log2(2^32）≈32`, `log32(2^32)≈6.4`查找。每个查找是随机访问，这对于具有旋转盘的硬盘来说是非常昂贵的。SSD有助于延迟，但是I/O的节省仍然存在。
+
+默认情况下，`ValueRef`存储的值，期望字节为值（直接传递到存储）。二叉树节点本身只是`ValueRef`的子帧。通过json或msgpack存储更丰富的数据，这是将其设置为`value_ref_class`的问题。`BinaryNodeRef`是使用`pickle`串行化数据的一个例子。
+
+数据库压缩是另一个有趣的练习。压缩可以通过树的中值遍历遍历树。这可能是最好的树节点都在一起，因为他们是遍历找到的所有数据。将尽可能多的中间节点包装到磁盘扇区提高读取性能，至少在紧缩之后。这里有一些细微之处（例如，内存使用），如果你试图实现这一点。并记住：总是基准性能增强前后！你会发现惊讶的结果。
+
+## 模式和原则
+
+测试接口没有实现。作为开发DBDB的一部分，我写了一些测试，描述了我想要如何使用它。第一个测试针对内存版本的数据库运行，然后我将DBDB扩展到持久化磁盘，甚至后来添加了`NodeRefs`的概念。大多数测试没有必要改变，这让我有信心继续做下去。
+
+尊重单一责任原则。类最多只能有一个理由改变。这不是DBDB的情况，但有多个扩展途径，只需要本地化更改。
+
+## 总结
+
+DBDB是一个简单的数据库，但程序仍然是复杂的。我管理这种复杂性的最重要的是实现一个具有不可变的数据结构的表面上可变的对象。我鼓励你考虑这种技术，下一次你发现自己在一个棘手的问题，似乎有更多的边缘情况，你可以继续跟踪。
+
+
+## 引用
+
+1. Bonus feature: Can you guarantee that the compacted tree structure is balanced? This helps maintain performance over time.↩
+
+2. Calling fsync on a file descriptor asks the operating system and hard drive (or SSD) to write all buffered data immediately. Operating systems and drives don't usually write everything immediately in order to improve performance.↩
+
+
