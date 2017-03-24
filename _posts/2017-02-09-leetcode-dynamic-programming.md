@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      "Leetcode (53) Dynamic Programming"
+title:      "Leetcode (53, 91) Dynamic Programming"
 category:   Leetcode
-tags:		Leetcode LinkedList
+tags:		Leetcode DP
 ---
 
 * content
