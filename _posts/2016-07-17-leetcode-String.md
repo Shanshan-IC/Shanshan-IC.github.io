@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      Leetcode  (14, 58) String Series"
+title:      "Leetcode  (14, 58, 151, 179) String Series"
 category:   Leetcode
-tags:		Leetcode Binary Tree Recursion
+tags:		Leetcode String
 ---
 
 * content
@@ -60,6 +60,49 @@ public:
             res+=temp;
         }
         return res;
+    }
+};
+```
+
+## Leetcode 151. Reverse Words in a String
+
+* [Leetcode 151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/#/description)
+
+```cpp
+class Solution {
+public:
+    void reverseWords(string &s) {
+        istringstream input(s);
+        string res, temp;
+        while(input>>temp) 
+            res = " "+ temp + res;
+        s = res.empty()?res: res.substr(1);
+    }
+};
+```
+
+## Leetcode 179. Largest Number
+
+* [Leetcode 179. Largest Number](https://leetcode.com/problems/largest-number/)
+
+Given a list of non negative integers, arrange them such that they form the largest number.
+
+For example, given [3, 30, 34, 5, 9], the largest formed number is 9534330.
+
+Note: The result may be very large, so you need to return a string instead of an integer.
+
+```cpp
+class Solution {
+public:
+    string largestNumber(vector<int>& nums) {
+        const int n = nums.size();
+        vector<string> str(n);
+        for (int i=0; i<n; i++)
+            str[i] = to_string(nums[i]);
+        sort(str.begin(), str.end(), [](string &i, string &j){return i+j>j+i;});
+        string res;
+        for (string s:str)  res+=s;
+        return res[0]=='0'?"0":res;
     }
 };
 ```
