@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Leetcode Matrix Series"
+title:      "Leetcode (48) Matrix Series"
 category:   Leetcode
 tags:		Leetcode
 ---
