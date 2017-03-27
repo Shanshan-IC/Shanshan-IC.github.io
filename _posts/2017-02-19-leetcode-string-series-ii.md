@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Leetcode (43, 49) String Series II"
+title:      "Leetcode (43, 49, 67) String Series II"
 category:   Leetcode
 tags:		Leetcode Math
 ---
@@ -80,6 +80,45 @@ public:
         }
         for (auto i=table.begin(); i!=table.end(); i++) 
             res.push_back(i->second);
+        return res;
+    }
+};
+```
+
+## Leetcode 67. Add Binary
+
+* [Leetcode 67. Add Binary](https://leetcode.com/problems/add-binary/#/description)
+
+Given two binary strings, return their sum (also a binary string).
+
+For example,
+
+a = "11"
+
+b = "1"
+
+Return "100".
+
+```cpp
+class Solution {
+public:
+    string addBinary(string a, string b) {
+        if (a.empty())  return b;
+        if (b.empty())  return a;
+        reverse(a.begin(), a.end());
+        reverse(b.begin(), b.end());
+        int i = 0, j = 0, carry = 0;
+        string res = "";
+        while (i<a.size() || j<b.size()) {
+            if (i<a.size())
+                carry += a[i++]-'0';
+            if (j<b.size())
+                carry += b[j++]-'0';
+            res += (char)(carry%2+'0');
+            carry /= 2;
+        }
+        if (carry)  res += '1';
+        reverse(res.begin(), res.end());
         return res;
     }
 };
