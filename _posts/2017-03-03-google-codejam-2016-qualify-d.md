@@ -1,14 +1,12 @@
 ---
 layout:     post
-title:      "Google Code Jam Qualification Round 2016 D. Fractiles"
+title:      "Google Code Jam Qualification Round 2016 D Fractiles"
 category:   Google
 tags:       Google
 ---
 
 * content
 {:toc}
-
-**Problem D. Fractiles**
 
 ## Problem
 
@@ -50,7 +48,6 @@ If there are multiple valid sets of tiles, you may output any of them. Remember 
 
 ## Limits
 
-`
 1 ≤ T ≤ 100.
 
 1 ≤ K ≤ 100.
@@ -58,7 +55,6 @@ If there are multiple valid sets of tiles, you may output any of them. Remember 
 1 ≤ C ≤ 100.
 
 KC ≤ 1018.
-`
 
 Small dataset
 
@@ -70,35 +66,24 @@ Large dataset
 
 ## Sample
 
+```
 Input 
 
-` 
-5
-
-2 3 2
-
-1 1 1
-
-2 1 1
-
-2 1 2
-
-3 2 3
-`
+    5
+    2 3 2
+    1 1 1
+    2 1 1
+    2 1 2
+    3 2 3
  	
 Output 
 
-`
-Case #1: 2
-
-Case #2: 1
-
-Case #3: IMPOSSIBLE
-
-Case #4: 1 2
-
-Case #5: 2 6
-`
+    Case #1: 2
+    Case #2: 1
+    Case #3: IMPOSSIBLE
+    Case #4: 1 2
+    Case #5: 2 6
+```
 
 Note: for some of these sample cases, other valid solutions exist.
 

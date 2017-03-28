@@ -16,6 +16,7 @@ Voters will show up at the polling place one at a time, in an order chosen unifo
 What is the probability that A stays in the lead the entire time -- that is, that A will always be winning after every vote?
 
 ## Input and Output
+
 Input
 
 The input starts with one line containing one integer T, which is the number of test cases. Each test case consists of one line with two integers N and M: the numbers of voters supporting A and B, respectively.
@@ -26,7 +27,7 @@ For each test case, output one line containing Case #x: y, where x is the test c
 
 y will be considered correct if y is within an absolute or relative error of 10-6 of the correct answer. See the FAQ for an explanation of what that means, and what formats of real numbers we accept.
 
-Limits
+## Limits
 
 1 ≤ T ≤ 100.
 
@@ -39,6 +40,7 @@ Large dataset
 0 ≤ M < N ≤ 2000.
 
 ## Sample
+
 ```
 Input 
 	2

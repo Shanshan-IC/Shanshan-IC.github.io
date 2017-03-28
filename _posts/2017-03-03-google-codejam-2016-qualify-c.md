@@ -8,8 +8,6 @@ tags:       Google
 * content
 {:toc}
 
-**Problem C. Coin Jam**
-
 ## Problem
 
 A jamcoin is a string of N ≥ 2 digits with the following properties:
@@ -65,26 +63,20 @@ So, you can consider doing some computation before actually downloading an input
 
 ## Sample
 
+```
 Input 
  
-`
-1
-
-6 3
-`
+    1
+    6 3
 
 Output 
 
-`
-Case #1:
-
-100011 5 13 147 31 43 1121 73 77 629
-
-111111 21 26 105 1302 217 1032 513 13286 
-10101
-
-111001 3 88 5 1938 7 208 3 20 11
-`
+    Case #1:
+    100011 5 13 147 31 43 1121 73 77 629
+    111111 21 26 105 1302 217 1032 513 13286 
+    10101
+    111001 3 88 5 1938 7 208 3 20 11
+```
 
 In this sample case, we have used very small values of N and J for ease of explanation. Note that this sample case would not appear in either the Small or Large datasets.
 

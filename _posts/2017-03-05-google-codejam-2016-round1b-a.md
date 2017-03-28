@@ -1,14 +1,12 @@
 ---
 layout:     post
-title:      "Google Code Jam Qualification Round 1B 2016 A. Getting the Digits"
+title:      "Google Code Jam Round 1B 2016 A. Getting the Digits"
 category:   Google
 tags:       Google
 ---
 
 * content
 {:toc}
-
-**Problem A. Getting the Digits**
 
 ## Problem
 
@@ -44,26 +42,21 @@ Large dataset
 
 ## Sample
 
+```
 Input 
- 	
-`
-4
 
-OZONETOWER
-
-WEIGHFOXTOURIST
-
-OURNEONFOE
-
-ETHER
+    4
+    OZONETOWER
+    WEIGHFOXTOURIST
+    OURNEONFOE
+    ETHER
 
 Output 
- 
-`
-Case #1: 012
-Case #2: 2468
-Case #3: 114
-Case #4: 3
+
+    Case #1: 012
+    Case #2: 2468
+    Case #3: 114
+    Case #4: 3
 `
 
 ## Codes

@@ -1,14 +1,12 @@
 ---
 layout:     post
-title:      "Google Code Jam Qualification Round 1C 2016 A. Senate Evacuation"
+title:      "Google Code Jam Round 1C 2016 A. Senate Evacuation"
 category:   Google
 tags:       Google
 ---
 
 * content
 {:toc}
-
-**Problem A. Senate Evacuation**
 
 ## Problem
 
@@ -55,39 +53,26 @@ sum of all Pi ≤ 1000.
 
 ## Sample
 
+```
 Input 
  	
-`
-4
-
-2
-
-2 2
-
-3
-
-3 2 2
-
-3
-
-1 1 2
-
-3
-
-2 3 1
-`
+    4
+    2
+    2 2
+    3
+    3 2 2
+    3
+    1 1 2
+    3
+    2 3 1
 
 Output
 
-`
-Case #1: AB BA
-
-Case #2: AA BC C BA
-
-Case #3: C C AB
-
-Case #4: BA BB CA
-`
+    Case #1: AB BA
+    Case #2: AA BC C BA
+    Case #3: C C AB
+    Case #4: BA BB CA
+```
 
 The sample output displays one set of answers to the sample cases. Other answers may be possible.
 

@@ -1,14 +1,12 @@
 ---
 layout:     post
-title:      "Google Code Jam Qualification Round 1A 2016 C. BFFs"
+title:      "Google Code Jam Round 1A 2016 C. BFFs"
 category:   Google
 tags:       Google
 ---
 
 * content
 {:toc}
-
-**Problem C. BFFs**
 
 ## Problem
 
@@ -46,39 +44,26 @@ Large dataset
 
 ## Sample
 
+```
 Input 
  	
-`
-4
-
-4
-
-2 3 4 1
-
-4
-
-3 3 4 1
-
-4
-
-3 3 4 3
-
-10
-
-7 8 10 10 9 2 9 6 3 3
-`
+	4
+	4
+	2 3 4 1
+	4
+	3 3 4 1
+	4
+	3 3 4 3
+	10
+	7 8 10 10 9 2 9 6 3 3
 
 Output 
 
-`
-Case #1: 4
-
-Case #2: 3
-
-Case #3: 3
-
-Case #4: 6
-`
+	Case #1: 4
+	Case #2: 3
+	Case #3: 3
+	Case #4: 6
+```
 
 In sample case #4, the largest possible circle seats the following kids in the following order: 7 9 3 10 4 1. (Any reflection or rotation of this circle would also work.) Note that the kid with student ID 1 is next to the kid with student ID 7, as required, because the list represents a circle.
 

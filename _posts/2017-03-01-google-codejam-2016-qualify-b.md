@@ -8,8 +8,6 @@ tags:       Google
 * content
 {:toc}
 
-**Problem B. Revenge of the Pancakes**
-
 ## Problem
 
 The Infinite House of Pancakes has just introduced a new kind of pancake! It has a happy face made of chocolate chips on one side (the "happy side"), and nothing on the other side (the "blank side").
@@ -48,26 +46,24 @@ Large dataset
 
 ## Sample
 
+```
 Input 
  	
-` 	
-5
--
--+
-+-
-+++
---+-
-`
+    5
+    -
+    -+
+    +-
+    +++
+    --+-
 
 Output 
 
-`
-Case #1: 1
-Case #2: 1
-Case #3: 2
-Case #4: 0
-Case #5: 3
-`
+    Case #1: 1
+    Case #2: 1
+    Case #3: 2
+    Case #4: 0
+    Case #5: 3
+```
 
 In Case #1, you only need to execute the maneuver once, flipping the first (and only) pancake.
 

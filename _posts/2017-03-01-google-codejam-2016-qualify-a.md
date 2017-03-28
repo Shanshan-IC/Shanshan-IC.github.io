@@ -8,8 +8,6 @@ tags:       Google
 * content
 {:toc}
 
-**Problem A. Counting Sheep**
-
 ## Problem
 
 Bleatrix Trotter the sheep has devised a strategy that helps her fall asleep faster. First, she picks a number N. Then she starts naming N, 2 × N, 3 × N, and so on. Whenever she names a number, she thinks about all of the digits in that number. She keeps track of which digits (0, 1, 2, 3, 4, 5, 6, 7, 8, and 9) she has seen at least once so far as part of any number she has named. Once she has seen each of the ten digits at least once, she will fall asleep.
@@ -45,35 +43,24 @@ Large dataset
 
 ## Sample
 
+```
 Input 
-
-` 
-5
-
-0
-
-1
-
-2
-
-11
-
-1692
-`
+ 
+    5
+    0
+    1
+    2
+    11
+    1692
 
 Output 
 
-`
-Case #1: INSOMNIA
-
-Case #2: 10
-
-Case #3: 90
-
-Case #4: 110
-
-Case #5: 5076
-`
+    Case #1: INSOMNIA
+    Case #2: 10
+    Case #3: 90
+    Case #4: 110
+    Case #5: 5076
+```
 
 In Case #1, since 2 × 0 = 0, 3 × 0 = 0, and so on, Bleatrix will never see any digit other than 0, and so she will count forever and never fall asleep. Poor sheep!
 

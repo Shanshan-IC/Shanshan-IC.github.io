@@ -1,14 +1,12 @@
 ---
 layout:     post
-title:      "Google Code Jam Qualification Round 1A 2016 B. Rank and File"
+title:      "Google Code Jam Round 1A 2016 B Rank and File"
 category:   Google
 tags:       Google
 ---
 
 * content
 {:toc}
-
-**Problem B. Rank and File**
 
 ## Problem
 
@@ -53,49 +51,35 @@ Large dataset
 
 ## Sample
 
+```
 Input 
 
-` 
-1
-
-3
-
-1 2 3
-
-2 3 5
-
-3 5 6
-
-2 3 4
-
-1 2 3
-`
-
- 	
+    1
+    3
+    1 2 3
+    2 3 5
+    3 5 6
+    2 3 4
+    1 2 3
+	
 Output 
 
-`
-Case #1: 3 4 6
-`
+    Case #1: 3 4 6
+```
 
 In the sample case, the arrangement must be either this:
 
-`
+```
 1 2 3
-
 2 3 4
-
 3 5 6
 
 or this:
 
 1 2 3
-
 2 3 5
-
 3 4 6
-
-`
+```
 
 In either case, the missing list is 3 4 6.
 

@@ -29,9 +29,10 @@ Output
 
 For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the answer, as described above.
 
-Limits
+## Limits
 
 1 ≤ T ≤ 100.
+
 1 ≤ D ≤ 100.
 
 Small dataset
@@ -43,14 +44,17 @@ Large dataset
 1 ≤ N ≤ 100000.
 
 ## Sample
+
 ```
 Input 
+
 	3
 	7 1
 	7 2
 	2 4
 
 Output 
+
 	Case #1: 10
 	Case #2: 1
 	Case #3: 0

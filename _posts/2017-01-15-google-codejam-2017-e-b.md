@@ -23,7 +23,7 @@ Output
 
 For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the base described in the problem statement.
 
-Limits
+## Limits
 
 1 ≤ T ≤ 100.
 

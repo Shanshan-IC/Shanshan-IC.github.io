@@ -14,26 +14,31 @@ The Codejamon game is on fire! Many players have gathered in an auditorium to fi
 The competition will be intense, and the players are sensitive about sitting near too many of their future opponents! A player will feel too crowded if another player is seated directly to their left and another player is seated directly to their right. Also, a player will feel too crowded if one player is seated directly in front of them and another player is seated directly behind them. 
 
 What is the maximum number of players that can be seated such that no player feels too crowded? 
+
+## Input and Output
+
 Input
 
 The first line of the input gives the number of test cases, T. T test cases follow. Each test case consists of one line with two integers R and C: the number of rows and columns of chairs in the auditorium.
 
-## Output
+Output
 
 For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the maximum number of players that can be seated, as described in the problem statement.
 
-Limits
+## Limits
 
 1 ≤ T ≤ 100.
 
 Small dataset
 
 1 ≤ R ≤ 5.
+
 1 ≤ C ≤ 5.
 
 Large dataset
 
 1 ≤ R ≤ 100.
+
 1 ≤ C ≤ 100.
 
 ## Sample
