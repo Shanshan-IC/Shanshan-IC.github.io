@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Google CodeJam Round D 2017 Problem B Sitting"
+title:      "Google APAC 2017 University Test Round D Problem B Sitting"
 category:   Google 
 tags:       Google
 ---

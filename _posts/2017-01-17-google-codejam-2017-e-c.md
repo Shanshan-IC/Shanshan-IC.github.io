@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Google CodeJam Round E 2017 Problem C Partioning Number"
+title:      "Google APAC 2017 University Test Round E Problem C Partioning Number"
 category:   Google 
 tags:       Google
 ---

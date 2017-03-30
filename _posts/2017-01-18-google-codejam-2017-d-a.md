@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Google CodeJam Round D 2017 Problem A Partioning Number"
+title:      "Google APAC 2017 University Test Round D Problem A Partioning Number"
 category:   Google 
 tags:       Google
 ---

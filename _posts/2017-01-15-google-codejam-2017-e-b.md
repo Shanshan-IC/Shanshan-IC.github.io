@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Google CodeJam Round E 2017 B Beautiful Numbers"
+title:      "Google APAC 2017 University Test Round E Problem B Beautiful Numbers"
 category:   Google 
 tags:       Google
 ---
