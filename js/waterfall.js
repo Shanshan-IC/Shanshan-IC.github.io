@@ -14,19 +14,19 @@
      */
     var demoContent = [
         {
-            demo_link: 'https://codepen.io/haoyang/pen/jrvrQq',
-            img_link: 'https://ooo.0o0.ooo/2016/11/24/5836d81f48cd2.png',
-            code_link: 'https://codepen.io/haoyang/pen/jrvrQq',
-            title: 'Fisher-Yates 洗牌算法动画',
-            core_tech: 'JavaScript',
-            description: 'Fisher-Yates 洗牌算法动画。算法详情见 <a href ="https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/">这里</a>。'
+            demo_link: 'https://github.com/Shanshan-IC/MyWebsite',
+            img_link: '/images/weblearn.png',
+            code_link: 'https://myweb33.firebaseapp.com/',
+            title: 'My Website hosted in Firebase',
+            core_tech: 'HTML',
+            description: 'Websites collecting Computing Science Learning Resources。Details in <a href ="https://github.com/Shanshan-IC/MyWebsite">Here</a>。'
         },{
-        demo_link: 'http://gaohaoyang.github.io/test/headerTransition/',
+        demo_link: 'https://github.com/Shanshan-IC/Code-Practice',
         img_link: 'https://ooo.0o0.ooo/2016/06/20/5768c1597d1fe.png',
-        code_link: 'https://github.com/Gaohaoyang/test/tree/master/headerTransition',
-        title: 'Header Transition 渐变动画',
-        core_tech: 'jQuery BootStrap CSS3',
-        description: '花费不到半小时帮师兄做了一个简单的 CSS3 动画效果，当页面滚动到指定距离时，header 区的背景色由透明变为蓝色。仿照了网站 <a href ="https://quorrajs.org/">https://quorrajs.org/</a> 的 Header 区动画效果。'
+        code_link: 'https://github.com/Shanshan-IC/Code-Practice',
+        title: 'Code Practice in Different Websites',
+        core_tech: 'Code Competitions',
+        description: 'Code Competitions (Google Code Jam, Leetcode, AtCoder, Codeforces) <a href ="https://github.com/Shanshan-IC/Code-Practice">https://github.com/Shanshan-IC/Code-Practice</a>'
     }, {
         demo_link: 'http://gaohaoyang.github.io/mask-fade-out/',
         img_link: 'http://7q5cdt.com1.z0.glb.clouddn.com/demo-fade-out.png',
