@@ -474,7 +474,7 @@ kill -l name
 kill 3268
 #彻底杀死
 kill -9 3268
-
+```
 
 `killall`
 
