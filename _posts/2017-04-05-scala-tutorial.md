@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      "Scala Tutorial"
-category:   Scala
-tags:   Scala
+category:   Spark
+tags:   Scala Spark
 ---
 
 * content
