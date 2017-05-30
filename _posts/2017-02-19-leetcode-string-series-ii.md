@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Leetcode (43, 49, 67) String Series II"
+title:      "Leetcode (43, 49, 67, 539) String Series II"
 category:   Leetcode
 tags:		Leetcode Math
 ---
@@ -119,6 +119,49 @@ public:
         }
         if (carry)  res += '1';
         reverse(res.begin(), res.end());
+        return res;
+    }
+};
+```
+
+## Leetcode 539. Minimum Time Difference
+
+* [Leetcode 539. Minimum Time Difference](https://leetcode.com/problems/add-binary/#/description)
+
+Given a list of 24-hour clock time points in "Hour:Minutes" format, find the minimum minutes difference between any two time points in the list.
+
+Example 1:
+
+```
+Input: ["23:59","00:00"]
+Output: 1
+```
+
+Note:
+
+* The number of time points in the given list is at least 2 and won't exceed 20000.
+
+* The input time is legal and ranges from 00:00 to 23:59.
+
+```cpp
+class Solution {
+public:
+    int findMinDifference(vector<string>& timePoints) {
+        if (timePoints.empty()) return 0;
+        sort(timePoints.begin(), timePoints.end());
+        int res = INT_MAX;
+        const int n = timePoints.size();
+        int val[n] = {0};
+        int val2[n] = {0};
+        for (int i = 0; i<timePoints.size(); i++) {
+            val[i] = stoi(timePoints[i].substr(0,2));
+            val2[i] = stoi(timePoints[i].substr(3,2));
+        }
+        for (int i = 1; i<timePoints.size(); i++) {
+            res = min(res, (val[i]-val[i-1])*60+val2[i]-val2[i-1]);
+            res = min(res, (val[i-1]+24-val[i])*60+val2[i-1]-val2[i]);
+        }
+        res = min(res, (val[0]+24-val[n-1])*60+val2[0]-val2[n-1]);
         return res;
     }
 };
